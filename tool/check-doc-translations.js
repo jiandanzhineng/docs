@@ -1,5 +1,6 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const { requestTranslate, normalizeBaseUrl } = require('./translate-md');
 
 function toPosixPath(p) {
   return p.split(path.sep).join('/');
@@ -17,8 +18,7 @@ async function loadDotEnvIfPresent(repoRoot) {
   const lines = String(raw).split(/\r?\n/);
   for (const lineRaw of lines) {
     const line = String(lineRaw || '').trim();
-    if (!line) continue;
-    if (line.startsWith('#')) continue;
+    if (!line || line.startsWith('#')) continue;
     const eq = line.indexOf('=');
     if (eq === -1) continue;
     const key = line.slice(0, eq).trim();
@@ -54,9 +54,10 @@ function parseArgs(argv) {
     concurrency: 5,
     apiKey: null,
     baseUrl: null,
-    model: null,
+    model: 'DeepSeek-V3.2',
     checkLocaleMapping: false,
     extensions: new Set(['.md', '.mdx']),
+    help: false,
   };
 
   const takeValue = (i) => {
@@ -72,17 +73,14 @@ function parseArgs(argv) {
       args.includeDefaultLocale = true;
       continue;
     }
-
     if (token === '--force') {
       args.force = true;
       continue;
     }
-
     if (token === '--check-locale-mapping' || token === '--print-locale-mapping') {
       args.checkLocaleMapping = true;
       continue;
     }
-
     if (token === '--help' || token === '-h') {
       args.help = true;
       continue;
@@ -92,37 +90,47 @@ function parseArgs(argv) {
     const key = k;
     const value = v ?? takeValue(i++);
 
-    if (key === '--source-dir') args.sourceDir = value;
-    else if (key === '--i18n-dir') args.i18nDir = value;
-    else if (key === '--default-locale') args.defaultLocale = value;
-    else if (key === '--plugin-docs-subdir') args.pluginDocsSubdir = value;
-    else if (key === '--locale' || key === '--locales') {
-      args.locales = value.split(',').map((s) => s.trim()).filter(Boolean);
-    } else if (key === '--limit' || key === '-n') {
-      const n = Number(value);
-      if (!Number.isFinite(n) || n < 0) throw new Error(`limit 必须是非负数字：${value}`);
-      args.limit = n === 0 ? 0 : n;
-    } else if (key === '--only') {
-      const normalized = value.trim().toLowerCase();
-      if (!['all', 'missing', 'outdated'].includes(normalized)) {
-        throw new Error(`only 仅支持 all|missing|outdated：${value}`);
+    switch (key) {
+      case '--source-dir': args.sourceDir = value; break;
+      case '--i18n-dir': args.i18nDir = value; break;
+      case '--default-locale': args.defaultLocale = value; break;
+      case '--plugin-docs-subdir': args.pluginDocsSubdir = value; break;
+      case '--locale':
+      case '--locales':
+        args.locales = value.split(',').map((s) => s.trim()).filter(Boolean);
+        break;
+      case '--limit':
+      case '-n': {
+        const n = Number(value);
+        if (!Number.isFinite(n) || n < 0) throw new Error(`limit 必须是非负数字：${value}`);
+        args.limit = n === 0 ? 0 : n;
+        break;
       }
-      args.only = normalized;
-    } else if (key === '--concurrency') {
-      const n = Number(value);
-      if (!Number.isFinite(n) || n <= 0) throw new Error(`concurrency 必须是正整数：${value}`);
-      args.concurrency = Math.floor(n);
-    } else if (key === '--api-key') {
-      args.apiKey = value;
-    } else if (key === '--base-url') {
-      args.baseUrl = value;
-    } else if (key === '--model') {
-      args.model = value;
-    } else if (key === '--ext' || key === '--extensions') {
-      const parts = value.split(',').map((s) => s.trim()).filter(Boolean);
-      args.extensions = new Set(parts.map((e) => (e.startsWith('.') ? e : `.${e}`)));
-    } else {
-      throw new Error(`未知参数：${token}`);
+      case '--only': {
+        const normalized = value.trim().toLowerCase();
+        if (!['all', 'missing', 'outdated'].includes(normalized)) {
+          throw new Error(`only 仅支持 all|missing|outdated：${value}`);
+        }
+        args.only = normalized;
+        break;
+      }
+      case '--concurrency': {
+        const n = Number(value);
+        if (!Number.isFinite(n) || n <= 0) throw new Error(`concurrency 必须是正整数：${value}`);
+        args.concurrency = Math.floor(n);
+        break;
+      }
+      case '--api-key': args.apiKey = value; break;
+      case '--base-url': args.baseUrl = value; break;
+      case '--model': args.model = value; break;
+      case '--ext':
+      case '--extensions': {
+        const parts = value.split(',').map((s) => s.trim()).filter(Boolean);
+        args.extensions = new Set(parts.map((e) => (e.startsWith('.') ? e : `.${e}`)));
+        break;
+      }
+      default:
+        throw new Error(`未知参数：${token}`);
     }
   }
 
@@ -130,13 +138,12 @@ function parseArgs(argv) {
 }
 
 async function listLocales(i18nDirAbs) {
-  let entries;
   try {
-    entries = await fs.readdir(i18nDirAbs, { withFileTypes: true });
+    const entries = await fs.readdir(i18nDirAbs, { withFileTypes: true });
+    return entries.filter((e) => e.isDirectory()).map((e) => e.name);
   } catch {
     return [];
   }
-  return entries.filter((e) => e.isDirectory()).map((e) => e.name);
 }
 
 async function* walkFiles(dirAbs) {
@@ -151,16 +158,33 @@ async function* walkFiles(dirAbs) {
   }
 }
 
-function normalizeBaseUrl(baseUrl) {
-  const trimmed = String(baseUrl || '').trim();
-  if (!trimmed) return '';
-  return trimmed.replace(/\/+$/, '');
+function resolveModel({ cliModel, envModel, defaultModel }) {
+  if (cliModel) return cliModel;
+  if (envModel) return envModel;
+  return defaultModel;
 }
 
-function buildChatCompletionsUrl(baseUrl) {
-  const normalized = normalizeBaseUrl(baseUrl);
-  if (!normalized) return '';
-  return `${normalized}/chat/completions`;
+async function sleep(ms) {
+  await new Promise((r) => setTimeout(r, ms));
+}
+
+async function requestWithRetry(fn, maxRetries = 3) {
+  let attempt = 0;
+  while (true) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (attempt >= maxRetries) throw err;
+      const waitMs = Math.min(30_000, 800 * 2 ** attempt);
+      attempt += 1;
+      await sleep(waitMs);
+    }
+  }
+}
+
+function countMatches(text, re) {
+  const m = String(text || '').match(re);
+  return m ? m.length : 0;
 }
 
 function normalizeLocaleTag(locale) {
@@ -228,51 +252,6 @@ function localeToTargetLangCandidates(locale) {
   return unique;
 }
 
-function isQwenMtModel(model) {
-  const s = String(model || '').trim().toLowerCase();
-  return s.startsWith('qwen-mt-');
-}
-
-function resolveModel({ cliModel, envModel, defaultModel, warn }) {
-  if (cliModel) return cliModel;
-  if (envModel && isQwenMtModel(envModel)) return envModel;
-  if (envModel && warn) {
-    warn(
-      `OPENAI_MODEL=${envModel} 不是 Qwen-MT 翻译模型（建议 qwen-mt-flash|qwen-mt-plus|qwen-mt-turbo），将回退到 ${defaultModel}`,
-    );
-  }
-  return defaultModel;
-}
-
-async function sleep(ms) {
-  await new Promise((r) => setTimeout(r, ms));
-}
-
-async function requestWithRetry(doRequest, maxRetries = 3) {
-  let attempt = 0;
-  while (true) {
-    try {
-      const res = await doRequest();
-      if (res.ok) return res;
-      if (![429, 500, 502, 503, 504].includes(res.status) || attempt >= maxRetries) return res;
-      const waitMs = Math.min(30_000, 800 * 2 ** attempt);
-      attempt += 1;
-      await sleep(waitMs);
-      continue;
-    } catch (err) {
-      if (attempt >= maxRetries) throw err;
-      const waitMs = Math.min(30_000, 800 * 2 ** attempt);
-      attempt += 1;
-      await sleep(waitMs);
-    }
-  }
-}
-
-function countMatches(text, re) {
-  const m = String(text || '').match(re);
-  return m ? m.length : 0;
-}
-
 function stripFrontMatter(text) {
   const s = String(text || '');
   if (!s.trimStart().startsWith('---')) return s;
@@ -314,6 +293,8 @@ function buildTranslationUserPrompt({ targetLang, forceTargetLang = false }) {
     .join('\n');
 }
 
+
+
 function validateTranslatedLanguage(locale, translatedText) {
   const loc = normalizeLocaleTag(locale);
   const primary = loc.split('-')[0];
@@ -332,40 +313,6 @@ function validateTranslatedLanguage(locale, translatedText) {
     return 'wrong_language';
   }
   return null;
-}
-
-async function translateViaQwenMT({ url, apiKey, model, text, targetLang, sourceLang, forceTargetLang }) {
-  const response = await requestWithRetry(
-    () =>
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model,
-          messages: [{ role: 'user', content: `${buildTranslationUserPrompt({ targetLang, forceTargetLang })}\n\n${text}` }],
-          translation_options: {
-            source_lang: sourceLang,
-            target_lang: targetLang,
-          },
-        }),
-      }),
-    3,
-  );
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
-  }
-
-  const data = await response.json();
-  const content = data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
-  if (typeof content !== 'string') {
-    throw new Error(`Translation failed: ${JSON.stringify(data)}`);
-  }
-  return content;
 }
 
 function stripBomAndTrimLeft(text) {
@@ -479,6 +426,30 @@ function extractMarkdownImageUrls(markdown) {
   return urls;
 }
 
+function extractMdLinks(text) {
+  const urls = [];
+  // Matches [text](url) and ![alt](url)
+  // Group 2 is the URL content inside parentheses
+  const re = /(!?\[[^\]]*?\]\()([^)]*)(\))/g;
+  const s = String(text || '');
+  for (const m of s.matchAll(re)) {
+    urls.push(m[2]);
+  }
+  return urls;
+}
+
+function restoreMdLinks(text, originalUrls) {
+  let i = 0;
+  const re = /(!?\[[^\]]*?\]\()([^)]*)(\))/g;
+  const s = String(text || '');
+  return s.replace(re, (match, prefix, url, suffix) => {
+    if (i < originalUrls.length) {
+      return `${prefix}${originalUrls[i++]}${suffix}`;
+    }
+    return match;
+  });
+}
+
 async function fileExists(filePathAbs) {
   try {
     const st = await fs.stat(filePathAbs);
@@ -569,7 +540,7 @@ function printHelp() {
     'API 配置（建议用环境变量）：',
     '  OPENAI_API_KEY=...             必需（DMXAPI token）',
     '  OPENAI_BASE_URL=https://www.dmxapi.cn/v1   可选',
-    '  OPENAI_MODEL=qwen-mt-plus      可选',
+    '  OPENAI_MODEL=DeepSeek-V3.2     可选',
     '',
     '选项：',
     '  --locale en,ja        仅处理指定语言（逗号分隔）',
@@ -586,7 +557,7 @@ function printHelp() {
     '  --ext md,mdx          扫描的文件后缀（默认 md,mdx）',
     '  --api-key <key>       覆盖 OPENAI_API_KEY',
     '  --base-url <url>      覆盖 OPENAI_BASE_URL（默认 https://www.dmxapi.cn/v1）',
-    '  --model <name>        覆盖 OPENAI_MODEL（默认 qwen-mt-plus）',
+    '  --model <name>        覆盖 OPENAI_MODEL（默认 DeepSeek-V3.2）',
   ];
   process.stdout.write(`${lines.join('\n')}\n`);
 }
@@ -607,12 +578,13 @@ async function main() {
   const model = resolveModel({
     cliModel: args.model,
     envModel: process.env.OPENAI_MODEL,
-    defaultModel: 'qwen-mt-plus',
-    warn: (msg) => process.stderr.write(`${msg}\n`),
+    defaultModel: 'DeepSeek-V3.2',
   });
 
   const allLocales = await listLocales(i18nDirAbs);
-  const locales = (args.locales ?? allLocales)
+  // Default to allLocales if args.locales is null/empty
+  const targetLocales = args.locales && args.locales.length > 0 ? args.locales : allLocales;
+  const locales = targetLocales
     .filter((l) => (args.includeDefaultLocale ? true : l !== args.defaultLocale))
     .sort((a, b) => a.localeCompare(b));
 
@@ -629,8 +601,7 @@ async function main() {
   if (!apiKey) {
     throw new Error('缺少 API Key：请设置环境变量 OPENAI_API_KEY（或使用 --api-key）');
   }
-  const url = buildChatCompletionsUrl(baseUrl);
-  if (!url) {
+  if (!baseUrl) {
     throw new Error('base url 无效：请设置 OPENAI_BASE_URL（或使用 --base-url）');
   }
 
@@ -670,6 +641,10 @@ async function main() {
   };
 
   const sourceFiles = [];
+  const translationTasks = [];
+
+  process.stdout.write('正在扫描源文件和翻译状态...\n');
+
   for await (const srcPathAbs of walkFiles(sourceDirAbs)) {
     const ext = path.extname(srcPathAbs).toLowerCase();
     if (!args.extensions.has(ext)) continue;
@@ -690,6 +665,7 @@ async function main() {
       }
 
       const isMissing = !trStat;
+
       const isOutdated = !!trStat && srcStat.mtimeMs > trStat.mtimeMs;
       const status = isMissing ? 'missing' : isOutdated ? 'outdated' : 'ok';
 
@@ -709,7 +685,7 @@ async function main() {
         path.join(args.i18nDir, locale, toPosixPath(args.pluginDocsSubdir), relFromSource),
       );
 
-      await schedule(async () => {
+      translationTasks.push(async () => {
         try {
           const targetLang = localeToTargetLang(locale);
           const targetLangCandidates = localeToTargetLangCandidates(locale);
@@ -726,32 +702,34 @@ async function main() {
           const content = await fs.readFile(srcPathAbs, 'utf8');
           let translated = '';
           let invalidReason = null;
-          const modelCandidates = (() => {
-            const arr = [model, 'qwen-mt-turbo', 'qwen-mt-flash'].filter(Boolean);
-            const unique = [];
-            for (const m of arr) {
-              const v = String(m).trim();
-              if (v && !unique.includes(v)) unique.push(v);
-            }
-            return unique;
-          })();
+
+          const sourceLinks = extractMdLinks(content);
           for (let attempt = 0; attempt < 3; attempt++) {
             const sourceLang = attempt === 0 ? guessSourceLang(content) : 'Chinese';
             const forceTargetLang = attempt >= 1;
             const candidateTargetLang = targetLangCandidates[attempt] || targetLangCandidates[0] || targetLang;
-            const candidateModel = modelCandidates[attempt] || modelCandidates[0] || model;
-            translated = await translateViaQwenMT({
-              url,
-              apiKey,
-              model: candidateModel,
-              text: content,
-              targetLang: candidateTargetLang,
-              sourceLang,
-              forceTargetLang,
-            });
-            invalidReason = validateTranslatedDoc(translated, locale);
-            if (!invalidReason) break;
+            const prompt = buildTranslationUserPrompt({ targetLang: candidateTargetLang, forceTargetLang });
+            const fullPrompt = `${prompt}\n\n${content}`;
+            
+            try {
+              translated = await requestWithRetry(() => requestTranslate(baseUrl, apiKey, model, fullPrompt));
+              invalidReason = validateTranslatedDoc(translated, locale);
+
+              if (!invalidReason) {
+                const translatedLinks = extractMdLinks(translated);
+                if (sourceLinks.length !== translatedLinks.length) {
+                  invalidReason = `link_count_mismatch (src:${sourceLinks.length} vs tr:${translatedLinks.length})`;
+                } else {
+                  translated = restoreMdLinks(translated, sourceLinks);
+                }
+              }
+
+              if (!invalidReason) break;
+            } catch (err) {
+               if (attempt === 2) throw err;
+            }
           }
+          
           if (invalidReason === 'missing_title') {
             const titleLine = extractSourceTitleLine(content);
             if (titleLine) {
@@ -759,6 +737,7 @@ async function main() {
               invalidReason = validateTranslatedDoc(translated, locale);
             }
           }
+
           if (invalidReason) throw new Error(`翻译输出不可用（${invalidReason}）：${translationRel}`);
           await fs.mkdir(path.dirname(trPathAbs), { recursive: true });
           await fs.writeFile(trPathAbs, translated, 'utf8');
@@ -782,6 +761,14 @@ async function main() {
         }
       });
     }
+  }
+
+  process.stdout.write(
+    `\n[预检查完成] 待翻译任务: ${translationTasks.length}, 跳过: ${counts.skipped}\n开始执行翻译...\n\n`,
+  );
+
+  for (const task of translationTasks) {
+    await schedule(task);
   }
 
   await Promise.all(active);

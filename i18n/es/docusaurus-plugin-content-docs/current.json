@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
+    "message": "(Versión de PC) Cliente de control",
+    "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.玩法说明": {
+    "message": "Instrucciones de juego",
+    "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.设备介绍 & 购买": {
+    "message": "Introducción y Compra de Dispositivos",
+    "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.其他使用说明": {
+    "message": "Otras instrucciones de uso",
+    "description": "The label for category '其他使用说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
+    "message": "Conexión de dispositivo a WiFi (configuración de red)",
+    "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.开发文档": {
+    "message": "Documentación de desarrollo",
+    "description": "The label for category '开发文档' in sidebar 'tutorialSidebar'"
+  }
+}

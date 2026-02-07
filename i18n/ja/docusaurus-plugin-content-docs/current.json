@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
+    "message": "（PC版）制御クライアント",
+    "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.玩法说明": {
+    "message": "プレイ方法の説明",
+    "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.设备介绍 & 购买": {
+    "message": "デバイスの紹介 & 購入",
+    "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.其他使用说明": {
+    "message": "その他の使用説明",
+    "description": "The label for category '其他使用说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
+    "message": "デバイスをWiFiに接続（ネットワーク設定）",
+    "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.开发文档": {
+    "message": "開発ドキュメント",
+    "description": "The label for category '开发文档' in sidebar 'tutorialSidebar'"
+  }
+}
