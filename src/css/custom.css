@@ -28,3 +28,19 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 996px) {
+  .navbar__items--right
+    > .navbar__item:has(> .navbar__link.mobileLocaleDropdown) {
+    display: inherit;
+  }
+
+  .navbar__items--right
+    > .navbar__item:has(> .navbar__link.mobileLocaleDropdown)
+    .navbar__link.mobileLocaleDropdown {
+    max-width: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

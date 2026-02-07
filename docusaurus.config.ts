@@ -35,6 +35,7 @@ const config: Config = {
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownImages: 'warn',
     },
   },
 
@@ -115,7 +116,7 @@ const config: Config = {
           label: '文档',
         },
         {to: '/blog', label: '博客', position: 'left'},
-        {type: 'localeDropdown', position: 'right'},
+        {type: 'localeDropdown', position: 'right', className: 'mobileLocaleDropdown'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
