@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import Translate, {translate} from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
@@ -21,7 +22,12 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/">
-            查看使用说明
+            <Translate id="homepage.visitDocs">开始使用</Translate>
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/pc-client">
+            <Translate id="homepage.downloadClient">下载客户端</Translate>
           </Link>
         </div>
       </div>
@@ -33,8 +39,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`欢迎来到 ${siteConfig.title}`}
-      description="EZS 文档网站">
+      title={translate({id: 'homepage.title', message: '欢迎来到 {title}'}, {title: siteConfig.title})}
+      description={translate({id: 'homepage.description', message: '硅基之下(UnderSilicon) 文档网站'})}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

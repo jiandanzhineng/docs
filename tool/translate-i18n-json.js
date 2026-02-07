@@ -252,9 +252,24 @@ function printHelp() {
       '说明:',
       '  - 会翻译 i18n/<locale> 下的 code.json、navbar.json、footer.json、docs/current.json、blog/options.json（若存在）',
       "  - docs/current.json 的 sidebar category 会优先从 i18n/<locale>/.../_category_.json 同步 label",
+      '  - 支持并行处理 (5个) 和错误自动重试 (3次)',
       '',
     ].join('\n'),
   );
+}
+
+async function runWithRetry(fn, maxRetries = 3) {
+  let lastError;
+  for (let i = 0; i <= maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (e) {
+      lastError = e;
+      if (i === maxRetries) break;
+      await new Promise((r) => setTimeout(r, 1000));
+    }
+  }
+  throw lastError;
 }
 
 async function main() {
@@ -287,43 +302,84 @@ async function main() {
     'code.json',
   ];
 
-  const total = targetLocales.length * filesRel.length;
-  let current = 0;
+  const tasks = [];
+  process.stdout.write('Generating translation tasks...\n');
 
   for (const locale of targetLocales) {
     const labelMap = await buildCategoryLabelMap({repoRoot, docsDirAbs, i18nDirAbs, locale, pluginDocsSubdir});
 
     for (const rel of filesRel) {
-      current++;
       const filePathAbs = path.join(i18nDirAbs, locale, rel);
       try {
         await fs.access(filePathAbs);
+        tasks.push({
+          locale,
+          rel,
+          filePathAbs,
+          labelMap,
+          baseUrl,
+          apiKey,
+          model,
+        });
       } catch {
-        continue;
+        // ignore
       }
+    }
+  }
 
-      if (apiKey) {
-        try {
-          const remaining = total - current;
-          process.stdout.write(`[${current}/${total}] Translating ${locale} ${rel}... `);
-          const start = Date.now();
-          await translateChromeI18nFile({filePathAbs, locale, baseUrl, apiKey, model});
-          const cost = ((Date.now() - start) / 1000).toFixed(1);
-          process.stdout.write(`Done (${cost}s). Remaining: ${remaining}\n`);
-        } catch (e) {
-          process.stderr.write(`\n[SKIP] locale=${locale} ${rel}: ${formatError(e)}\n`);
-        }
+  const total = tasks.length;
+  if (total === 0) {
+    console.log('No files to process.');
+    return;
+  }
+
+  console.log(`Found ${total} files to process.`);
+
+  const CONCURRENCY = 5;
+  let completedCount = 0;
+
+  const processTask = async (task) => {
+    const {locale, rel, filePathAbs, labelMap, apiKey, baseUrl, model} = task;
+    const taskName = `${locale} ${rel}`;
+
+    if (apiKey) {
+      try {
+        const start = Date.now();
+        await runWithRetry(() => translateChromeI18nFile({filePathAbs, locale, baseUrl, apiKey, model}), 3);
+        const cost = ((Date.now() - start) / 1000).toFixed(1);
+        completedCount++;
+        process.stdout.write(`[${completedCount}/${total}] Translated ${taskName} (${cost}s)\n`);
+      } catch (e) {
+        completedCount++;
+        process.stderr.write(`[${completedCount}/${total}] [FAILED] ${taskName}: ${formatError(e)}\n`);
       }
+    } else {
+      completedCount++;
+    }
 
-      if (rel === path.join('docusaurus-plugin-content-docs', 'current.json')) {
+    if (rel === path.join('docusaurus-plugin-content-docs', 'current.json')) {
+      try {
         const obj = JSON.parse(await fs.readFile(filePathAbs, 'utf8'));
         if (isChromeI18nJsonObject(obj) && labelMap.size > 0) {
           applyCategoryLabelsToDocsCurrentJson({jsonObj: obj, labelMap});
           await fs.writeFile(filePathAbs, JSON.stringify(obj, null, 2) + '\n', 'utf8');
         }
+      } catch (e) {
+        process.stderr.write(`[ERROR] Applying labels for ${taskName}: ${formatError(e)}\n`);
       }
     }
-  }
+  };
+
+  const queue = [...tasks];
+  const workers = Array.from({length: Math.min(CONCURRENCY, tasks.length)}, async () => {
+    while (queue.length > 0) {
+      const task = queue.shift();
+      if (task) await processTask(task);
+    }
+  });
+
+  await Promise.all(workers);
+  console.log('All tasks completed.');
 }
 
 if (require.main === module) {
@@ -332,4 +388,3 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-

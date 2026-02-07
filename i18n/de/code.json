@@ -126,21 +126,17 @@
     "message": "Letztes Update{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versionen",
-    "description": "The label for the navbar versions dropdown on mobile view"
-  },
   "theme.NotFound.title": {
     "message": "Seite nicht gefunden",
     "description": "The title of the 404 page"
   },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versionen",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
     "description": "The label alongside a tag list"
-  },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Schließen",
-    "description": "The ARIA label for close button of announcement bar"
   },
   "theme.admonition.caution": {
     "message": "vorsicht",
@@ -166,6 +162,10 @@
     "message": "warnung",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Schließen",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Navigation der letzten Beiträge im Blog",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -186,10 +186,6 @@
     "message": "Main",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Sprachen",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
     "description": "The first paragraph of the 404 page"
@@ -201,6 +197,10 @@
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Auf dieser Seite",
     "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.blog.post.readMore": {
     "message": "Mehr lesen",
@@ -214,10 +214,6 @@
     "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Zeilenumbruch umschalten",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
-  },
   "theme.CodeBlock.copy": {
     "message": "Kopieren",
     "description": "The copy button label on code blocks"
@@ -229,6 +225,10 @@
   "theme.CodeBlock.copyButtonAriaLabel": {
     "message": "In die Zwischenablage kopieren",
     "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Zeilenumbruch umschalten",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Home page",
@@ -325,5 +325,59 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.visitDocs": {
+    "message": "Benutzerhandbuch ansehen"
+  },
+  "homepage.title": {
+    "message": "Willkommen bei {title}"
+  },
+  "homepage.description": {
+    "message": "EZS-Dokumentationswebsite"
+  },
+  "易于使用": {
+    "message": "Benutzerfreundlich"
+  },
+  "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
+    "message": "Docusaurus wurde von Grund auf für einfache Installation und Nutzung entwickelt, um Ihre Website schnell zum Laufen zu bringen."
+  },
+  "专注于核心内容": {
+    "message": "Fokus auf Kerninhalte"
+  },
+  "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
+    "message": "Docusaurus lässt Sie sich auf die Dokumente selbst konzentrieren und übernimmt die mühsame Arbeit für Sie. Legen Sie Ihre Dokumente einfach ins {docs}-Verzeichnis."
+  },
+  "基于 React 构建": {
+    "message": "Auf React aufgebaut"
+  },
+  "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
+    "message": "Erweitern oder passen Sie Ihr Website-Layout an, indem Sie React wiederverwenden. Docusaurus kann erweitert werden, während Kopf- und Fußzeile beibehalten werden."
+  },
+  "homepage.downloadClient": {
+    "message": "Client herunterladen"
+  },
+  "硬件生态与连接": {
+    "message": "Hardware-Ökosystem und Konnektivität"
+  },
+  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
+    "message": "Unterstützt verschiedene intelligente Endgeräte (Motoren, Vibratoren, Impulsgeräte usw.), schnelle WLAN-Einrichtung, stabile Verbindung und einfache Handhabung."
+  },
+  "无限创意玩法": {
+    "message": "Unendliche kreative Spielmöglichkeiten"
+  },
+  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
+    "message": "Integrierte unterhaltsame Interaktionsmodi wie Liegestütz-Erkennung, Elektroschock-Fragen, Stopp-Training und mehr machen die Steuerung noch unterhaltsamer."
+  },
+  "全平台控制": {
+    "message": "Plattformübergreifende Steuerung"
+  },
+  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
+    "message": "Leistungsstarke Unterstützung für Desktop- und mobile Clients (App/Mini-Programm) zur jederzeitigen Überwachung des Gerätestatus."
+  },
+  "开放开发生态": {
+    "message": "Open-Development-Ecosystem"
+  },
+  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
+    "message": "Bietet eine Python-Steuerungsschnittstelle und Open-Source-Code zur Unterstützung von Entwicklern bei benutzerdefinierten Erweiterungen für den gemeinsamen Aufbau eines intelligenten Spielerlebnisses."
   }
 }

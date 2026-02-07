@@ -325,5 +325,59 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "homepage.visitDocs": {
+    "message": "查看使用说明"
+  },
+  "homepage.title": {
+    "message": "欢迎来到 {title}"
+  },
+  "homepage.description": {
+    "message": "硅基之下(UnderSilicon) 文档网站"
+  },
+  "易于使用": {
+    "message": "易于使用"
+  },
+  "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
+    "message": "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。"
+  },
+  "专注于核心内容": {
+    "message": "专注于核心内容"
+  },
+  "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
+    "message": "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。"
+  },
+  "基于 React 构建": {
+    "message": "基于 React 构建"
+  },
+  "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
+    "message": "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。"
+  },
+  "homepage.downloadClient": {
+    "message": "下载客户端"
+  },
+  "硬件生态与连接": {
+    "message": "硬件生态与连接"
+  },
+  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
+    "message": "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。"
+  },
+  "无限创意玩法": {
+    "message": "无限创意玩法"
+  },
+  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
+    "message": "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。"
+  },
+  "全平台控制": {
+    "message": "全平台控制"
+  },
+  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
+    "message": "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。"
+  },
+  "开放开发生态": {
+    "message": "开放开发生态"
+  },
+  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
+    "message": "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。"
   }
 }

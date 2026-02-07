@@ -1,18 +1,18 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "次へ（現在のバージョン）",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
-    "message": "（PC版）制御クライアント",
+    "message": "（PC版）コントロールクライアント",
     "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.玩法说明": {
-    "message": "プレイ方法の説明",
+    "message": "遊び方説明",
     "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.设备介绍 & 购买": {
-    "message": "デバイスの紹介 & 購入",
+    "message": "デバイス紹介 & 購入",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.其他使用说明": {

@@ -11,8 +11,8 @@ const organizationName = process.env.GITHUB_ORG ?? 'facebook';
 const projectName = process.env.GITHUB_PROJECT ?? 'docusaurus';
 
 const config: Config = {
-  title: 'EZS 文档',
-  tagline: '快速构建高效的文档网站',
+  title: '硅基之下(UnderSilicon)文档',
+  tagline: '探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -103,9 +103,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'EZS 文档',
+      title: '硅基之下(UnderSilicon) 文档',
       logo: {
-        alt: 'EZS 文档 Logo',
+        alt: '硅基之下(UnderSilicon) 文档 Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -167,7 +167,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} EZS 文档, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 硅基之下(UnderSilicon) , Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

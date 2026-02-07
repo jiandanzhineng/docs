@@ -1,49 +1,61 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  title: ReactNode;
+  emoji: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '易于使用',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: <Translate>硬件生态与连接</Translate>,
+    emoji: '🔌',
     description: (
-      <>
-        Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。
-      </>
+      <Translate>
+        支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。
+      </Translate>
     ),
   },
   {
-    title: '专注于核心内容',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: <Translate>无限创意玩法</Translate>,
+    emoji: '🎮',
     description: (
-      <>
-        Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 <code>docs</code> 目录即可。
-      </>
+      <Translate>
+        内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。
+      </Translate>
     ),
   },
   {
-    title: '基于 React 构建',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: <Translate>全平台控制</Translate>,
+    emoji: '📱',
     description: (
-      <>
-        通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。
-      </>
+      <Translate>
+        提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。
+      </Translate>
+    ),
+  },
+  {
+    title: <Translate>开放开发生态</Translate>,
+    emoji: '👨‍💻',
+    description: (
+      <Translate>
+        提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。
+      </Translate>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, emoji, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <span style={{fontSize: '5rem', lineHeight: '1.5', display: 'block', marginBottom: '1rem'}} role="img" aria-label="icon">
+          {emoji}
+        </span>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

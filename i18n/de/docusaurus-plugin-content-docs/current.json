@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
-    "message": "(PC-Version) Client-Steuerung",
+    "message": "(PC-Version) Kontroll-Client",
     "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.玩法说明": {
@@ -20,7 +20,7 @@
     "description": "The label for category '其他使用说明' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
-    "message": "Gerät mit WLAN verbinden (Einrichtung)",
+    "message": "Gerät mit WiFi verbinden (Netzwerkkonfiguration)",
     "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.开发文档": {

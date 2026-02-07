@@ -1,4 +1,4 @@
-# EZS 文档站
+# 硅基之下(UnderSilicon) 文档站
 
 本项目使用 [Docusaurus](https://docusaurus.io/) 构建静态文档站点。
 
