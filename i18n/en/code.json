@@ -1,4 +1,46 @@
 {
+  "homepage.heroTitle": {
+    "message": "UnderSilicon Documentation"
+  },
+  "homepage.heroTagline": {
+    "message": "Explore the UnderSilicon Intelligent Ecosystem, Unlock Infinite Interactive Gameplay"
+  },
+  "homepage.visitDocs": {
+    "message": "Get Started"
+  },
+  "homepage.downloadClient": {
+    "message": "Download Client"
+  },
+  "homepage.title": {
+    "message": "Welcome to UnderSilicon Documentation"
+  },
+  "homepage.description": {
+    "message": "UnderSilicon Documentation Website"
+  },
+  "硬件生态与连接": {
+    "message": "Hardware Ecosystem & Connectivity"
+  },
+  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
+    "message": "Supports various smart terminals (motors, vibrators, pulse devices, etc.), ultra-fast WiFi configuration, stable connection, easy to get started."
+  },
+  "无限创意玩法": {
+    "message": "Infinite Creative Gameplay"
+  },
+  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
+    "message": "Built-in push-up detection, electric shock Q&A, edging training, and other fun interactive modes to make control more interesting."
+  },
+  "全平台控制": {
+    "message": "Cross-Platform Control"
+  },
+  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
+    "message": "Provides powerful PC client and mobile support (App/Mini Program), allowing you to control device status anytime, anywhere."
+  },
+  "开放开发生态": {
+    "message": "Open Development Ecosystem"
+  },
+  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
+    "message": "Provides Python control interfaces and open-source code, supports developer customization and extension, co-creating the smart toy experience."
+  },
   "theme.ErrorPageContent.title": {
     "message": "Page has crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -16,15 +58,15 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog post list pagination navigation",
+    "message": "Blog list pagination navigation",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer posts",
+    "message": "Newer entries",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older posts",
+    "message": "Older entries",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
@@ -56,19 +98,19 @@
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Toggle light/dark mode (current is {mode})",
+    "message": "Toggle light/dark mode (current: {mode})",
     "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Page breadcrumbs",
+    "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
-  "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Page path",
-    "description": "The ARIA label for the breadcrumbs"
-  },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Document tabs",
+    "message": "Docs pagination",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -84,7 +126,7 @@
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} \"{tagName}\"",
+    "message": "{nDocsTagged}「{tagName}」",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
@@ -99,11 +141,11 @@
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "See the latest documentation at {latestVersionLink} ({versionLabel}).",
+    "message": "For the latest documentation, see {latestVersionLink} ({versionLabel}).",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "Latest version",
+    "message": "latest version",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
@@ -115,24 +157,24 @@
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": "on {date}",
+    "message": "on {date} ",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": "by {user}",
+    "message": "by {user} ",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated {byUser}{atDate}",
+    "message": "Last updated{byUser}{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
-  },
-  "theme.NotFound.title": {
-    "message": "Page Not Found",
-    "description": "The title of the 404 page"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Select version",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Page Not Found",
+    "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
@@ -186,24 +228,24 @@
     "message": "Main navigation",
     "description": "The ARIA label for the main navigation"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Select language",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.NotFound.p1": {
     "message": "We could not find the page you were looking for.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "Please contact the owner of the site from which the original link came and inform them that the link is broken.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "Page overview",
+    "message": "On this page",
     "description": "The label used by the button on the collapsible TOC component"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Select language",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.blog.post.readMore": {
-    "message": "Read more",
+    "message": "Read More",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
@@ -279,7 +321,7 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} with tag \"{tagName}\"",
+    "message": "{nPosts} with tag 「{tagName}」",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -311,7 +353,7 @@
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft and is only visible in development environments. It will not be included in the production build.",
+    "message": "This page is a draft. It is only visible in development environments and will not be included in production builds.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -325,65 +367,5 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
-  },
-  "homepage.visitDocs": {
-    "message": "View Documentation"
-  },
-  "homepage.title": {
-    "message": "Welcome to {title}"
-  },
-  "homepage.description": {
-    "message": "UnderSilicon Documentation Website"
-  },
-  "易于使用": {
-    "message": "Easy to Use"
-  },
-  "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
-  },
-  "专注于核心内容": {
-    "message": "Focus on Your Content"
-  },
-  "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus lets you focus on your docs, and we'll do the chores. Just drop your documents into the {docs} directory."
-  },
-  "基于 React 构建": {
-    "message": "Built Using React"
-  },
-  "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer."
-  },
-  "homepage.downloadClient": {
-    "message": "Download Client"
-  },
-  "硬件生态与连接": {
-    "message": "Hardware Ecosystem & Connectivity"
-  },
-  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "Supports various smart devices (motors, vibrators, pulse devices, etc.), fast WiFi setup, stable connection, easy to get started."
-  },
-  "无限创意玩法": {
-    "message": "Unlimited Creative Play"
-  },
-  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "Built-in push-up detection, electric shock Q&A, edging training, and other fun interactive modes to make control more interesting."
-  },
-  "全平台控制": {
-    "message": "Cross-Platform Control"
-  },
-  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
-    "message": "Provides powerful PC client and mobile support (App/Mini Program), allowing you to control device status anytime, anywhere."
-  },
-  "开放开发生态": {
-    "message": "Open Development Ecosystem"
-  },
-  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "Provides Python control interface and open-source code, supports developer customization and extension, co-creating the smart toy experience."
-  },
-  "homepage.heroTitle": {
-    "message": "UnderSilicon Documentation"
-  },
-  "homepage.heroTagline": {
-    "message": "Explore the UnderSilicon smart ecosystem and unlock unlimited interactive play"
   }
 }

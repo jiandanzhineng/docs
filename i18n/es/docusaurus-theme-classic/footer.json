@@ -15,28 +15,24 @@
     "message": "Instrucciones de uso",
     "description": "The label of footer link with label=使用说明 linking to /docs/"
   },
-  "link.item.label.Stack Overflow": {
-    "message": "Stack Overflow",
-    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/docusaurus"
-  },
-  "link.item.label.Discord": {
-    "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://discordapp.com/invite/docusaurus"
+  "link.item.label.QQ群(验证问题答案为 简单智能)": {
+    "message": "Grupo QQ (La respuesta a la pregunta de verificación es 简单智能)",
+    "description": "The label of footer link with label=QQ群(验证问题答案为 简单智能) linking to https://qm.qq.com/q/EN44NRr8RO"
   },
   "link.item.label.X": {
     "message": "X",
-    "description": "The label of footer link with label=X linking to https://x.com/docusaurus"
+    "description": "The label of footer link with label=X linking to https://x.com/lufashi181845"
   },
-  "link.item.label.博客": {
-    "message": "Blog",
-    "description": "The label of footer link with label=博客 linking to /blog"
+  "link.item.label.淘宝店": {
+    "message": "Tienda de Taobao",
+    "description": "The label of footer link with label=淘宝店 linking to https://shop282688998.taobao.com/"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/orgs/jiandanzhineng/repositories"
   },
   "copyright": {
-    "message": "Copyright © 2026 EZS Documentación, Inc. Construido con Docusaurus.",
+    "message": "Copyright © 2026 硅基之下(UnderSilicon) , Inc. Construido con Docusaurus.",
     "description": "The footer copyright"
   }
 }

@@ -3,10 +3,6 @@
     "message": "次へ",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
-    "message": "（PC版）コントロールクライアント",
-    "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.玩法说明": {
     "message": "遊び方説明",
     "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"

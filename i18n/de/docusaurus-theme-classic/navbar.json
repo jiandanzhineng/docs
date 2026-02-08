@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Dokumentation zu UnderSilicon",
+    "message": "UnderSilicon Dokumentation",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "EZS-Dokumentations-Logo",
+    "message": "EZS-Dokumentationslogo",
     "description": "The alt text of navbar logo"
   },
   "item.label.文档": {

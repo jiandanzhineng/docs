@@ -1,4 +1,46 @@
 {
+  "homepage.heroTitle": {
+    "message": "シリコン基盤の下(UnderSilicon)ドキュメント"
+  },
+  "homepage.heroTagline": {
+    "message": "シリコン基盤の下(UnderSilicon) スマートエコシステムを探索し、無限のインタラクティブな遊び方を解放"
+  },
+  "homepage.visitDocs": {
+    "message": "使い始める"
+  },
+  "homepage.downloadClient": {
+    "message": "クライアントをダウンロード"
+  },
+  "homepage.title": {
+    "message": "シリコン基盤の下(UnderSilicon)ドキュメントへようこそ"
+  },
+  "homepage.description": {
+    "message": "シリコン基盤の下(UnderSilicon) ドキュメントサイト"
+  },
+  "硬件生态与连接": {
+    "message": "ハードウェアエコシステムと接続"
+  },
+  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
+    "message": "多様なスマート端末（モーター、バイブレーター、パルスデバイスなど）をサポートし、高速Wi-Fi設定、安定した接続、簡単な操作を実現。"
+  },
+  "无限创意玩法": {
+    "message": "無限のクリエイティブな遊び方"
+  },
+  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
+    "message": "腕立て伏せ検出、電気ショッククイズ、寸止めトレーニングなど、多彩で楽しいインタラクティブモードを内蔵し、コントロールをより面白くします。"
+  },
+  "全平台控制": {
+    "message": "全プラットフォーム対応コントロール"
+  },
+  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
+    "message": "強力なPCクライアントとモバイル端末サポート（アプリ/ミニアプリ）を提供し、いつでもどこでもデバイスの状態を管理できます。"
+  },
+  "开放开发生态": {
+    "message": "オープン開発エコシステム"
+  },
+  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
+    "message": "Python制御インターフェースとオープンソースコードを提供し、開発者のカスタム拡張をサポートして、スマート玩具体験を共に構築します。"
+  },
   "theme.ErrorPageContent.title": {
     "message": "ページがクラッシュしました。",
     "description": "The title of the fallback page when the page crashed"
@@ -16,7 +58,7 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "ブログ記事リストのページネーション",
+    "message": "ブログ記事リストページネーション",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -28,7 +70,7 @@
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "ブログ記事のページネーション",
+    "message": "ブログ記事ページネーション",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
@@ -40,7 +82,7 @@
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
-    "message": "すべてのタグを表示",
+    "message": "すべてのタグを見る",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
@@ -59,13 +101,13 @@
     "message": "ライト/ダークモードを切り替え（現在：{mode}）",
     "description": "The ARIA label for the color mode toggle"
   },
-  "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} 項目",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "ページパンくずリスト",
     "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} 項目",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "ドキュメントページネーション",
@@ -80,7 +122,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count} 件のドキュメントにタグ付けされています",
+    "message": "{count} 件のドキュメントがタグ付けされています",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
@@ -126,13 +168,13 @@
     "message": "最終更新日：{byUser}{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.NotFound.title": {
-    "message": "ページが見つかりません",
-    "description": "The title of the 404 page"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "バージョンを選択",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "ページが見つかりません",
+    "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
     "message": "タグ：",
@@ -179,28 +221,28 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(新しいタブで開きます)",
+    "message": "(新しいタブで開く)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "メインナビゲーション",
     "description": "The ARIA label for the main navigation"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "言語を選択",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.NotFound.p1": {
     "message": "お探しのページが見つかりませんでした。",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "元のリンクを提供したサイトの所有者に連絡し、リンクが壊れていることを伝えてください。",
+    "message": "元のリンク提供元のサイト所有者に連絡し、リンクが壊れていることをお知らせください。",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "このページの目次",
     "description": "The label used by the button on the collapsible TOC component"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "言語を選択",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.blog.post.readMore": {
     "message": "続きを読む",
@@ -231,7 +273,7 @@
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "ホームページ",
+    "message": "ホーム",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
@@ -279,7 +321,7 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "タグ「{tagName}」を含む {nPosts}",
+    "message": "{nPosts} 件の記事がタグ「{tagName}」を含みます",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -291,7 +333,7 @@
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "すべての著者を表示",
+    "message": "すべての著者を見る",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
@@ -311,7 +353,7 @@
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "このページは下書きです。開発環境でのみ表示され、本番ビルドには含まれません。",
+    "message": "このページは下書きです。開発環境でのみ表示され、正式リリースには含まれません。",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -325,65 +367,5 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
-  },
-  "homepage.visitDocs": {
-    "message": "使い方を見る"
-  },
-  "homepage.title": {
-    "message": "{title} へようこそ"
-  },
-  "homepage.description": {
-    "message": "シリコン・アンダー(UnderSilicon) ドキュメントサイト"
-  },
-  "易于使用": {
-    "message": "使いやすい"
-  },
-  "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurusは、インストールと使用が簡単で、サイトを素早く立ち上げられるように設計されています。"
-  },
-  "专注于核心内容": {
-    "message": "コンテンツに集中"
-  },
-  "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurusは、ドキュメント自体に集中できるようにします。面倒な作業は私たちが行います。ドキュメントを{docs}ディレクトリに入れるだけです。"
-  },
-  "基于 React 构建": {
-    "message": "Reactベース"
-  },
-  "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "Reactを再利用してサイトレイアウトを拡張またはカスタマイズできます。Docusaurusは、ヘッダーとフッターを再利用しながら拡張することをサポートしています。"
-  },
-  "homepage.downloadClient": {
-    "message": "クライアントをダウンロード"
-  },
-  "硬件生态与连接": {
-    "message": "ハードウェアエコシステムと接続"
-  },
-  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "様々なスマートデバイス（モーター、バイブレーター、パルスデバイスなど）をサポート。高速Wi-Fi設定、安定した接続、簡単操作。"
-  },
-  "无限创意玩法": {
-    "message": "無限のクリエイティブな遊び方"
-  },
-  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "腕立て伏せ検出、電気ショッククイズ、寸止めトレーニングなど、様々な楽しいインタラクションモードを内蔵し、コントロールをより面白くします。"
-  },
-  "全平台控制": {
-    "message": "全プラットフォーム対応"
-  },
-  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
-    "message": "強力なPCクライアントとモバイルサポート（アプリ/ミニアプリ）を提供し、いつでもどこでもデバイスの状態を管理できます。"
-  },
-  "开放开发生态": {
-    "message": "オープンな開発エコシステム"
-  },
-  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "Python制御インターフェースとオープンソースコードを提供し、開発者がカスタム拡張を可能にし、スマート玩具体験を共に構築します。"
-  },
-  "homepage.heroTitle": {
-    "message": "シリコン・アンダー(UnderSilicon) ドキュメント"
-  },
-  "homepage.heroTagline": {
-    "message": "シリコン・アンダー(UnderSilicon) スマートエコシステムを探索し、無限のインタラクティブな遊び方を解き放とう"
   }
 }

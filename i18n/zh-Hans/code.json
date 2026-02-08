@@ -1,4 +1,46 @@
 {
+  "homepage.heroTitle": {
+    "message": "硅基之下(UnderSilicon)文档"
+  },
+  "homepage.heroTagline": {
+    "message": "探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法"
+  },
+  "homepage.visitDocs": {
+    "message": "开始使用"
+  },
+  "homepage.downloadClient": {
+    "message": "下载客户端"
+  },
+  "homepage.title": {
+    "message": "欢迎来到 硅基之下(UnderSilicon)文档"
+  },
+  "homepage.description": {
+    "message": "硅基之下(UnderSilicon) 文档网站"
+  },
+  "硬件生态与连接": {
+    "message": "硬件生态与连接"
+  },
+  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
+    "message": "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。"
+  },
+  "无限创意玩法": {
+    "message": "无限创意玩法"
+  },
+  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
+    "message": "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。"
+  },
+  "全平台控制": {
+    "message": "全平台控制"
+  },
+  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
+    "message": "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。"
+  },
+  "开放开发生态": {
+    "message": "开放开发生态"
+  },
+  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
+    "message": "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。"
+  },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
@@ -59,13 +101,13 @@
     "message": "切换浅色/暗黑模式（当前为{mode}）",
     "description": "The ARIA label for the color mode toggle"
   },
-  "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} 个项目",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "页面路径",
     "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} 个项目",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "文件选项卡",
@@ -126,13 +168,13 @@
     "message": "最后{byUser}{atDate}更新",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.NotFound.title": {
-    "message": "找不到页面",
-    "description": "The title of the 404 page"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "选择版本",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "找不到页面",
+    "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
     "message": "标签：",
@@ -186,6 +228,10 @@
     "message": "主导航",
     "description": "The ARIA label for the main navigation"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "选择语言",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.NotFound.p1": {
     "message": "我们找不到您要找的页面。",
     "description": "The first paragraph of the 404 page"
@@ -197,10 +243,6 @@
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "本页总览",
     "description": "The label used by the button on the collapsible TOC component"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "选择语言",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.blog.post.readMore": {
     "message": "阅读更多",
@@ -325,65 +367,5 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
-  },
-  "homepage.visitDocs": {
-    "message": "查看使用说明"
-  },
-  "homepage.title": {
-    "message": "欢迎来到 {title}"
-  },
-  "homepage.description": {
-    "message": "硅基之下(UnderSilicon) 文档网站"
-  },
-  "易于使用": {
-    "message": "易于使用"
-  },
-  "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。"
-  },
-  "专注于核心内容": {
-    "message": "专注于核心内容"
-  },
-  "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。"
-  },
-  "基于 React 构建": {
-    "message": "基于 React 构建"
-  },
-  "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。"
-  },
-  "homepage.downloadClient": {
-    "message": "下载客户端"
-  },
-  "硬件生态与连接": {
-    "message": "硬件生态与连接"
-  },
-  "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。"
-  },
-  "无限创意玩法": {
-    "message": "无限创意玩法"
-  },
-  "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。"
-  },
-  "全平台控制": {
-    "message": "全平台控制"
-  },
-  "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
-    "message": "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。"
-  },
-  "开放开发生态": {
-    "message": "开放开发生态"
-  },
-  "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。"
-  },
-  "homepage.heroTitle": {
-    "message": "硅基之下(UnderSilicon)文档"
-  },
-  "homepage.heroTagline": {
-    "message": "探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法"
   }
 }

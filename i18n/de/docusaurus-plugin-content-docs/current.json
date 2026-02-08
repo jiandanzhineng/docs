@@ -3,10 +3,6 @@
     "message": "Nächste",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.（电脑版）控制客户端": {
-    "message": "（Desktop-Version）Steuerungsclient",
-    "description": "The label for category '（电脑版）控制客户端' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.玩法说明": {
     "message": "Spielanleitung",
     "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"
