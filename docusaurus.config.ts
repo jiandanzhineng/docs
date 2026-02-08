@@ -140,16 +140,12 @@ const config: Config = {
           title: '社区',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'QQ群(验证问题答案为 简单智能)',
+              href: 'https://qm.qq.com/q/EN44NRr8RO',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/lufashi181845',
             },
           ],
         },
@@ -157,12 +153,12 @@ const config: Config = {
           title: '更多',
           items: [
             {
-              label: '博客',
-              to: '/blog',
+              label: "淘宝店",
+              href: "https://shop282688998.taobao.com/",
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/orgs/jiandanzhineng/repositories',
             },
           ],
         },
