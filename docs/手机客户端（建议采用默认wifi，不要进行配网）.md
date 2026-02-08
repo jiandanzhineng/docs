@@ -29,7 +29,7 @@ cd "${HOME}/control-panel-stable" && npm run dev:all
 
 等待运行完成 类似下图（如20分钟后还没有类似图像 请参考常见问题1）
 
-![1761797537885-6667e5d2-a8ea-4d3b-956d-32f8ebe1d663.jpeg](./img/aeI6B3lspG60kJMv/1761797537885-6667e5d2-a8ea-4d3b-956d-32f8ebe1d663-159999.jpeg)
+<img src={require('./img/aeI6B3lspG60kJMv/1761797537885-6667e5d2-a8ea-4d3b-956d-32f8ebe1d663-159999.jpeg').default} width="30%" height="auto" alt="1761797537885-6667e5d2-a8ea-4d3b-956d-32f8ebe1d663.jpeg" />
 
 4. 打开手机热点 建议将热点名设置为easysmart 密码设置为8个1 设备会自动连接 如果不是这个请参考其他使用说明中的设备配网方式进行配网，建议用默认选项
 5. 在手机浏览器打开访问 127.0.0.1:5173
