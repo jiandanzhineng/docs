@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "EZS ドキュメンテーション",
+    "message": "シリコン基盤の下 (UnderSilicon) ドキュメント",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "EZS ドキュメントロゴ",
+    "message": "EZS ドキュメント ロゴ",
     "description": "The alt text of navbar logo"
   },
   "item.label.文档": {

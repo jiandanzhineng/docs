@@ -379,5 +379,11 @@
   },
   "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
     "message": "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。"
+  },
+  "homepage.heroTitle": {
+    "message": "硅基之下(UnderSilicon)文档"
+  },
+  "homepage.heroTagline": {
+    "message": "探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法"
   }
 }

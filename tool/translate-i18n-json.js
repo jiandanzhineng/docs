@@ -214,8 +214,8 @@ function applyCategoryLabelsToDocsCurrentJson({jsonObj, labelMap}) {
   }
 }
 
-async function translateChromeI18nFile({filePathAbs, locale, baseUrl, apiKey, model}) {
-  const raw = await fs.readFile(filePathAbs, 'utf8');
+async function translateChromeI18nFile({srcFilePath, destFilePath, locale, baseUrl, apiKey, model}) {
+  const raw = await fs.readFile(srcFilePath, 'utf8');
   let jsonObj;
   try {
     jsonObj = JSON.parse(raw);
@@ -230,7 +230,9 @@ async function translateChromeI18nFile({filePathAbs, locale, baseUrl, apiKey, mo
   const translatedRaw = await requestTranslate(baseUrl, apiKey, model, fullPrompt);
   const clean = stripJsonCodeFence(translatedRaw);
   JSON.parse(clean);
-  await fs.writeFile(filePathAbs, clean + '\n', 'utf8');
+
+  await fs.mkdir(path.dirname(destFilePath), {recursive: true});
+  await fs.writeFile(destFilePath, clean + '\n', 'utf8');
   return true;
 }
 
@@ -309,13 +311,15 @@ async function main() {
     const labelMap = await buildCategoryLabelMap({repoRoot, docsDirAbs, i18nDirAbs, locale, pluginDocsSubdir});
 
     for (const rel of filesRel) {
-      const filePathAbs = path.join(i18nDirAbs, locale, rel);
+      const srcFilePath = path.join(i18nDirAbs, defaultLocale, rel);
+      const destFilePath = path.join(i18nDirAbs, locale, rel);
       try {
-        await fs.access(filePathAbs);
+        await fs.access(srcFilePath);
         tasks.push({
           locale,
           rel,
-          filePathAbs,
+          srcFilePath,
+          destFilePath,
           labelMap,
           baseUrl,
           apiKey,
@@ -339,13 +343,13 @@ async function main() {
   let completedCount = 0;
 
   const processTask = async (task) => {
-    const {locale, rel, filePathAbs, labelMap, apiKey, baseUrl, model} = task;
+    const {locale, rel, srcFilePath, destFilePath, labelMap, apiKey, baseUrl, model} = task;
     const taskName = `${locale} ${rel}`;
 
     if (apiKey) {
       try {
         const start = Date.now();
-        await runWithRetry(() => translateChromeI18nFile({filePathAbs, locale, baseUrl, apiKey, model}), 3);
+        await runWithRetry(() => translateChromeI18nFile({srcFilePath, destFilePath, locale, baseUrl, apiKey, model}), 3);
         const cost = ((Date.now() - start) / 1000).toFixed(1);
         completedCount++;
         process.stdout.write(`[${completedCount}/${total}] Translated ${taskName} (${cost}s)\n`);
@@ -359,13 +363,13 @@ async function main() {
 
     if (rel === path.join('docusaurus-plugin-content-docs', 'current.json')) {
       try {
-        const obj = JSON.parse(await fs.readFile(filePathAbs, 'utf8'));
+        const obj = JSON.parse(await fs.readFile(destFilePath, 'utf8'));
         if (isChromeI18nJsonObject(obj) && labelMap.size > 0) {
           applyCategoryLabelsToDocsCurrentJson({jsonObj: obj, labelMap});
-          await fs.writeFile(filePathAbs, JSON.stringify(obj, null, 2) + '\n', 'utf8');
+          await fs.writeFile(destFilePath, JSON.stringify(obj, null, 2) + '\n', 'utf8');
         }
       } catch (e) {
-        process.stderr.write(`[ERROR] Applying labels for ${taskName}: ${formatError(e)}\n`);
+        // ignore
       }
     }
   };

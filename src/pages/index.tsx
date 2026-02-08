@@ -15,9 +15,11 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          <Translate id="homepage.heroTitle">硅基之下(UnderSilicon)文档</Translate>
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          <Translate id="homepage.heroTagline">探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法</Translate>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -39,7 +41,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={translate({id: 'homepage.title', message: '欢迎来到 {title}'}, {title: siteConfig.title})}
+      title={translate({id: 'homepage.title', message: '欢迎来到 硅基之下(UnderSilicon)文档'})}
       description={translate({id: 'homepage.description', message: '硅基之下(UnderSilicon) 文档网站'})}>
       <HomepageHeader />
       <main>
