@@ -2,53 +2,54 @@
 
 Alle Geräte können gemäß dieser Anleitung mit dem WLAN verbunden werden.
 
-**<font>Hinweis: Wenn Sie das Standard-WLAN nutzen möchten, führen Sie keine Netzwerkkonfiguration durch. Das Standard-WLAN heißt „easysmart“ mit dem Passwort „11111111“. Das Gerät verbindet sich automatisch mit dem Standard-WLAN.</font>**
+**<font>Hinweis: Wenn Sie das Standard-WLAN verwenden möchten, führen Sie keine Netzwerkkonfiguration durch. Das Standard-WLAN heißt "easysmart" mit dem Passwort "11111111". Das Gerät verbindet sich automatisch mit dem Standard-WLAN.</font>**
 
-Videoanleitung:
+Video-Tutorials:
 
 Douyin: [https://v.douyin.com/l_QWua94sRA/](https://v.douyin.com/l_QWua94sRA/)
 
-YouTube: [https://www.youtube.com/watch?v=W7ITGIC0lw8](https://www.youtube.com/watch?v=W7ITGIC0lw8)
+YT: [https://www.youtube.com/watch?v=W7ITGIC0lw8](https://www.youtube.com/watch?v=W7ITGIC0lw8)
 
 **<font>Voraussetzungen:</font>**
 
 1.  Im Raum ist ein 2,4-GHz-WLAN verfügbar.
-2.  Das Mobiltelefon ist derzeit mit diesem WLAN verbunden (wenn es sich um ein kombiniertes 2,4-GHz- und 5-GHz-Netzwerk handelt, kann auch das gleichnamige 5-GHz-WLAN verwendet werden).
+2.  Das Smartphone ist aktuell mit diesem WLAN verbunden (bei kombinierten 2,4-GHz-/5-GHz-Netzen mit gleichem Namen ist auch eine Verbindung mit dem 5-GHz-Netz möglich).
 
 Falls dies nicht erfolgreich ist, können Sie das Gerät auch [über die APP mit dem WLAN verbinden](./通过APP将设备连接到wifi.md).
 
-## Schritt 1: Gerät einschalten – das Gerät sollte nun leuchten
+## Schritt 1: Gerät starten – das Gerät sollte jetzt leuchten
 Beispiel:
 
 ![1736778961469-1ea5e8a0-5131-4123-809d-c12aa7e32ee0.jpeg](./img/BwCUIIfLskyFx0zd/1736778961469-1ea5e8a0-5131-4123-809d-c12aa7e32ee0-968887.jpeg)
 
-## Schritt 2: Im WeChat nach dem Mini-Programm "物联地带蓝牙配网" suchen und es öffnen
-<font>Hinweis: Aktivieren Sie vor der Nutzung die Bluetooth-Funktion Ihres Mobiltelefons.</font>
+## Schritt 2: In WeChat nach dem Mini-Programm "物联地带蓝牙配网" suchen und öffnen
+<font>Hinweis: Bitte Bluetooth auf dem Smartphone vor der Bedienung aktivieren.</font>
 
-Nach dem Öffnen sollte es wie folgt aussehen:
+Nach dem Öffnen sieht es wie folgt aus:
 
 ![1736778759468-c1415188-e182-4a02-8bcb-661d1d3510a7.jpeg](./img/BwCUIIfLskyFx0zd/1736778759468-c1415188-e182-4a02-8bcb-661d1d3510a7-216457.jpeg)
 
-Klicken Sie auf "Netzwerkkonfiguration starten". Nach wenigen Sekunden sollte es wie folgt aussehen:
+Auf "Netzwerkkonfiguration starten" klicken. Nach einigen Sekunden sieht es wie folgt aus:
 
-(Achten Sie darauf: Geräte werden nur gefunden, wenn sie eingeschaltet sind. Wenn die Netzwerkkonfiguration erfolgreich war und das Gerät bereits mit dem WLAN verbunden ist, wird es auch nicht mehr angezeigt.)
+(Hinweis: Gerät muss eingeschaltet sein, um gefunden zu werden.
+Wenn die Netzwerkkonfiguration erfolgreich war und das Gerät bereits mit dem WLAN verbunden ist, wird es nicht mehr gefunden.)
 
 ![1736778774091-dfcd4838-0150-4f73-b6aa-980a7cb0e1fa.jpeg](./img/BwCUIIfLskyFx0zd/1736778774091-dfcd4838-0150-4f73-b6aa-980a7cb0e1fa-204739.jpeg)
 
-Wählen Sie das gefundene Gerät aus.
+Das gefundene Gerät auswählen.
 
-Geben Sie das Passwort des WLANs ein, mit dem Ihr Mobiltelefon derzeit verbunden ist (es muss sich um ein 2,4-GHz-Netzwerk oder ein kombiniertes Netzwerk mit gleichem Namen für 2,4 GHz und 5 GHz handeln).
+Das Passwort des WLANs eingeben, mit dem das Smartphone aktuell verbunden ist (muss 2,4 GHz sein oder 2,4 GHz/5 GHz mit gleichem Namen).
 
-Klicken Sie auf "Weiter".
+Auf "Weiter" klicken.
 
 ![1736778837887-f0b18aa3-c9e7-4aa8-8470-08a1b62032c9.jpeg](./img/BwCUIIfLskyFx0zd/1736778837887-f0b18aa3-c9e7-4aa8-8470-08a1b62032c9-470214.jpeg)
 
-Nach wenigen Sekunden sollte die Netzwerkkonfiguration erfolgreich sein.
+Nach einigen Sekunden ist die Netzwerkkonfiguration erfolgreich.
 
 ![1736778915718-1e769ec6-d814-49fe-91b6-771f19454784.jpeg](./img/BwCUIIfLskyFx0zd/1736778915718-1e769ec6-d814-49fe-91b6-771f19454784-492537.jpeg)
 
-Auch wenn "Netzwerkkonfiguration fehlgeschlagen" angezeigt wird, bedeutet das nicht, dass es nicht geklappt hat – es ist in der Regel trotzdem erfolgreich. Die Konfiguration ist dann abgeschlossen.
+Auch wenn "Netzwerkkonfiguration fehlgeschlagen" angezeigt wird, ist dies kein Problem – sie war erfolgreich. Die Netzwerkkonfiguration ist nun abgeschlossen.
 
-**<font>Hinweis: Nachdem das Gerät eine WLAN-Verbindung hergestellt hat, schaltet es Bluetooth automatisch aus. Wenn ein Fehler angezeigt wird, aber bei einer erneuten Suche kein Gerät mehr gefunden wird, war die Konfiguration erfolgreich.</font>**
+**<font>Hinweis: Nachdem sich das Gerät mit dem WLAN verbunden hat, schaltet es Bluetooth automatisch aus. Wenn "Fehlgeschlagen" angezeigt wird, aber bei einer erneuten Suche das Gerät nicht mehr gefunden wird, war die Konfiguration erfolgreich.</font>**
 
 ![1736778898724-2f15ed51-ab73-4b24-b9e6-5587b9e3c652.jpeg](./img/BwCUIIfLskyFx0zd/1736778898724-2f15ed51-ab73-4b24-b9e6-5587b9e3c652-961265.jpeg)

@@ -16,19 +16,19 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "ブログ記事一覧ページネーション",
+    "message": "ブログ記事リストのページネーション",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "新しい記事",
+    "message": "新しいブログ記事",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "古い記事",
+    "message": "古いブログ記事",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "ブログ記事ページネーション",
+    "message": "ブログ記事のページネーション",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
@@ -40,7 +40,7 @@
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
-    "message": "すべてのタグを見る",
+    "message": "すべてのタグを表示",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
@@ -56,11 +56,11 @@
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "ライト/ダークモードを切り替え（現在{mode}）",
+    "message": "ライト/ダークモードを切り替え（現在：{mode}）",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} 件の項目",
+    "message": "{count} 項目",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
@@ -68,7 +68,7 @@
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "ドキュメントタブ",
+    "message": "ドキュメントページネーション",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -80,7 +80,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count} 件のドキュメントがタグ付けされています",
+    "message": "{count} 件のドキュメントにタグ付けされています",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
@@ -95,11 +95,11 @@
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "これは {siteTitle} {versionLabel} バージョンのドキュメントであり、現在は積極的にメンテナンスされていません。",
+    "message": "これは {siteTitle} {versionLabel} バージョンのドキュメントで、現在は積極的にメンテナンスされていません。",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) をご覧ください。",
+    "message": "最新のドキュメントについては {latestVersionLink} ({versionLabel}) をご覧ください。",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
@@ -115,15 +115,15 @@
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": "最終更新日 {date}",
+    "message": "{date} に",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": "最終更新者 {user}",
+    "message": "{user} によって",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "最終更新{byUser}{atDate}",
+    "message": "最終更新日：{byUser}{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.NotFound.title": {
@@ -139,7 +139,7 @@
     "description": "The label alongside a tag list"
   },
   "theme.admonition.caution": {
-    "message": "警告",
+    "message": "注意",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.admonition.danger": {
@@ -159,7 +159,7 @@
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "注意",
+    "message": "警告",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
@@ -179,7 +179,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(新しいタブで開く)",
+    "message": "(新しいタブで開きます)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
@@ -187,15 +187,15 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "お探しのページを見つけることができませんでした。",
+    "message": "お探しのページが見つかりませんでした。",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "リンク元のサイトの所有者に連絡し、リンクが切れていることをお知らせください。",
+    "message": "元のリンクを提供したサイトの所有者に連絡し、リンクが壊れていることを伝えてください。",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "ページの目次",
+    "message": "このページの目次",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
@@ -211,7 +211,7 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "読了時間 {readingTime} 分",
+    "message": "読了時間：約 {readingTime} 分",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
@@ -227,7 +227,7 @@
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "ワードラップを切り替え",
+    "message": "自動折り返しを切り替え",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
@@ -275,11 +275,11 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "{count} 件の記事",
+    "message": "{count} 件のブログ記事",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} タグ「{tagName}」を含む記事",
+    "message": "タグ「{tagName}」を含む {nPosts}",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -291,11 +291,11 @@
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "すべての著者を見る",
+    "message": "すべての著者を表示",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "この著者はまだ記事を投稿していません。",
+    "message": "この著者はまだ記事を書いていません。",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -311,7 +311,7 @@
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "このページは下書きであり、開発環境でのみ表示され、本番ビルドには含まれません。",
+    "message": "このページは下書きです。開発環境でのみ表示され、本番ビルドには含まれません。",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -319,7 +319,7 @@
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "メインコンテンツへスキップ",
+    "message": "メインコンテンツにスキップ",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
@@ -327,31 +327,31 @@
     "description": "The title of the tag list page"
   },
   "homepage.visitDocs": {
-    "message": "使用説明を見る"
+    "message": "使い方を見る"
   },
   "homepage.title": {
     "message": "{title} へようこそ"
   },
   "homepage.description": {
-    "message": "シリコン シーケンス (UnderSilicon) ドキュメントサイト"
+    "message": "シリコン・アンダー(UnderSilicon) ドキュメントサイト"
   },
   "易于使用": {
     "message": "使いやすい"
   },
   "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus は、最初から簡単にインストールして使用できるように設計されており、サイトを素早く立ち上げることができます。"
+    "message": "Docusaurusは、インストールと使用が簡単で、サイトを素早く立ち上げられるように設計されています。"
   },
   "专注于核心内容": {
-    "message": "コアコンテンツに集中"
+    "message": "コンテンツに集中"
   },
   "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus はドキュメント自体に集中できるよう、面倒な作業は私たちが行います。ドキュメントを {docs} ディレクトリに配置するだけです。"
+    "message": "Docusaurusは、ドキュメント自体に集中できるようにします。面倒な作業は私たちが行います。ドキュメントを{docs}ディレクトリに入れるだけです。"
   },
   "基于 React 构建": {
-    "message": "React ベースの構築"
+    "message": "Reactベース"
   },
   "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "React を再利用してサイトレイアウトを拡張またはカスタマイズできます。Docusaurus はヘッダーとフッターを再利用しながら拡張することをサポートしています。"
+    "message": "Reactを再利用してサイトレイアウトを拡張またはカスタマイズできます。Docusaurusは、ヘッダーとフッターを再利用しながら拡張することをサポートしています。"
   },
   "homepage.downloadClient": {
     "message": "クライアントをダウンロード"
@@ -360,30 +360,30 @@
     "message": "ハードウェアエコシステムと接続"
   },
   "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "様々なスマートデバイス（モーター、バイブレーター、パルスデバイスなど）をサポートし、高速Wi-Fi設定、安定した接続、簡単なセットアップを実現します。"
+    "message": "様々なスマートデバイス（モーター、バイブレーター、パルスデバイスなど）をサポート。高速Wi-Fi設定、安定した接続、簡単操作。"
   },
   "无限创意玩法": {
-    "message": "無限の創造的なプレイ"
+    "message": "無限のクリエイティブな遊び方"
   },
   "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "腕立て伏せ検出、電気ショックQ&A、寸止めトレーニングなど、様々な楽しいインタラクションモードを内蔵しており、コントロールをより面白くします。"
+    "message": "腕立て伏せ検出、電気ショッククイズ、寸止めトレーニングなど、様々な楽しいインタラクションモードを内蔵し、コントロールをより面白くします。"
   },
   "全平台控制": {
-    "message": "全プラットフォーム制御"
+    "message": "全プラットフォーム対応"
   },
   "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
     "message": "強力なPCクライアントとモバイルサポート（アプリ/ミニアプリ）を提供し、いつでもどこでもデバイスの状態を管理できます。"
   },
   "开放开发生态": {
-    "message": "オープン開発エコシステム"
+    "message": "オープンな開発エコシステム"
   },
   "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "Python制御インターフェースとオープンソースコードを提供し、開発者がカスタム拡張をサポートして、スマート玩具体験を共に構築できます。"
+    "message": "Python制御インターフェースとオープンソースコードを提供し、開発者がカスタム拡張を可能にし、スマート玩具体験を共に構築します。"
   },
   "homepage.heroTitle": {
-    "message": "シリコン シーケンス (UnderSilicon) ドキュメント"
+    "message": "シリコン・アンダー(UnderSilicon) ドキュメント"
   },
   "homepage.heroTagline": {
-    "message": "シリコン シーケンス (UnderSilicon) のスマートエコシステムを探索し、無限のインタラクティブなプレイを解き放とう"
+    "message": "シリコン・アンダー(UnderSilicon) スマートエコシステムを探索し、無限のインタラクティブな遊び方を解き放とう"
   }
 }
