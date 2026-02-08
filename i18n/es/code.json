@@ -4,39 +4,39 @@
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Volver arriba",
+    "message": "Volver al inicio",
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
-    "message": "Publicaciones del blog archivadas",
+    "message": "Entradas de blog antiguas",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Publicaciones del blog archivadas",
+    "message": "Entradas de blog antiguas",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navegación de paginación de la lista de publicaciones del blog",
+    "message": "Navegación por páginas de la lista de entradas del blog",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Publicaciones más recientes",
+    "message": "Entradas más recientes",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Publicaciones más antiguas",
+    "message": "Entradas más antiguas",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navegación de paginación de publicaciones del blog",
+    "message": "Navegación por páginas de entradas del blog",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Publicación más reciente",
+    "message": "Entrada más reciente",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Publicación más antigua",
+    "message": "Entrada más antigua",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
@@ -44,7 +44,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "modo del sistema",
+    "message": "modo sistema",
     "description": "The name for the system color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
@@ -64,7 +64,7 @@
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Ruta de navegación de la página",
+    "message": "Ruta de navegación",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
@@ -80,7 +80,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count} documentos etiquetados",
+    "message": "{count} documentos etiquetados con",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
@@ -91,11 +91,11 @@
     "message": "Versión: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Esta es la documentación de la versión {versionLabel} de {siteTitle} aún no publicada.",
+    "message": "Esta es la documentación no publicada para la versión {versionLabel} de {siteTitle}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Esta es la documentación de la versión {versionLabel} de {siteTitle}, que ya no se mantiene activamente.",
+    "message": "Esta es la documentación para la versión {versionLabel} de {siteTitle}, que ya no se mantiene activamente.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
@@ -123,7 +123,7 @@
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Última actualización{byUser}{atDate}",
+    "message": "Última actualización {byUser}{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.NotFound.title": {
@@ -167,19 +167,19 @@
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navegación de publicaciones recientes",
+    "message": "Navegación por entradas recientes del blog",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expandir categoría de la barra lateral '{label}'",
+    "message": "Expandir la categoría de la barra lateral '{label}'",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Contraer categoría de la barra lateral '{label}'",
+    "message": "Contraer la categoría de la barra lateral '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(se abre en una pestaña nueva)",
+    "message": "(se abre en una nueva pestaña)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
@@ -191,7 +191,7 @@
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Ponte en contacto con el propietario del sitio desde donde proviene el enlace original e infórmales de que su enlace está roto.",
+    "message": "Por favor, contacta al propietario del sitio que te envió el enlace original e infórmale de que su enlace está roto.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -207,11 +207,11 @@
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Leer el artículo completo de {title}",
+    "message": "Leer la publicación completa de {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "Tiempo de lectura: {readingTime} minuto(s)",
+    "message": "Tiempo de lectura: {readingTime} minutos",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
@@ -243,7 +243,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Barra lateral de documentos",
+    "message": "Barra lateral de documentación",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -275,7 +275,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "{count} publicación(es)",
+    "message": "{count} entradas",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
@@ -295,7 +295,7 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "Este autor aún no ha escrito ninguna publicación.",
+    "message": "Este autor aún no ha escrito ninguna entrada.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -303,15 +303,15 @@
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán y solo los usuarios con un enlace directo pueden acceder a ella.",
+    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán y solo los usuarios con un enlace directo pueden acceder.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Página borrador",
+    "message": "Página en borrador",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "Esta página es un borrador. Solo es visible en entornos de desarrollo y no se incluirá en la versión de producción.",
+    "message": "Esta página es un borrador, solo visible en entornos de desarrollo y no se incluirá en la versión de producción.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -327,63 +327,63 @@
     "description": "The title of the tag list page"
   },
   "homepage.visitDocs": {
-    "message": "Ver instrucciones de uso"
+    "message": "Consultar las instrucciones de uso"
   },
   "homepage.title": {
     "message": "Bienvenido a {title}"
   },
   "homepage.description": {
-    "message": "Sitio de documentación de Bajo el Silicio (UnderSilicon)"
+    "message": "Sitio web de documentación de UnderSilicon"
   },
   "易于使用": {
     "message": "Fácil de usar"
   },
   "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus se diseñó desde el principio para ser fácil de instalar y usar, permitiendo que tu sitio web funcione rápidamente."
+    "message": "Docusaurus se diseñó desde el principio para ser fácil de instalar y usar, poniendo tu sitio en funcionamiento rápidamente."
   },
   "专注于核心内容": {
-    "message": "Enfócate en el contenido principal"
+    "message": "Enfocado en el contenido principal"
   },
   "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus te permite centrarte en los documentos; nosotros nos ocupamos del trabajo tedioso. Solo pon tus documentos en el directorio {docs}."
+    "message": "Docusaurus te permite concentrarte en la documentación misma y deja el trabajo tedioso en nuestras manos. Simplemente coloca tus documentos en el directorio {docs}."
   },
   "基于 React 构建": {
     "message": "Construido con React"
   },
   "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "Amplía o personaliza el diseño de tu sitio reutilizando React. Docusaurus permite extenderse mientras se reutilizan encabezados y pies de página."
+    "message": "Extiende o personaliza el diseño de tu sitio reutilizando React. Docusaurus puede extenderse reutilizando cabeceras y pies de página."
   },
   "homepage.downloadClient": {
     "message": "Descargar cliente"
   },
   "硬件生态与连接": {
-    "message": "Ecosistema de hardware y conectividad"
+    "message": "Ecosistema de hardware y conexión"
   },
   "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "Soporta múltiples terminales inteligentes (motores, huevos vibratorios, pulsadores, etc.), configuración WiFi ultrarrápida, conexión estable y fácil uso."
+    "message": "Compatible con múltiples dispositivos inteligentes (motores, huevos vibradores, pulsadores, etc.), configuración WiFi ultrarrápida, conexión estable y fácil de usar."
   },
   "无限创意玩法": {
-    "message": "Jugabilidad creativa ilimitada"
+    "message": "Modos de juego creativos ilimitados"
   },
   "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "Incluye múltiples modos de interacción divertidos como detección de flexiones, preguntas y respuestas con descargas, entrenamiento de 'tease and denial', etc., haciendo el control más interesante."
+    "message": "Incluye diversos modos interactivos divertidos como detección de flexiones, preguntas y respuestas con descargas, entrenamiento de control de orgasmo, etc., haciendo el control más interesante."
   },
   "全平台控制": {
     "message": "Control multiplataforma"
   },
   "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
-    "message": "Proporciona potente soporte para cliente de PC y móvil (App/mini-programa), permitiéndote controlar el estado del dispositivo en cualquier momento y lugar."
+    "message": "Ofrece soporte potente para cliente de PC y móvil (App/mini programa), permitiéndote controlar el estado del dispositivo en cualquier momento y lugar."
   },
   "开放开发生态": {
     "message": "Ecosistema de desarrollo abierto"
   },
   "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "Proporciona interfaz de control Python y código abierto, apoyando a los desarrolladores en crear extensiones personalizadas y construir juntos la experiencia de juguetes inteligentes."
+    "message": "Proporciona una interfaz de control en Python y código abierto, permitiendo a los desarrolladores personalizar extensiones y construir juntos la experiencia de juguetes inteligentes."
   },
   "homepage.heroTitle": {
-    "message": "Documentación de Bajo el Silicio (UnderSilicon)"
+    "message": "Documentación de UnderSilicon"
   },
   "homepage.heroTagline": {
-    "message": "Explora el ecosistema inteligente de Bajo el Silicio (UnderSilicon) y desbloquea infinitas formas de interacción jugable"
+    "message": "Explora el ecosistema inteligente de UnderSilicon y desbloquea modos de interacción infinitos"
   }
 }

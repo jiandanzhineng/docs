@@ -12,7 +12,7 @@
     "description": "The title of the footer links column with title=更多 in the footer"
   },
   "link.item.label.使用说明": {
-    "message": "Benutzerhandbuch",
+    "message": "Anleitung",
     "description": "The label of footer link with label=使用说明 linking to /docs/"
   },
   "link.item.label.Stack Overflow": {
@@ -36,7 +36,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
   },
   "copyright": {
-    "message": "Copyright © 2026 EZS Dokumentation, Inc. Erstellt mit Docusaurus.",
+    "message": "Copyright © 2026 EZS-Dokumentation, Inc. Erstellt mit Docusaurus.",
     "description": "The footer copyright"
   }
 }

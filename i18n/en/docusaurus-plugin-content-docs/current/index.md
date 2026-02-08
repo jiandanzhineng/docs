@@ -8,7 +8,7 @@ sidebar_position: 0
 > Official website: easysmart.top
 This documentation details the specific usage methods of the product.
 
-## [(PC Version) Control Client](（电脑版）控制客户端/index.md)
+## [(PC Version) Control Client](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 
 - [New PC Client User Guide](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 

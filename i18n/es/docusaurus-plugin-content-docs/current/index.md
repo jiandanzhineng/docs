@@ -9,7 +9,7 @@ sidebar_position: 0
 Este documento explica cómo usar el producto en detalle.
 
 
-## [Cliente de control (versión para PC)](（电脑版）控制客户端/index.md)
+## [Cliente de control (versión para PC)](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 
 - [Guía de uso del nuevo cliente para PC](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 

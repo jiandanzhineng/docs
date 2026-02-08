@@ -9,7 +9,7 @@ sidebar_position: 0
 Dieses Dokument beschreibt die konkrete Verwendung des Produkts.
 
 
-## [（PC-Version）Steuerungsclient](（电脑版）控制客户端/index.md)
+## [（PC-Version）Steuerungsclient](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 
 - [Anleitung zur neuen PC-Client-Version](（电脑版）控制客户端/新版电脑客户端使用指南.md)
 
