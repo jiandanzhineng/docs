@@ -293,7 +293,24 @@ function buildTranslationUserPrompt({ targetLang, forceTargetLang = false }) {
     .join('\n');
 }
 
+function buildJsonTranslationUserPrompt({ targetLang }) {
+  return [
+    '你是一个专业的软件国际化翻译助手。',
+    `请将以下 JSON 内容中的 "label" 和 "description"（如果存在）字段翻译为 ${targetLang}。`,
+    '保持 JSON 结构完全不变，不要修改 key，不要添加额外的字段。',
+    '只输出翻译后的 JSON 字符串，不要包含 Markdown 代码块标记（如 ```json ... ```）。',
+  ].join('\n');
+}
 
+function validateTranslatedJson(text) {
+  try {
+    const clean = text.replace(/```json/g, '').replace(/```/g, '').trim();
+    JSON.parse(clean);
+    return null;
+  } catch (e) {
+    return 'invalid_json';
+  }
+}
 
 function validateTranslatedLanguage(locale, translatedText) {
   const loc = normalizeLocaleTag(locale);
@@ -647,11 +664,15 @@ async function main() {
 
   for await (const srcPathAbs of walkFiles(sourceDirAbs)) {
     const ext = path.extname(srcPathAbs).toLowerCase();
-    if (!args.extensions.has(ext)) continue;
+    const isCategoryJson = path.basename(srcPathAbs) === '_category_.json';
+    if (!args.extensions.has(ext) && !isCategoryJson) continue;
     sourceFiles.push(srcPathAbs);
     counts.scannedSourceFiles += 1;
 
     const relFromSource = path.relative(sourceDirAbs, srcPathAbs);
+    if (isCategoryJson) {
+        // console.log(`DEBUG: Found JSON ${relFromSource}`);
+    }
     const srcStat = await fs.stat(srcPathAbs);
 
     for (const locale of locales) {
@@ -665,6 +686,9 @@ async function main() {
       }
 
       const isMissing = !trStat;
+      if (isCategoryJson && isMissing) {
+         // console.log(`DEBUG: Missing JSON translation for ${locale}: ${trPathAbs}`);
+      }
 
       const isOutdated = !!trStat && srcStat.mtimeMs > trStat.mtimeMs;
       const status = isMissing ? 'missing' : isOutdated ? 'outdated' : 'ok';
@@ -702,39 +726,53 @@ async function main() {
           const content = await fs.readFile(srcPathAbs, 'utf8');
           let translated = '';
           let invalidReason = null;
+          const isCategoryJson = path.basename(srcPathAbs) === '_category_.json';
 
-          const sourceLinks = extractMdLinks(content);
-          for (let attempt = 0; attempt < 3; attempt++) {
-            const sourceLang = attempt === 0 ? guessSourceLang(content) : 'Chinese';
-            const forceTargetLang = attempt >= 1;
-            const candidateTargetLang = targetLangCandidates[attempt] || targetLangCandidates[0] || targetLang;
-            const prompt = buildTranslationUserPrompt({ targetLang: candidateTargetLang, forceTargetLang });
+          if (isCategoryJson) {
+            const prompt = buildJsonTranslationUserPrompt({ targetLang });
             const fullPrompt = `${prompt}\n\n${content}`;
-            
             try {
               translated = await requestWithRetry(() => requestTranslate(baseUrl, apiKey, model, fullPrompt));
-              invalidReason = validateTranslatedDoc(translated, locale);
-
-              if (!invalidReason) {
-                const translatedLinks = extractMdLinks(translated);
-                if (sourceLinks.length !== translatedLinks.length) {
-                  invalidReason = `link_count_mismatch (src:${sourceLinks.length} vs tr:${translatedLinks.length})`;
-                } else {
-                  translated = restoreMdLinks(translated, sourceLinks);
-                }
-              }
-
-              if (!invalidReason) break;
+              // Clean up markdown code blocks if present
+              translated = translated.replace(/^```json\s*/, '').replace(/^```\s*/, '').replace(/\s*```$/, '').trim();
+              invalidReason = validateTranslatedJson(translated);
             } catch (err) {
-               if (attempt === 2) throw err;
+               throw err;
             }
-          }
-          
-          if (invalidReason === 'missing_title') {
-            const titleLine = extractSourceTitleLine(content);
-            if (titleLine) {
-              translated = `${titleLine}\n\n${translated}`;
-              invalidReason = validateTranslatedDoc(translated, locale);
+          } else {
+            const sourceLinks = extractMdLinks(content);
+            for (let attempt = 0; attempt < 3; attempt++) {
+              const sourceLang = attempt === 0 ? guessSourceLang(content) : 'Chinese';
+              const forceTargetLang = attempt >= 1;
+              const candidateTargetLang = targetLangCandidates[attempt] || targetLangCandidates[0] || targetLang;
+              const prompt = buildTranslationUserPrompt({ targetLang: candidateTargetLang, forceTargetLang });
+              const fullPrompt = `${prompt}\n\n${content}`;
+              
+              try {
+                translated = await requestWithRetry(() => requestTranslate(baseUrl, apiKey, model, fullPrompt));
+                invalidReason = validateTranslatedDoc(translated, locale);
+
+                if (!invalidReason) {
+                  const translatedLinks = extractMdLinks(translated);
+                  if (sourceLinks.length !== translatedLinks.length) {
+                    invalidReason = `link_count_mismatch (src:${sourceLinks.length} vs tr:${translatedLinks.length})`;
+                  } else {
+                    translated = restoreMdLinks(translated, sourceLinks);
+                  }
+                }
+
+                if (!invalidReason) break;
+              } catch (err) {
+                 if (attempt === 2) throw err;
+              }
+            }
+            
+            if (invalidReason === 'missing_title') {
+              const titleLine = extractSourceTitleLine(content);
+              if (titleLine) {
+                translated = `${titleLine}\n\n${translated}`;
+                invalidReason = validateTranslatedDoc(translated, locale);
+              }
             }
           }
 
