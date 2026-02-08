@@ -8,11 +8,11 @@
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
-    "message": "Historical Blog Posts",
+    "message": "Blog Archive",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Historical Blog Posts",
+    "message": "Blog Archive",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
@@ -20,11 +20,11 @@
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer blog posts",
+    "message": "Newer posts",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older blog posts",
+    "message": "Older posts",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
@@ -56,7 +56,7 @@
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Toggle light/dark mode (currently {mode})",
+    "message": "Toggle light/dark mode (current is {mode})",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
@@ -115,7 +115,7 @@
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": "at {date}",
+    "message": "on {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
@@ -127,7 +127,7 @@
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.NotFound.title": {
-    "message": "Page not found",
+    "message": "Page Not Found",
     "description": "The title of the 404 page"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
@@ -191,7 +191,7 @@
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site from which you got the original link and inform them that the link is broken.",
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -207,7 +207,7 @@
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Read the full post of {title}",
+    "message": "Read full post of {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
@@ -295,11 +295,11 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any articles yet.",
+    "message": "This author has not written any posts yet.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Unlisted Page",
+    "message": "Unlisted page",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
@@ -307,11 +307,11 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft Page",
+    "message": "Draft page",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It is only visible in the development environment and will not be included in the production build.",
+    "message": "This page is a draft and is only visible in development environments. It will not be included in the production build.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -327,49 +327,49 @@
     "description": "The title of the tag list page"
   },
   "homepage.visitDocs": {
-    "message": "Visit the documentation"
+    "message": "View Documentation"
   },
   "homepage.title": {
     "message": "Welcome to {title}"
   },
   "homepage.description": {
-    "message": "UnderSilicon documentation website"
+    "message": "UnderSilicon Documentation Website"
   },
   "易于使用": {
-    "message": "Easy to use"
+    "message": "Easy to Use"
   },
   "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus is designed from the ground up to be easy to install and use, so you can get your website up and running quickly."
+    "message": "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
   },
   "专注于核心内容": {
-    "message": "Focus on your content"
+    "message": "Focus on Your Content"
   },
   "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus lets you focus on your docs, and we'll handle the chores. Simply place your documents in the {docs} directory."
+    "message": "Docusaurus lets you focus on your docs, and we'll do the chores. Just drop your documents into the {docs} directory."
   },
   "基于 React 构建": {
-    "message": "Built using React"
+    "message": "Built Using React"
   },
   "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "Extend or customize your website layout by reusing React. Docusaurus allows you to extend while reusing the header and footer."
+    "message": "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer."
   },
   "homepage.downloadClient": {
-    "message": "Download client"
+    "message": "Download Client"
   },
   "硬件生态与连接": {
     "message": "Hardware Ecosystem & Connectivity"
   },
   "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "Supports various smart devices (motor, vibrator, pulse, etc.), rapid WiFi setup, stable connection, easy to get started."
+    "message": "Supports various smart devices (motors, vibrators, pulse devices, etc.), fast WiFi setup, stable connection, easy to get started."
   },
   "无限创意玩法": {
     "message": "Unlimited Creative Play"
   },
   "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "Built-in fun interactive modes such as push-up detection, shock Q&A, edging training, making control more interesting."
+    "message": "Built-in push-up detection, electric shock Q&A, edging training, and other fun interactive modes to make control more interesting."
   },
   "全平台控制": {
-    "message": "Cross-platform Control"
+    "message": "Cross-Platform Control"
   },
   "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
     "message": "Provides powerful PC client and mobile support (App/Mini Program), allowing you to control device status anytime, anywhere."
@@ -384,6 +384,6 @@
     "message": "UnderSilicon Documentation"
   },
   "homepage.heroTagline": {
-    "message": "Explore the UnderSilicon intelligent ecosystem and unlock infinite interactive play"
+    "message": "Explore the UnderSilicon smart ecosystem and unlock unlimited interactive play"
   }
 }

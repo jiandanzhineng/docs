@@ -4,7 +4,7 @@
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Nach oben",
+    "message": "Zurück nach oben",
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
@@ -12,11 +12,11 @@
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Ältere Blog-Beiträge",
+    "message": "Blog-Archiv",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog-Beiträge Seiten-Navigation",
+    "message": "Blog-Listen-Seitennavigation",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -28,7 +28,7 @@
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog-Beitrag Seiten-Navigation",
+    "message": "Blogbeitrags-Seitennavigation",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
@@ -64,19 +64,19 @@
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Seitenpfad",
+    "message": "Breadcrumb-Navigation",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Dokumenten Seiten-Navigation",
+    "message": "Dokumenten-Seitennavigation",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Vorherige Seite",
+    "message": "Vorherige",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Nächste Seite",
+    "message": "Nächste",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
@@ -84,22 +84,22 @@
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} \"{tagName}\"",
+    "message": "{nDocsTagged} „{tagName}“",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
     "message": "Version: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Dies ist die noch nicht veröffentlichte Dokumentation für {siteTitle} Version {versionLabel}.",
+    "message": "Dies ist die unveröffentlichte Dokumentation für {siteTitle} Version {versionLabel}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Dies ist die Dokumentation für {siteTitle} Version {versionLabel}, die nicht mehr aktiv gewartet wird.",
+    "message": "Dies ist die Dokumentation für {siteTitle} Version {versionLabel}, die nicht mehr aktiv gepflegt wird.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "Für die neueste Dokumentation siehe {latestVersionLink} ({versionLabel}).",
+    "message": "Die neueste Dokumentation finden Sie unter {latestVersionLink} ({versionLabel}).",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
@@ -123,7 +123,7 @@
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Zuletzt {byUser}{atDate}aktualisiert",
+    "message": "Zuletzt aktualisiert {byUser}{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.NotFound.title": {
@@ -167,15 +167,15 @@
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navigation kürzlicher Blog-Beiträge",
+    "message": "Navigation zuletzt veröffentlichter Blogbeiträge",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Seitenleisten-Kategorie '{label}' erweitern",
+    "message": "Sidebar-Kategorie '{label}' erweitern",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Seitenleisten-Kategorie '{label}' einklappen",
+    "message": "Sidebar-Kategorie '{label}' einklappen",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
@@ -187,11 +187,11 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "Wir konnten die von Ihnen gesuchte Seite nicht finden.",
+    "message": "Die von Ihnen gesuchte Seite konnte nicht gefunden werden.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Bitte kontaktieren Sie den Eigentümer der Website, von der der ursprüngliche Link stammt, und teilen Sie ihm mit, dass der Link defekt ist.",
+    "message": "Bitte kontaktieren Sie den Eigentümer der Website, von der der ursprüngliche Link stammt, und informieren Sie ihn, dass der Link defekt ist.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -207,7 +207,7 @@
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Vollständigen Beitrag von {title} lesen",
+    "message": "Den vollständigen Beitrag {title} lesen",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
@@ -223,7 +223,7 @@
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Code in Zwischenablage kopieren",
+    "message": "Code in die Zwischenablage kopieren",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.wordWrapToggle": {
@@ -235,19 +235,19 @@
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Seitenleiste einklappen",
+    "message": "Sidebar einklappen",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Seitenleiste einklappen",
+    "message": "Sidebar einklappen",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Dokumenten-Seitenleiste",
+    "message": "Dokumenten-Sidebar",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Navigationsleiste schließen",
+    "message": "Navigation schließen",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -255,7 +255,7 @@
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Navigationsleiste umschalten",
+    "message": "Navigation umschalten",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
@@ -267,11 +267,11 @@
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Seitenleiste erweitern",
+    "message": "Sidebar erweitern",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Seitenleiste erweitern",
+    "message": "Sidebar erweitern",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
@@ -279,7 +279,7 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} mit Tag \"{tagName}\"",
+    "message": "{nPosts} mit Tag „{tagName}“",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -295,23 +295,23 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "Dieser Autor hat noch keine Artikel veröffentlicht.",
+    "message": "Dieser Autor hat noch keine Beiträge verfasst.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Unaufgeführte Seite",
+    "message": "Nicht gelistete Seite",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Diese Seite ist nicht aufgeführt. Suchmaschinen indizieren sie nicht und nur Benutzer mit einem direkten Link können darauf zugreifen.",
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht indexieren, und nur Benutzer mit einem direkten Link können darauf zugreifen.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Entwurfsseite",
+    "message": "Seitenentwurf",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "Diese Seite ist ein Entwurf, nur in Entwicklungsumgebungen sichtbar und wird nicht in die Veröffentlichung aufgenommen.",
+    "message": "Diese Seite ist ein Entwurf und nur in der Entwicklungsumgebung sichtbar. Sie wird nicht in der Produktionsversion enthalten sein.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -327,31 +327,31 @@
     "description": "The title of the tag list page"
   },
   "homepage.visitDocs": {
-    "message": "Dokumentation aufrufen"
+    "message": "Dokumentation ansehen"
   },
   "homepage.title": {
     "message": "Willkommen bei {title}"
   },
   "homepage.description": {
-    "message": "Dokumentations-Website von UnderSilicon (硅基之下)"
+    "message": "UnderSilicon Dokumentationswebsite"
   },
   "易于使用": {
-    "message": "Einfach zu bedienen"
+    "message": "Einfach zu verwenden"
   },
   "Docusaurus 从一开始就设计为易于安装和使用，让您的网站快速运行起来。": {
-    "message": "Docusaurus wurde von Grund auf so entworfen, dass es einfach zu installieren und zu verwenden ist, damit Ihre Website schnell loslegen kann."
+    "message": "Docusaurus wurde von Grund auf so konzipiert, dass es einfach zu installieren und zu verwenden ist, damit Ihre Website schnell läuft."
   },
   "专注于核心内容": {
-    "message": "Fokus auf Kerninhalte"
+    "message": "Fokus auf den Inhalt"
   },
   "Docusaurus 让您专注于文档本身，繁琐的工作交给我们。只需将文档放入 {docs} 目录即可。": {
-    "message": "Docusaurus lässt Sie sich auf die Dokumente selbst konzentrieren, die mühsame Arbeit übernehmen wir. Legen Sie einfach Ihre Dokumente in das {docs}-Verzeichnis."
+    "message": "Docusaurus ermöglicht es Ihnen, sich auf Ihre Dokumente zu konzentrieren, während wir die lästige Arbeit übernehmen. Legen Sie Ihre Dokumente einfach im {docs}-Verzeichnis ab."
   },
   "基于 React 构建": {
     "message": "Auf React aufgebaut"
   },
   "通过复用 React 来扩展或定制您的网站布局。Docusaurus 支持在复用头部和底部的同时进行扩展。": {
-    "message": "Erweitern oder passen Sie Ihr Seitenlayout durch Wiederverwendung von React an. Docusaurus ermöglicht Erweiterungen bei gleichzeitiger Wiederverwendung von Kopf- und Fußbereichen."
+    "message": "Erweitern oder passen Sie Ihr Seitenlayout durch die Wiederverwendung von React an. Docusaurus kann erweitert werden, während Kopf- und Fußzeilen wiederverwendet werden."
   },
   "homepage.downloadClient": {
     "message": "Client herunterladen"
@@ -360,30 +360,30 @@
     "message": "Hardware-Ökosystem und Konnektivität"
   },
   "支持多种智能终端（电机、跳蛋、脉冲等），极速 WiFi 配网，稳定连接，轻松上手。": {
-    "message": "Unterstützt eine Vielzahl intelligenter Endgeräte (Motoren, Vibratoren, Impulsgeräte usw.), superschnelles WiFi-Setup, stabile Verbindung, einfache Einrichtung."
+    "message": "Unterstützt eine Vielzahl intelligenter Geräte (Motoren, Vibratoren, Impulsgeräte usw.), superschnelle WiFi-Einrichtung, stabile Verbindung, einfache Handhabung."
   },
   "无限创意玩法": {
-    "message": "Unendliche kreative Spielmöglichkeiten"
+    "message": "Unendliche kreative Möglichkeiten"
   },
   "内置俯卧撑检测、电击问答、寸止训练等多种趣味互动模式，让控制更有趣。": {
-    "message": "Integrierte unterhaltsame Interaktionsmodi wie Liegestütz-Erkennung, Elektroschock-Frage-Antwort, Edging-Training usw., um die Steuerung unterhaltsamer zu gestalten."
+    "message": "Integrierte interaktive Modi wie Liegestütz-Erkennung, Elektroschock-Fragen, Edging-Training und mehr machen die Steuerung unterhaltsamer."
   },
   "全平台控制": {
     "message": "Plattformübergreifende Steuerung"
   },
   "提供强大的电脑客户端与手机端支持（App/小程序），随时随地掌控设备状态。": {
-    "message": "Leistungsstarke Desktop-Client- und Mobile-Unterstützung (App/Mini-Programm), um den Gerätestatus jederzeit und überall zu kontrollieren."
+    "message": "Leistungsstarke Desktop-Client- und Mobile-Unterstützung (App/Mini-Programm) ermöglicht die Gerätesteuerung von überall."
   },
   "开放开发生态": {
-    "message": "Offene Entwicklerumgebung"
+    "message": "Offenes Entwicklungsumfeld"
   },
   "提供 Python 控制接口与开源代码，支持开发者自定义扩展，共建智能玩具体验。": {
-    "message": "Bietet Python-Steuerungsschnittstelle und Open-Source-Code, unterstützt Entwickler bei benutzerdefinierten Erweiterungen, um gemeinsam eine intelligente Spielzeuge-Erfahrung aufzubauen."
+    "message": "Bietet Python-Schnittstellen und Open-Source-Code, unterstützt Entwickler bei benutzerdefinierten Erweiterungen für ein gemeinsames intelligentes Spielzeugelebnis."
   },
   "homepage.heroTitle": {
-    "message": "UnderSilicon (硅基之下) Dokumentation"
+    "message": "UnderSilicon-Dokumentation"
   },
   "homepage.heroTagline": {
-    "message": "Entdecken Sie das intelligente UnderSilicon-Ökosystem und schalten Sie unendliche interaktive Spielmöglichkeiten frei"
+    "message": "Entdecken Sie das UnderSilicon-Intelligente Ökosystem und erschließen Sie unendliche interaktive Möglichkeiten"
   }
 }

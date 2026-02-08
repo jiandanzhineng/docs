@@ -1,5 +1,9 @@
 {
-  "label": "(Versión de PC) Cliente de control",
+  "label": "Cliente de control (versión para PC)",
   "position": 10,
-  "collapsed": false
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "新版电脑客户端使用指南"
+  }
 }

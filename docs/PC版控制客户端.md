@@ -1,5 +1,7 @@
 ---
 slug: /pc-client
+sidebar_label: PC版控制客户端
+sidebar_position: 10
 ---
 
 # 新版电脑客户端使用指南
@@ -15,7 +17,7 @@ slug: /pc-client
  
 
 ## 无电脑热点情况使用方式
-1. 设备配网：参考[通过 APP 将设备连接到 WiFi](../其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md) 将设备连接到家里的 WiFi（注意必须是 2.4G WiFi）
+1. 设备配网：参考[通过 APP 将设备连接到 WiFi](./其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md) 将设备连接到家里的 WiFi（注意必须是 2.4G WiFi）
 2. 客户端启用mdns
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)
