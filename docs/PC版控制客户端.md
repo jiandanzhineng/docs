@@ -4,6 +4,11 @@ sidebar_label: PC版控制客户端
 sidebar_position: 10
 ---
 
+# 视频版教程
+
+B站：https://www.bilibili.com/video/BV1jBcuzGEyC/
+youtube: https://youtu.be/1m-OEwx_Gjg
+
 # 电脑客户端使用指南
 
 1. 下载地址：[https://update.ezsapi.top/control-panel/UnderSilicon.zip](https://update.ezsapi.top/control-panel/UnderSilicon.zip)

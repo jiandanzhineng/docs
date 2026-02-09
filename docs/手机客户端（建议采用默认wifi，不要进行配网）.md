@@ -10,6 +10,11 @@ sidebar_position: 1
 
 更新固件
 
+# 视频教程
+
+B站：https://www.bilibili.com/video/BV1ZicuzkETc/
+youtube：https://youtu.be/362cUVcYms8
+
 # 使用流程
 1. 下载termux 下载地址：[https://update.ezsapi.top/termux.apk](https://update.ezsapi.top/termux.apk)
 2. 安装termux 并将termux的电源管理设置为**<font>不限制 后台锁定</font>**防止被杀后台
