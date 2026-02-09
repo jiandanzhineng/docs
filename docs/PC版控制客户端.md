@@ -12,10 +12,11 @@ youtube: https://youtu.be/1m-OEwx_Gjg
 # 电脑客户端使用指南
 
 1. 下载地址：[https://update.ezsapi.top/control-panel/UnderSilicon.zip](https://update.ezsapi.top/control-panel/UnderSilicon.zip)
-2. **请解压后安装 解压失败可以安装 [7zip](https://www.7-zip.org/download.html) 之后用该软件解压**
+2. **请解压后安装 （解压失败可以安装 [7zip](https://www.7-zip.org/download.html) 之后用该软件解压**）
 3. **启动客户端**
 4. **启用电脑热点，设置wifi名为easysmart 密码为8个1  频段为****2.4G****频段（[无电脑热点配置方式](#无电脑热点情况使用方式)）**
-5. **（重要）如果设备连上了wifi但是客户端没有设备就是被拦截了，需要关闭电脑防火墙。**
+注意：设备如果已经连接了5g其他wifi，可能导致设备即使配置了2.4g也仍然是5g频段，此时需要设备链接到一个2.4g的wifi（或网线连接）才能正常设置wifi热点。
+5. **如果设备连上了wifi但是客户端没有设备就是被拦截了，需要关闭电脑防火墙。**
 6. **启动设备，设备启动后约15-30秒会自动连接到电脑**
 7. **可以开始愉快玩耍啦**
 
