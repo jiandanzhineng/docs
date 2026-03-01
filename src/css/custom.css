@@ -44,3 +44,19 @@
     white-space: nowrap;
   }
 }
+
+/* ===== 图片样式：支持自定义宽度和居中 (源自 HXLoLiHub) ===== */
+
+/* 限定在文档内容区域 */
+.markdown img {
+  display: block;       /* 块级显示，以便居中 */
+  margin: 0rem auto;    /* 上下边距0，左右自动（即居中） */
+  height: auto;         /* 高度自适应 */
+  max-width: 100%;      /* 限制最大宽度不超过容器 */
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 鼠标悬停时稍微放大 */
+.markdown img:hover {
+  transform: scale(1.02);
+}
