@@ -76,8 +76,8 @@ jobs:
         with:
           accessKeyId: ${{ secrets.S3_ACCESS_KEY_ID }}
           accessKeySecret: ${{ secrets.S3_ACCESS_KEY_SECRET }}
-          bucket: oss-cn-shanghai.aliyuncs.com
-          endpoint: ezs-docs
+          bucket: ezs-docs
+          endpoint: oss-cn-shanghai.aliyuncs.com
           folder: build
           incremental: true
           indexPage: index.html
