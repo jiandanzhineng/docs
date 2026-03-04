@@ -36,6 +36,21 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && format('https://{0}', github.event.repository.name) || format('https://{0}.github.io', github.repository_owner)) }}
           BASE_URL: ${{ vars.BASE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && '/' || format('/{0}/', github.event.repository.name)) }}
 
+      - name: 安装 ossutil
+        run: |
+          curl -fsSL https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil64 -o /usr/local/bin/ossutil
+          chmod +x /usr/local/bin/ossutil
+
+      - name: 同步到 OSS
+        env:
+          OSS_ENDPOINT: ${{ vars.OSS_ENDPOINT }}
+          OSS_DEST: ${{ vars.OSS_DEST }}
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        run: |
+          ossutil config -e "$OSS_ENDPOINT" -i "$OSS_ACCESS_KEY_ID" -k "$OSS_ACCESS_KEY_SECRET" -L CH -c .ossutilconfig
+          ossutil sync -f build "$OSS_DEST" --delete -c .ossutilconfig
+
       - name: 配置 Pages
         uses: actions/configure-pages@v5
 
