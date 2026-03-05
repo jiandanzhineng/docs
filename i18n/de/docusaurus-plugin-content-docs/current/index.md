@@ -32,11 +32,11 @@ Dieses Dokument beschreibt die konkrete Verwendung des Produkts.
 
 ## Gerätevorstellung & Kauf
 
-- [Hubmotor-Intensitätssteuerungs-Endgerät](设备介绍&购买/往复式电机强度控制终端.md)
-- [Einfaches intelligentes Abstandssensor-Endgerät](设备介绍&购买/简单智能距离感应终端.md)
-- [Einfaches intelligentes Verriegelungs-Endgerät](设备介绍&购买/简单智能锁定终端.md)
-- [Einfaches intelligentes Motor- (Vibrator) Steuerungs-Endgerät](设备介绍&购买/简单智能电机（跳蛋）控制终端.md)
-- [Einfaches intelligentes Impuls- (Elektroschock) Endgerät](设备介绍&购买/简单智能脉冲（电击）终端.md)
+- [Hubmotor-Intensitätssteuerungs-Endgerät](device/往复式电机强度控制终端.md)
+- [Einfaches intelligentes Abstandssensor-Endgerät](device/简单智能距离感应终端.md)
+- [Einfaches intelligentes Verriegelungs-Endgerät](device/简单智能锁定终端.md)
+- [Einfaches intelligentes Motor- (Vibrator) Steuerungs-Endgerät](device/简单智能电机（跳蛋）控制终端.md)
+- [Einfaches intelligentes Impuls- (Elektroschock) Endgerät](device/简单智能脉冲（电击）终端.md)
 
 ## [Spielteilungsplan & Produkterfahrungsplan](玩法共享计划&产品体验计划.md)
 

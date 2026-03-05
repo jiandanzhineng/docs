@@ -28,11 +28,11 @@ Este documento describe los métodos de uso específicos del producto.
 
 ## Introducción y compra de dispositivos
 
-- [Terminal de control de intensidad de motor recíproco](设备介绍&购买/往复式电机强度控制终端.md)
-- [Terminal inteligente simple con sensor de distancia](设备介绍&购买/简单智能距离感应终端.md)
-- [Terminal de bloqueo inteligente simple](设备介绍&购买/简单智能锁定终端.md)
-- [Terminal de control de motor (vibrador) inteligente simple](设备介绍&购买/简单智能电机（跳蛋）控制终端.md)
-- [Terminal de pulso (electroestimulación) inteligente simple](设备介绍&购买/简单智能脉冲（电击）终端.md)
+- [Terminal de control de intensidad de motor recíproco](device/往复式电机强度控制终端.md)
+- [Terminal inteligente simple con sensor de distancia](device/简单智能距离感应终端.md)
+- [Terminal de bloqueo inteligente simple](device/简单智能锁定终端.md)
+- [Terminal de control de motor (vibrador) inteligente simple](device/简单智能电机（跳蛋）控制终端.md)
+- [Terminal de pulso (electroestimulación) inteligente simple](device/简单智能脉冲（电击）终端.md)
 
 ## [Plan de intercambio de modos de juego y plan de experiencia del producto](玩法共享计划&产品体验计划.md)
 

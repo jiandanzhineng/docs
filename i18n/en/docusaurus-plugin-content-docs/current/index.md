@@ -32,11 +32,11 @@ This document describes the specific usage of the product.
 
 ## Device Introduction & Purchase
 
-- [Reciprocating Motor Intensity Control Terminal](设备介绍&购买/往复式电机强度控制终端.md)
-- [Simple Smart Distance Sensing Terminal](设备介绍&购买/简单智能距离感应终端.md)
-- [Simple Smart Locking Terminal](设备介绍&购买/简单智能锁定终端.md)
-- [Simple Smart Motor (Egg Vibrator) Control Terminal](设备介绍&购买/简单智能电机（跳蛋）控制终端.md)
-- [Simple Smart Pulse (Electric Shock) Terminal](设备介绍&购买/简单智能脉冲（电击）终端.md)
+- [Reciprocating Motor Intensity Control Terminal](device/往复式电机强度控制终端.md)
+- [Simple Smart Distance Sensing Terminal](device/简单智能距离感应终端.md)
+- [Simple Smart Locking Terminal](device/简单智能锁定终端.md)
+- [Simple Smart Motor (Egg Vibrator) Control Terminal](device/简单智能电机（跳蛋）控制终端.md)
+- [Simple Smart Pulse (Electric Shock) Terminal](device/简单智能脉冲（电击）终端.md)
 
 ## [Gameplay Sharing Program & Product Experience Program](玩法共享计划&产品体验计划.md)
 
