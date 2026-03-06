@@ -27,5 +27,11 @@ github：https://github.com/jiandanzhineng/osr6-controller/releases/
 
 寸止玩法使用方式参考 [3阶段寸止玩法介绍](../game/气压寸止玩法3阶段升级版说明.md)
 
+OSR6在游戏中的作用就是替代了原来的震动模块，通过OSR6来实现刺激的效果。
 
+1. 打开multifunplayer
+2. 打开UnderSilicon控制端
+3. 打开OSR6控制插件，选择OSR6的端口，并启动服务
+4. 在multifunplayer中添加 UDP输出方式 输出地址为 127.0.0.1 端口与OSR6控制插件中的一致
+4. 此时可以在UnderSilicon控制端中看到OSR6设备，可以开始寸止游戏啦
 
