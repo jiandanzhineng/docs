@@ -59,3 +59,7 @@ cd "${HOME}/control-panel-stable" && npm run dev:all
 可能原因2：手机热点问题 部分手机在连接5g wifi时无法设置2.4g的热点，此时请断开手机的wifi连接，仅用流量上网，再开启wifi热点。
 
 可能原因3：用户进行了配网操作，设备不再连接默认wifi，此时请用配网APP将设备重新配网到默认wifi和密码，APP的配网wifi名是可以修改的
+
+## Termux提示Unable to install bootstrap
+
+不要将termux安装到手机分身，应用双开模式中
