@@ -16,7 +16,7 @@ sidebar_position: 10
 
 ## Método de uso sin punto de acceso de computadora
 
-1.  Configurar la red del dispositivo: Consulte [Conectar el dispositivo a WiFi mediante la APP](./其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md) para conectar el dispositivo a la red WiFi de su hogar (nota: debe ser una red WiFi de 2.4G).
+1.  Configurar la red del dispositivo: Consulte [Conectar el dispositivo a WiFi mediante la APP](./other/设备连接wifi（配网）/通过APP将设备连接到wifi.md) para conectar el dispositivo a la red WiFi de su hogar (nota: debe ser una red WiFi de 2.4G).
 2.  Habilite mDNS en el cliente.
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)

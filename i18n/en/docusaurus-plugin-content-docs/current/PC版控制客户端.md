@@ -15,7 +15,7 @@ sidebar_position: 10
 7. **You can start having fun!**
 
 ## Usage without PC Hotspot
-1. Configure device network: Refer to [Connecting Device to WiFi via APP](./其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md) to connect the device to your home WiFi (must be 2.4G WiFi).
+1. Configure device network: Refer to [Connecting Device to WiFi via APP](./other/设备连接wifi（配网）/通过APP将设备连接到wifi.md) to connect the device to your home WiFi (must be 2.4G WiFi).
 2. Enable mDNS in the client.
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)

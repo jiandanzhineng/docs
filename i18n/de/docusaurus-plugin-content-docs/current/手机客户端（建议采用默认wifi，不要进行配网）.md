@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Nur **<font>Android-Smartphones</font>** und Produkte, die nach dem 1. November 2025 ausgeliefert werden, werden unterstützt. Ältere Geräte können über die
 
-[Anleitung zum Flashen der Hardware-Firmware](./其他使用说明/硬件固件烧录说明.md)
+[Anleitung zum Flashen der Hardware-Firmware](./other/硬件固件烧录说明.md)
 
 die Firmware aktualisieren.
 

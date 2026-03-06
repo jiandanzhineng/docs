@@ -16,15 +16,15 @@ Este documento describe los métodos de uso específicos del producto.
 
 ## Explicación de modos de juego
 
-- [Modo de control de presión en 3 etapas (versión mejorada)](玩法说明/气压寸止玩法3阶段升级版说明.md)
-- [Modo de entrenamiento de elevación pélvica](玩法说明/提肛训练玩法.md)
-- [Modo de control del borde (edging)](玩法说明/边缘控制（寸止）玩法.md)
-- [Juego de entrenamiento con detección de flexiones (aproximadamente)](玩法说明/俯卧撑（大概）检测训练游戏.md)
-- [Desafío de preguntas y respuestas con electroestimulación](玩法说明/电击问答挑战.md)
-- [Modo de castigo de puntillas v2](玩法说明/踮脚惩罚玩法v2.md)
-- [Modo de castigo de puntillas](玩法说明/踮脚惩罚玩法.md)
-- [Control del vibrador con Python](玩法说明/用python控制跳蛋.md)
-- [Explicación del modo de estudio de vocabulario con estimulación](玩法说明/锥刺股背单词玩法说明.md)
+- [Modo de control de presión en 3 etapas (versión mejorada)](game/气压寸止玩法3阶段升级版说明.md)
+- [Modo de entrenamiento de elevación pélvica](game/提肛训练玩法.md)
+- [Modo de control del borde (edging)](game/边缘控制（寸止）玩法.md)
+- [Juego de entrenamiento con detección de flexiones (aproximadamente)](game/俯卧撑（大概）检测训练游戏.md)
+- [Desafío de preguntas y respuestas con electroestimulación](game/电击问答挑战.md)
+- [Modo de castigo de puntillas v2](game/踮脚惩罚玩法v2.md)
+- [Modo de castigo de puntillas](game/踮脚惩罚玩法.md)
+- [Control del vibrador con Python](game/用python控制跳蛋.md)
+- [Explicación del modo de estudio de vocabulario con estimulación](game/锥刺股背单词玩法说明.md)
 
 ## Introducción y compra de dispositivos
 
@@ -38,19 +38,19 @@ Este documento describe los métodos de uso específicos del producto.
 
 ## Otras instrucciones de uso
 
-- [Instrucciones para grabar firmware en el hardware](其他使用说明/硬件固件烧录说明.md)
+- [Instrucciones para grabar firmware en el hardware](other/硬件固件烧录说明.md)
 
 ### Conexión del dispositivo a WiFi (configuración de red)
 
-- [Conectar el dispositivo a WiFi mediante la aplicación](其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md)
-- [Conectar el dispositivo a WiFi mediante mini programa](其他使用说明/设备连接wifi（配网）/通过小程序将设备连接到wifi.md)
-- [Configurar red mediante cliente de PC (requiere que la PC tenga Bluetooth)](其他使用说明/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）.md)
-- [Verificar si el router es compatible con mDNS (la mayoría de routers lo son)](其他使用说明/检测路由器是否支持mdns（大部分路由器都支持）.md)
-- [Solución de errores comunes](其他使用说明/常见报错解决.md)
+- [Conectar el dispositivo a WiFi mediante la aplicación](other/设备连接wifi（配网）/通过APP将设备连接到wifi.md)
+- [Conectar el dispositivo a WiFi mediante mini programa](other/设备连接wifi（配网）/通过小程序将设备连接到wifi.md)
+- [Configurar red mediante cliente de PC (requiere que la PC tenga Bluetooth)](other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）.md)
+- [Verificar si el router es compatible con mDNS (la mayoría de routers lo son)](other/检测路由器是否支持mdns（大部分路由器都支持）.md)
+- [Solución de errores comunes](other/常见报错解决.md)
 
 ## [Problemas conocidos](已知问题.md)
 
 ## Documentación de desarrollo
 
-- [Canal de llamada a modelos de lenguaje grandes a bajo costo (cooperación)](开发文档/合作低价大模型调用渠道.md)
-- [Código abierto y mejores prácticas](开发文档/开源代码&最佳实践.md)
+- [Canal de llamada a modelos de lenguaje grandes a bajo costo (cooperación)](developer/合作低价大模型调用渠道.md)
+- [Código abierto y mejores prácticas](developer/开源代码&最佳实践.md)

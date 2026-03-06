@@ -20,15 +20,15 @@ This document describes the specific usage of the product.
 ## Gameplay Instructions
 
 
-- [Air Pressure Edging Gameplay 3-Stage Upgraded Version](玩法说明/气压寸止玩法3阶段升级版说明.md)
-- [Kegel Exercise Gameplay](玩法说明/提肛训练玩法.md)
-- [Edging Control Gameplay](玩法说明/边缘控制（寸止）玩法.md)
-- [Push-up (Approximate) Detection Training Game](玩法说明/俯卧撑（大概）检测训练游戏.md)
-- [Electric Shock Q&A Challenge](玩法说明/电击问答挑战.md)
-- [Tiptoe Punishment Gameplay v2](玩法说明/踮脚惩罚玩法v2.md)
-- [Tiptoe Punishment Gameplay](玩法说明/踮脚惩罚玩法.md)
-- [Controlling Egg Vibrator with Python](玩法说明/用python控制跳蛋.md)
-- [Studying Vocabulary with "Stabbing Thigh" Gameplay](玩法说明/锥刺股背单词玩法说明.md)
+- [Air Pressure Edging Gameplay 3-Stage Upgraded Version](game/气压寸止玩法3阶段升级版说明.md)
+- [Kegel Exercise Gameplay](game/提肛训练玩法.md)
+- [Edging Control Gameplay](game/边缘控制（寸止）玩法.md)
+- [Push-up (Approximate) Detection Training Game](game/俯卧撑（大概）检测训练游戏.md)
+- [Electric Shock Q&A Challenge](game/电击问答挑战.md)
+- [Tiptoe Punishment Gameplay v2](game/踮脚惩罚玩法v2.md)
+- [Tiptoe Punishment Gameplay](game/踮脚惩罚玩法.md)
+- [Controlling Egg Vibrator with Python](game/用python控制跳蛋.md)
+- [Studying Vocabulary with "Stabbing Thigh" Gameplay](game/锥刺股背单词玩法说明.md)
 
 ## Device Introduction & Purchase
 
@@ -42,19 +42,19 @@ This document describes the specific usage of the product.
 
 ## Other Usage Instructions
 
-- [Hardware Firmware Flashing Instructions](其他使用说明/硬件固件烧录说明.md)
+- [Hardware Firmware Flashing Instructions](other/硬件固件烧录说明.md)
 
 ### Device WiFi Connection (Provisioning)
 
-- [Connecting Device to WiFi via APP](其他使用说明/设备连接wifi（配网）/通过APP将设备连接到wifi.md)
-- [Connecting Device to WiFi via Mini Program](其他使用说明/设备连接wifi（配网）/通过小程序将设备连接到wifi.md)
-- [Provisioning via PC Client (Requires PC Bluetooth Support)](其他使用说明/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）.md)
-- [Checking if Router Supports mDNS (Most Routers Do)](其他使用说明/检测路由器是否支持mdns（大部分路由器都支持）.md)
-- [Common Error Solutions](其他使用说明/常见报错解决.md)
+- [Connecting Device to WiFi via APP](other/设备连接wifi（配网）/通过APP将设备连接到wifi.md)
+- [Connecting Device to WiFi via Mini Program](other/设备连接wifi（配网）/通过小程序将设备连接到wifi.md)
+- [Provisioning via PC Client (Requires PC Bluetooth Support)](other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）.md)
+- [Checking if Router Supports mDNS (Most Routers Do)](other/检测路由器是否支持mdns（大部分路由器都支持）.md)
+- [Common Error Solutions](other/常见报错解决.md)
 
 ## [Known Issues](已知问题.md)
 
 ## Development Documentation
 
-- [Cooperative Low-Cost Large Model API Channel](开发文档/合作低价大模型调用渠道.md)
-- [Open Source Code & Best Practices](开发文档/开源代码&最佳实践.md)
+- [Cooperative Low-Cost Large Model API Channel](developer/合作低价大模型调用渠道.md)
+- [Open Source Code & Best Practices](developer/开源代码&最佳实践.md)

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Solo es compatible con **<font>teléfonos Android</font>** y productos enviados después del 1 de noviembre de 2025. Los dispositivos anteriores pueden actualizar el firmware mediante
 
-[Instrucciones de grabación de firmware de hardware](./其他使用说明/硬件固件烧录说明.md)
+[Instrucciones de grabación de firmware de hardware](./other/硬件固件烧录说明.md)
 
 # Flujo de uso
 1. Descarga Termux. Enlace de descarga: [https://update.ezsapi.top/termux.apk](https://update.ezsapi.top/termux.apk)
