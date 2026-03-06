@@ -21,7 +21,7 @@ github：https://github.com/jiandanzhineng/osr6-controller/releases/
 
 ## 使用说明
 
-视频版教程：（等待上传）
+视频版教程：https://www.bilibili.com/video/BV1Z4PWzdEkB/
 
 接下来以寸止玩法为例，介绍OSR6插件的使用方式。
 
