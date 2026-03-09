@@ -1,7 +1,7 @@
 ---
 slug: welcome
 title: 网站正式成立了！
-authors: [yangshun]
+authors: [xiaogui]
 tags: [hello, 欢迎]
 ---
 
