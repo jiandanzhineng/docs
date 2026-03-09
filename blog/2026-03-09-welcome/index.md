@@ -1,7 +1,7 @@
 ---
 slug: welcome
 title: 网站正式成立了！
-authors: [firesuiry]
+authors: [yangshun]
 tags: [hello, 欢迎]
 ---
 
