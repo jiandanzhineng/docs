@@ -6,6 +6,7 @@ title: OSR6控制插件
 # OSR6控制插件
 
 本插件可以将OSR6设备添加到硅基之下控制端，实现对OSR6设备的控制。
+其他OSR（OSR2 OSR3等）设备如果使用的是multifunplayer或者XTPlayer也都可以使用本插件
 
 ## 使用要求
 
