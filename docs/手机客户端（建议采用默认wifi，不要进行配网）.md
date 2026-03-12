@@ -17,7 +17,7 @@ youtube：https://youtu.be/362cUVcYms8
 
 # 使用流程
 1. 下载termux 下载地址：[https://update.ezsapi.top/termux.apk](https://update.ezsapi.top/termux.apk)
-2. 安装termux 并将termux的电源管理设置为**<font>不限制 后台锁定</font>**防止被杀后台
+2. 安装termux 并将termux的电源管理设置为<font>不限制 后台锁定</font>防止被杀后台
 3. 打开termux
 
 **<font>初次运行，请运行下面的语句，复制贴进termux 按回车</font>**
@@ -63,3 +63,7 @@ cd "${HOME}/control-panel-stable" && npm run dev:all
 ## Termux提示Unable to install bootstrap
 
 不要将termux安装到手机分身，应用双开模式中
+
+## 手机浏览器打开访问 127.0.0.1:5173 无法访问
+
+请将termux的电源管理设置为不限制 并且 后台锁定防止被杀后台
