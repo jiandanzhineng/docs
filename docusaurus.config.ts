@@ -138,6 +138,10 @@ const config: Config = {
               label: '使用说明',
               to: '/docs/',
             },
+            {
+              label: '在线客服',
+              href: 'https://undersilicon.com/kefu/',
+            }
           ],
         },
         {
