@@ -2,7 +2,7 @@
 slug: welcome
 title: 网站正式成立了！
 authors: [xiaogui]
-tags: [hello, 欢迎]
+tags: [hello]
 ---
 
 大家好呀！👋
@@ -15,3 +15,4 @@ tags: [hello, 欢迎]
 
 有什么想法或者建议，随时欢迎和我们说～
 
+<!-- truncate -->
