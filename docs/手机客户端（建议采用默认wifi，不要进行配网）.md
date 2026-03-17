@@ -4,12 +4,6 @@ title: 手机客户端（建议采用默认wifi，不要进行配网）
 sidebar_position: 1
 ---
 
-仅**<font>支持安卓手机</font>**和2025年11月1日之后发货的产品，以前的设备可以通过
-
-[硬件固件烧录说明](./other/硬件固件烧录说明.md)
-
-更新固件
-
 # 视频教程
 
 B站：https://www.bilibili.com/video/BV1ZicuzkETc/
