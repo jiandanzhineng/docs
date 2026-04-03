@@ -18,7 +18,7 @@ title: OSR6控制插件
 
 github：https://github.com/jiandanzhineng/osr6-controller/releases/
 
-蓝奏云：https://wwaos.lanzouu.com/igWnX3jvtlod
+蓝奏云：https://wwaos.lanzouu.com/iT4CF3md0hvc
 
 ## 使用说明
 
