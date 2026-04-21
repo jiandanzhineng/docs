@@ -3,11 +3,15 @@ slug: /
 sidebar_position: 0
 ---
 
-# 硅基之下UnderSilicon产品使用说明
+# 硅基之下产品使用说明 请先读我
 
-> 产品官网 easysmart.top
-> 文档地址 docs.undersilicon.com
-本文档介绍产品的具体使用方式
+本文档是针对普通用户的使用说明，高级玩家和开发者请参考以下文档：
+- [高级玩家使用说明](seniorPlayer/senior_player.md)
+- [开发者使用说明](developer/index.md)
+
+## 介绍
+
+欢迎您使用硅基之下产品！
 
 
 
@@ -52,9 +56,4 @@ sidebar_position: 0
 - [检测路由器是否支持mdns（大部分路由器都支持）](other/检测路由器是否支持mdns（大部分路由器都支持）.md)
 - [常见报错解决](other/常见报错解决.md)
 
-## [已知问题](已知问题.md)
 
-## 开发文档
-
-- [合作低价大模型调用渠道](developer/合作低价大模型调用渠道.md)
-- [开源代码&最佳实践](developer/开源代码&最佳实践.md)
