@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "web-access": {
+      "source": "eze-is/web-access",
+      "sourceType": "github",
+      "computedHash": "e974d9cd3f55c72e9240b1a4ff3ba2b8a669e1d8e4b75ca8f0ad79a459444aa0"
+    }
+  }
+}
