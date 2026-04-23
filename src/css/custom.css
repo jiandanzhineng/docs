@@ -60,3 +60,49 @@
 .markdown img:hover {
   transform: scale(1.02);
 }
+
+.mdx-img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme='dark'] .mdx-img-lightbox {
+  background: rgba(18, 18, 18, 0.92);
+}
+
+.mdx-img-lightbox__image {
+  max-width: min(100%, calc(100vw - 4rem));
+  max-height: calc(100vh - 4rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.24);
+  background: var(--ifm-background-color);
+}
+
+.mdx-img-lightbox__close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.markdown img {
+  cursor: zoom-in;
+}
