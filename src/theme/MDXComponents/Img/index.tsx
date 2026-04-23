@@ -110,7 +110,6 @@ export default function MDXImg(props: Props): ReactNode {
             className="mdx-img-lightbox__image"
             decoding="async"
             loading="eager"
-            onClick={(event) => event.stopPropagation()}
             sizes={sizes}
             src={src}
             srcSet={srcSet}
