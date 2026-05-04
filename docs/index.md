@@ -3,7 +3,9 @@ slug: /
 sidebar_position: 0
 ---
 
-# 硅基之下产品使用说明 请先读我
+# 硅基之下产品使用说明
+
+> 短网址: easysmart.top
 
 本文档是针对普通用户的使用说明，高级玩家和开发者请参考以下文档：
 - [高级玩家使用说明](seniorPlayer/index.md) （PC玩，多设备组网，玩法开发）
