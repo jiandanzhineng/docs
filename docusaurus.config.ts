@@ -145,7 +145,7 @@ const config: Config = {
           title: '社区',
           items: [
             {
-              label: 'QQ群(验证问题答案为 简单智能)',
+              label: 'QQ群(验证问题答案为 硅基之下)',
               href: 'https://qm.qq.com/q/EN44NRr8RO',
             },
             {
