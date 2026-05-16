@@ -17,7 +17,7 @@ youtube：https://youtu.be/362cUVcYms8
 **<font>初次运行，请运行下面的语句，复制贴进termux 按回车</font>**
 
 ```bash
-curl -fsSL https://update.ezsapi.top/run_control_panel.sh | sh
+curl -fsSL https://firmware.undersilicon.cn/control-panel/run_control_panel_stable.sh | sh
 ```
 
 如**<font>非初次运行</font>** 可运行下面的语句 以提升加载速度（如果想更新的话还是用上面的）

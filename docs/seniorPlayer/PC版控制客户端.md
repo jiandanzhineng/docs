@@ -11,7 +11,7 @@ youtube: https://youtu.be/1m-OEwx_Gjg
 
 # 电脑客户端使用指南
 
-1. 下载地址：[https://update.ezsapi.top/control-panel/UnderSilicon.zip](https://update.ezsapi.top/control-panel/UnderSilicon.zip)
+1. 下载地址：[https://firmware.undersilicon.cn/control-panel/stable/UnderSilicon.zip](https://firmware.undersilicon.cn/control-panel/stable/UnderSilicon.zip)
 2. **请解压后安装 （解压失败可以安装 [7zip](https://www.7-zip.org/download.html) 之后用该软件解压**）
 3. **启动客户端**
 4. **启用电脑热点，设置wifi名为easysmart 密码为8个1  频段为****2.4G****频段（[无电脑热点配置方式](#无电脑热点情况使用方式)）**
@@ -27,3 +27,11 @@ youtube: https://youtu.be/1m-OEwx_Gjg
 2. 客户端启用mdns
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)
+
+## 其他下载链接
+
+正式版：https://firmware.undersilicon.cn/control-panel/stable/UnderSilicon.zip
+
+测试版：https://firmware.undersilicon.cn/control-panel/test/UnderSilicon.zip
+
+历史版本：https://github.com/jiandanzhineng/control-panel/releases
