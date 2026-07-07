@@ -32,7 +32,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/orgs/jiandanzhineng/repositories"
   },
   "copyright": {
-    "message": "Copyright © 2026 UnterSilizium (UnderSilicon) , Inc. Erstellt mit Docusaurus.",
+    "message": "Copyright © 2026 UnterSilizium (UnderSilicon) , Inc. Erstellt mit Docusaurus.<br /><a href=\"https://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">豫ICP备2026016470号</a>",
     "description": "The footer copyright"
   }
 }

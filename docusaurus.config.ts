@@ -168,7 +168,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 硅基之下(UnderSilicon) , Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 硅基之下(UnderSilicon) , Inc. Built with Docusaurus.<br /><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">豫ICP备2026016470号</a>`,
     },
     prism: {
       theme: prismThemes.github,
