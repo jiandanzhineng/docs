@@ -12,16 +12,14 @@ sidebar_position: 12
 
 但如果**答错会被电一下**呢？给错误一个真实的代价，每个单词瞬间变成生死局——这就是扇贝单词电击玩法：**答错 → 电一下 → 下次绝对记住** 🔌⚡
 
-为什么这点小小的痛感这么管用？道理可以拆成四条 👇
-
 ![为什么背单词要加电击 ##h45vh##](./img/shanbay-shock/why-poster.png)
 
 ---
 
 扇贝单词电击是一个基于扇贝网页版单词学习页面的插件玩法：当插件识别到你点「不认识」（答错），或在开启惩罚后识别到「没想起来」时，就会触发已连接的电击设备，给你来一下 ⚡。
 
-> 🛒 **设备获取**：[淘宝购买](https://item.taobao.com/item.htm?id=892309919507) | [优惠券领取](../优惠券.md)  
-> 🎬 **视频教程**：[硅基之下视频站](https://video.undersilicon.com/w/pcesS2gYvbfuU5Wcf5v7fQ) | [YouTube](https://youtu.be/Q7ti6oOdhpc)
+> 🛒 **设备获取**：[淘宝购买](https://item.taobao.com/item.htm?id=1065205279302) | [官网购买](https://shop.undersilicon.cn/zh/products/beidanci) | [优惠券领取](../优惠券.md)  
+> 🎬 **视频教程**：[硅基之下视频站(还未上传)](https://video.undersilicon.com/w/pcesS2gYvbfuU5Wcf5v7fQ) | [YouTube(还未上传)](https://youtu.be/Q7ti6oOdhpc)
 
 <!-- TODO: 视频教程暂用寸止玩法视频占位，待替换为扇贝单词电击专属链接 -->
 
