@@ -4,6 +4,16 @@ title: 手机客户端（建议采用默认wifi，不要进行配网）
 sidebar_position: 1
 ---
 
+> 🎉 **手机客户端已正式发布！**
+> 
+> 非高级开发者无需阅读本文档，请直接使用已发布的客户端。
+> 
+> 📱 **客户端下载地址：[docs/player/new-phone-client](/docs/player/new-phone-client)**
+> 
+> ⚠️ 以下内容仅供高级开发者参考。
+
+---
+
 # 视频教程
 
 B站：https://www.bilibili.com/video/BV1ZicuzkETc/
