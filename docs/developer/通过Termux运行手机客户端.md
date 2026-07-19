@@ -1,7 +1,7 @@
 ---
-slug: /手机客户端-建议采用默认wifi-不要进行配网
-title: 手机客户端（建议采用默认wifi，不要进行配网）
-sidebar_position: 1
+slug: /通过Termux运行手机客户端
+title: 通过Termux运行手机客户端
+sidebar_position: 10
 ---
 
 > 🎉 **手机客户端已正式发布！**

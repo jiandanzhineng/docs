@@ -1,4 +1,8 @@
-﻿# 检测路由器是否支持mdns（大部分路由器都支持）
+﻿---
+slug: /other/check-mdns
+---
+
+# 检测路由器是否支持mdns（大部分路由器都支持）
 
 检测小工具：[https://wwcg.lanzouu.com/i13Al2owjkra](https://wwcg.lanzouu.com/i13Al2owjkra)
 

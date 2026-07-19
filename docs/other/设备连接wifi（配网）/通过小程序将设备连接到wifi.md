@@ -1,4 +1,8 @@
-﻿# 通过小程序将设备连接到wifi
+﻿---
+slug: /other/wifi-config/miniprogram
+---
+
+# 通过小程序将设备连接到wifi
 
 所有设备均可以按照本文档连接wifi
 

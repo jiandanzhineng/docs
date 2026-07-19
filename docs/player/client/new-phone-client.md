@@ -1,5 +1,5 @@
 ---
-slug: new-phone-client
+slug: /player/new-phone-client
 title: 客户端下载与设备连接
 sidebar_position: 1
 ---

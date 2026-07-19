@@ -1,4 +1,8 @@
-﻿# 用python控制跳蛋
+﻿---
+slug: /developer/python-control
+---
+
+# 用python控制跳蛋
 
 视频教程地址： 
 

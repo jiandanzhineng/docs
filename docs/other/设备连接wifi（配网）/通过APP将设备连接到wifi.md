@@ -1,4 +1,8 @@
-﻿# 通过APP将设备连接到wifi
+﻿---
+slug: /other/wifi-config/app
+---
+
+# 通过APP将设备连接到wifi
 
 **<font>注意：如您想使用默认wifi 请勿配网 默认wifi名 easysmart 密码 11111111 设备会自动连接默认wifi</font>**
 
