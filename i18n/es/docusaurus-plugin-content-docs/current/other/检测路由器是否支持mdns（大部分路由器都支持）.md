@@ -1,15 +1,19 @@
-# 检测路由器是否支持mdns（大部分路由器都支持）
+---
+slug: /other/check-mdns
+---
 
-Herramienta de detección: [https://wwcg.lanzouu.com/i13Al2owjkra](https://wwcg.lanzouu.com/i13Al2owjkra)
+# Verificar si el router admite mDNS (la mayoría lo admite)
+
+Herramienta de verificación: [https://wwcg.lanzouu.com/i13Al2owjkra](https://wwcg.lanzouu.com/i13Al2owjkra)
 
 ![1740662709359-df988512-bac5-44da-9e04-dad40127cebf.png](./img/vx4ed-gCjjyFr7tF/1740662709359-df988512-bac5-44da-9e04-dad40127cebf-168097.png)
 
-Si el resultado de la detección muestra que es compatible con mdns, entonces no hay problema.
+Si los resultados de la verificación muestran que admite mDNS, no hay problema.
 
-Si el contenido mostrado no es así, no se puede usar directamente bajo el router actual.
+Si el contenido mostrado no es así, no se puede usar directamente con el router actual.
 
-Se sabe que:
+Conocido:
 
-Es posible que Huawei AX2 no sea compatible.
+El Huawei AX2 puede no admitirlo.
 
-Todos los demás modelos de router probados son compatibles.
+Todos los otros modelos de router probados lo admiten.

@@ -42,9 +42,10 @@ async function main() {
     process.exit(1)
   }
 
-  const content = fs.readFileSync(path.resolve(inPath), 'utf8')
   // 清除所有 <font> </font> 标签
-  content = content.replace(/<font.*?>.*?<\/font>/g, '')
+  const content = fs
+    .readFileSync(path.resolve(inPath), 'utf8')
+    .replace(/<font.*?>.*?<\/font>/g, '')
   const targetLang = detectTargetLanguage(outPath)
   const prompt =
     `将以下内容翻译为${targetLang}，不要翻译超链接中的引用标记(就是[]后紧跟的括号内容,这部分用于标识超链接的目标，要保持原样！)` +

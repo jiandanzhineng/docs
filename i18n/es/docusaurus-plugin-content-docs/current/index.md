@@ -3,54 +3,36 @@ slug: /
 sidebar_position: 0
 ---
 
-# Manual de uso del producto UnderSilicon
+# Manual de uso de Silicon Underworld
 
-> Sitio web oficial del producto: easysmart.top  
-> Dirección de la documentación: docs.undersilicon.com  
-Este documento describe los métodos de uso específicos del producto.
+> URL corta: easysmart.top
 
-## Descarga del cliente
+## Descarga de cliente & Comunidad
 
-[Windows](PC版控制客户端.md) |
-[Android](手机客户端（建议采用默认wifi，不要进行配网）.md)
+[Windows](player/client/PC版控制客户端.md) | [Android](player/client/new-phone-client.md) | [HarmonyOS](player/client/鸿蒙客户端.md) | [iOS](player/client/iOS客户端.md)
+
+Grupo QQ: 970326066 (Información de verificación: Silicon Underworld) | Grupo de WeChat: Contactar con el servicio al cliente en la esquina inferior derecha
 
 ## Explicación de modos de juego
 
-- [Modo de control de presión en 3 etapas (versión mejorada)](game/气压寸止玩法3阶段升级版说明.md)
-- [Modo de entrenamiento de elevación pélvica](game/提肛训练玩法.md)
-- [Modo de control del borde (edging)](game/边缘控制（寸止）玩法.md)
-- [Juego de entrenamiento con detección de flexiones (aproximadamente)](game/俯卧撑（大概）检测训练游戏.md)
-- [Desafío de preguntas y respuestas con electroestimulación](game/电击问答挑战.md)
-- [Modo de castigo de puntillas v2](game/踮脚惩罚玩法v2.md)
-- [Modo de castigo de puntillas](game/踮脚惩罚玩法.md)
-- [Control del vibrador con Python](game/用python控制跳蛋.md)
-- [Explicación del modo de estudio de vocabulario con estimulación](game/锥刺股背单词玩法说明.md)
+- [Tutorial de uso de la segunda generación de modo de juego de detención por pulgada](player/寸止玩法二代使用教程.md)
+- [Tutorial de entrenamiento de elevación de puntillas y contracción anal](player/踮脚提肛训练教程.md)
+- [Descarga eléctrica con Shanbay para memorizar palabras](player/shanbay-shock.md)
+- [Versión mejorada de 3 etapas del modo de detención por pulgada con presión de aire](player/气压寸止玩法3阶段升级版说明.md)
+- [Modo de control de borde (detención por pulgada)](player/边缘控制（寸止）玩法.md)
+- [Modo de entrenamiento de contracción anal](player/提肛训练玩法.md)
+- [Modo de castigo por elevación de puntillas v2](player/踮脚惩罚玩法v2.md)
+- [Juego de entrenamiento con detección de flexiones (aproximadamente)](player/俯卧撑（大概）检测训练游戏.md)
 
-## Introducción y compra de dispositivos
+## Presentación y compra de dispositivos
 
-- [Terminal de control de intensidad de motor recíproco](device/往复式电机强度控制终端.md)
-- [Terminal inteligente simple con sensor de distancia](device/简单智能距离感应终端.md)
-- [Terminal de bloqueo inteligente simple](device/简单智能锁定终端.md)
-- [Terminal de control de motor (vibrador) inteligente simple](device/简单智能电机（跳蛋）控制终端.md)
-- [Terminal de pulso (electroestimulación) inteligente simple](device/简单智能脉冲（电击）终端.md)
+- [Terminal de control de intensidad del motor de movimiento recíproco](device/往复式电机强度控制终端.md)
+- [Terminal sensible a distancia simple e inteligente](device/简单智能距离感应终端.md)
+- [Terminal de bloqueo simple e inteligente](device/简单智能锁定终端.md)
+- [Terminal de control de motor (huevo vibrador) simple e inteligente](device/简单智能电机（跳蛋）控制终端.md)
+- [Terminal de pulso (descarga eléctrica) simple e inteligente](device/简单智能脉冲（电击）终端.md)
 
-## [Plan de intercambio de modos de juego y plan de experiencia del producto](玩法共享计划&产品体验计划.md)
+## Alcance de la documentación
 
-## Otras instrucciones de uso
-
-- [Instrucciones para grabar firmware en el hardware](other/硬件固件烧录说明.md)
-
-### Conexión del dispositivo a WiFi (configuración de red)
-
-- [Conectar el dispositivo a WiFi mediante la aplicación](other/设备连接wifi（配网）/通过APP将设备连接到wifi.md)
-- [Conectar el dispositivo a WiFi mediante mini programa](other/设备连接wifi（配网）/通过小程序将设备连接到wifi.md)
-- [Configurar red mediante cliente de PC (requiere que la PC tenga Bluetooth)](other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）.md)
-- [Verificar si el router es compatible con mDNS (la mayoría de routers lo son)](other/检测路由器是否支持mdns（大部分路由器都支持）.md)
-- [Solución de errores comunes](other/常见报错解决.md)
-
-## [Problemas conocidos](已知问题.md)
-
-## Documentación de desarrollo
-
-- [Canal de llamada a modelos de lenguaje grandes a bajo costo (cooperación)](developer/合作低价大模型调用渠道.md)
-- [Código abierto y mejores prácticas](developer/开源代码&最佳实践.md)
+Este documento es un manual de uso para usuarios generales. Los desarrolladores deben consultar:
+- [Documentación para desarrolladores](developer/index.md) (Cliente Termux, grabación de hardware, desarrollo de modos de juego)

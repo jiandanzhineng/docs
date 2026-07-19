@@ -54,7 +54,7 @@ function parseArgs(argv) {
     concurrency: 5,
     apiKey: null,
     baseUrl: null,
-    model: 'DeepSeek-V3.2',
+    model: null,
     checkLocaleMapping: false,
     extensions: new Set(['.md', '.mdx']),
     help: false,
