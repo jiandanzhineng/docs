@@ -26,7 +26,7 @@ Video tutorial: https://www.bilibili.com/video/BV1Z4PWzdEkB/
 
 Next, using the edging gameplay as an example, we introduce how to use the OSR6 plugin.
 
-For the usage of edging gameplay, refer to: [3-Stage Edging Gameplay Introduction](../game/气压寸止玩法3阶段升级版说明.md)
+For the usage of edging gameplay, refer to: [3-Stage Edging Gameplay Introduction](../player/气压寸止玩法3阶段升级版说明.md)
 
 The role of OSR6 in the game is to replace the original vibration module, using OSR6 to achieve stimulation effects.
 
@@ -37,4 +37,4 @@ The role of OSR6 in the game is to replace the original vibration module, using 
 5. Now you can see the OSR6 device in the UnderSilicon control end, and you can start the edging game
 > ! Note: When starting the game, you must check the OSR6 device as the eccentric motor controller; otherwise, OSR6 will not receive game commands.
 
-[Purchase Link](../game/气压寸止玩法3阶段升级版说明.md#buy-link-info)
+[Purchase Link](../player/气压寸止玩法3阶段升级版说明.md#buy-link-info)

@@ -14,11 +14,11 @@ sidebar_position: 1
 
 1. 开启设备 此时设备应该为蓝灯闪烁状态（如不闪烁请先充电）
 2. 打开客户端 点击添加设备 或右上角加号
-   ![APP首页截图 ##h40vh##](./img/client/app.jpg)
+   ![APP首页截图 ##h40vh##](../img/client/app.jpg)
 3. 点击添加设备
-   ![发现设备 ##h40vh##](./img/client/finddevice.jpg)
+   ![发现设备 ##h40vh##](../img/client/finddevice.jpg)
 4. 点击完成
-   ![添加设备 ##h40vh##](./img/client/adddevice.jpg)
+   ![添加设备 ##h40vh##](../img/client/adddevice.jpg)
 5. 此时添加成功 已经正确连接 连接成功后蓝灯会常亮几秒之后熄灭
-   ![完成 ##h40vh##](./img/client/finish.jpg)
+   ![完成 ##h40vh##](../img/client/finish.jpg)
 

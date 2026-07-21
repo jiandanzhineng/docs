@@ -14,10 +14,10 @@ Androidダウンロードリンク：https://dl.undersilicon.com/apk/latest/app-
 
 1. デバイスを起動します。この時点でデバイスの青いランプは点滅状態であるはずです（点滅しない場合はまず充電してください）。
 2. クライアントを開き、「デバイスを追加」または右上のプラスアイコンをタップします。
-   ![APPホーム画面スクリーンショット ##h40vh##](./img/client/app.jpg)
+   ![APPホーム画面スクリーンショット ##h40vh##](../img/client/app.jpg)
 3. 「デバイスを追加」をタップします。
-   ![デバイスを発見 ##h40vh##](./img/client/finddevice.jpg)
+   ![デバイスを発見 ##h40vh##](../img/client/finddevice.jpg)
 4. 「完了」をタップします。
-   ![デバイスを追加 ##h40vh##](./img/client/adddevice.jpg)
+   ![デバイスを追加 ##h40vh##](../img/client/adddevice.jpg)
 5. これで追加が成功し、正しく接続されました。接続成功後、青いランプは数秒間点灯した後に消灯します。
-   ![完了 ##h40vh##](./img/client/finish.jpg)
+   ![完了 ##h40vh##](../img/client/finish.jpg)

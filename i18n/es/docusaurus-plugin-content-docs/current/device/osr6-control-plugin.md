@@ -26,7 +26,7 @@ Tutorial en video: https://www.bilibili.com/video/BV1Z4PWzdEkB/
 
 A continuación, se toma como ejemplo el玩法 de寸止 para explicar cómo utilizar el plugin OSR6.
 
-La forma de utilizar el玩法 de寸止 se refiere a [Introducción al juego de寸止 de 3 etapas](../game/气压寸止玩法3阶段升级版说明.md)
+La forma de utilizar el玩法 de寸止 se refiere a [Introducción al juego de寸止 de 3 etapas](../player/气压寸止玩法3阶段升级版说明.md)
 
 El papel de OSR6 en el juego es sustituir el módulo de vibración original, utilizando OSR6 para lograr efectos de estímulo.
 
@@ -37,4 +37,4 @@ El papel de OSR6 en el juego es sustituir el módulo de vibración original, uti
 5. Ahora se puede ver el dispositivo OSR6 en el terminal de control UnderSilicon y comenzar el juego de寸止
 > ! Nota: Al iniciar el juego, es necesario marcar el dispositivo OSR6 como controlador de motor de eje descentrado; de lo contrario, OSR6 no recibirá las instrucciones del juego.
 
-[Enlace de compra](../game/气压寸止玩法3阶段升级版说明.md#buy-link-info)
+[Enlace de compra](../player/气压寸止玩法3阶段升级版说明.md#buy-link-info)

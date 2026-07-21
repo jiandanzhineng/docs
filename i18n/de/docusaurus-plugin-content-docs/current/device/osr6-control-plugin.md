@@ -26,7 +26,7 @@ Video-Tutorial: https://www.bilibili.com/video/BV1Z4PWzdEkB/
 
 Im Folgenden wird die Verwendung des OSR6-Plugins am Beispiel des "Edging"-Spiels erläutert.
 
-Die Verwendung des "Edging"-Spiels bezieht sich auf [die Einführung zum 3-stufigen Edging-Spiel](../game/气压寸止玩法3阶段升级版说明.md)
+Die Verwendung des "Edging"-Spiels bezieht sich auf [die Einführung zum 3-stufigen Edging-Spiel](../player/气压寸止玩法3阶段升级版说明.md)
 
 Die Rolle des OSR6 im Spiel besteht darin, das ursprüngliche Vibrationsmodul zu ersetzen und durch den OSR6 die stimulierende Wirkung zu erzielen.
 
@@ -37,4 +37,4 @@ Die Rolle des OSR6 im Spiel besteht darin, das ursprüngliche Vibrationsmodul zu
 5. Nun sollte das OSR6-Gerät in der UnderSilicon-Steuerung sichtbar sein. Das "Edging"-Spiel kann gestartet werden.
 > ! Hinweis: Beim Start des Spiels muss das OSR6-Gerät als **Exzentermotor-Controller** ausgewählt werden, da es sonst keine Spielbefehle empfangen kann.
 
-[Kauf-Link](../game/气压寸止玩法3阶段升级版说明.md#buy-link-info)
+[Kauf-Link](../player/气压寸止玩法3阶段升级版说明.md#buy-link-info)

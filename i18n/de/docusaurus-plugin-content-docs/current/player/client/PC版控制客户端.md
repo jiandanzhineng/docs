@@ -22,8 +22,8 @@ Hinweis: Wenn das Gerät bereits mit einem anderen 5-GHz-WLAN verbunden ist, kan
 
  
 
-## Nutzungsweise ohne Computer-Hotspot
-1. Gerätevernetzung: Bitte lesen Sie [Gerät mit WLAN verbinden (Vernetzung) über die APP](../other/设备连接wifi（配网）/通过APP将设备连接到wifi.md), um das Gerät mit Ihrem Heim-WLAN zu verbinden (beachten Sie, dass es sich um ein 2,4-GHz-WLAN handeln muss).
+## Nutzungsweise ohne Computer-Hotspot {#无电脑热点情况使用方式}
+1. Gerätevernetzung: Bitte lesen Sie [Gerät mit WLAN verbinden (Vernetzung) über die APP](../../other/设备连接wifi（配网）/通过APP将设备连接到wifi.md), um das Gerät mit Ihrem Heim-WLAN zu verbinden (beachten Sie, dass es sich um ein 2,4-GHz-WLAN handeln muss).
 2. Aktivieren Sie mDNS im Client.
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)

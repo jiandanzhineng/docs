@@ -22,8 +22,8 @@ Note: If the device has already connected to a 5G WiFi network, it might still o
 
  
 
-## Usage without Computer Hotspot
-1. Device Network Configuration: Refer to [Connecting the Device to WiFi via APP](../other/设备连接wifi（配网）/通过APP将设备连接到wifi.md) to connect the device to your home WiFi (Note: Must be 2.4G WiFi)
+## Usage without Computer Hotspot {#无电脑热点情况使用方式}
+1. Device Network Configuration: Refer to [Connecting the Device to WiFi via APP](../../other/设备连接wifi（配网）/通过APP将设备连接到wifi.md) to connect the device to your home WiFi (Note: Must be 2.4G WiFi)
 2. Enable mDNS in the client
 
 ![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)
