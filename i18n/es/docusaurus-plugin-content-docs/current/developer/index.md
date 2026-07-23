@@ -17,14 +17,14 @@ slug: /developer
 
 ## Otras instrucciones de uso
 
-- [Instrucciones de grabación de firmware del hardware](/docs/other/硬件固件烧录说明)
+- [Instrucciones de grabación de firmware del hardware](/docs/other/firmware-flash)
 
 ### Conexión del dispositivo a wifi (configuración de red)
 
-- [Conectar dispositivo a wifi a través de la APP](/docs/other/设备连接wifi（配网）/通过APP将设备连接到wifi)
-- [Conectar dispositivo a wifi a través del mini programa](/docs/other/设备连接wifi（配网）/通过小程序将设备连接到wifi)
-- [Configuración de red a través del cliente de PC (requiere que el PC admita Bluetooth)](/docs/other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）)
-- [Verificar si el router admite mdns](/docs/other/检测路由器是否支持mdns（大部分路由器都支持）)
-- [Solución de errores comunes](/docs/other/常见报错解决)
+- [Conectar dispositivo a wifi a través de la APP](/docs/other/wifi-config/app)
+- [Conectar dispositivo a wifi a través del mini programa](/docs/other/wifi-config/miniprogram)
+- [Configuración de red a través del cliente de PC (requiere que el PC admita Bluetooth)](/docs/other/wifi-config/pc-bluetooth)
+- [Verificar si el router admite mdns](/docs/other/check-mdns)
+- [Solución de errores comunes](/docs/other/faq)
 
-## [Plan de compartir formas de uso y plan de experiencia de producto](/docs/玩法共享计划&产品体验计划)
+## [Plan de compartir formas de uso y plan de experiencia de producto](/docs/sharing-plan)

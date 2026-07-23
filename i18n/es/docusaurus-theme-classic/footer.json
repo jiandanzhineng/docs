@@ -15,10 +15,6 @@
     "message": "Instrucciones de uso",
     "description": "The label of footer link with label=使用说明 linking to /docs/"
   },
-  "link.item.label.QQ群(验证问题答案为 简单智能)": {
-    "message": "Grupo QQ (La respuesta a la pregunta de verificación es 简单智能)",
-    "description": "The label of footer link with label=QQ群(验证问题答案为 简单智能) linking to https://qm.qq.com/q/EN44NRr8RO"
-  },
   "link.item.label.X": {
     "message": "X",
     "description": "The label of footer link with label=X linking to https://x.com/lufashi181845"
@@ -34,5 +30,13 @@
   "copyright": {
     "message": "Copyright © 2026 硅基之下(UnderSilicon) , Inc. Construido con Docusaurus.<br /><a href=\"https://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">豫ICP备2026016470号</a>",
     "description": "The footer copyright"
+  },
+  "link.item.label.在线客服": {
+    "message": "Servicio al cliente en línea",
+    "description": "The label of footer link with label=在线客服 linking to https://undersilicon.com/kefu/"
+  },
+  "link.item.label.QQ群(验证问题答案为 硅基之下)": {
+    "message": "Grupo QQ (Respuesta de verificación: bajo de silicio)",
+    "description": "The label of footer link with label=QQ群(验证问题答案为 硅基之下) linking to https://qm.qq.com/q/EN44NRr8RO"
   }
 }

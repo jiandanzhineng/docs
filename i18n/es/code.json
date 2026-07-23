@@ -367,5 +367,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "homepage.heroBadge": {
+    "message": "Ecosistema inteligente · Centro de documentación"
+  },
+  "homepage.ctaTitle": {
+    "message": "¿Estás listo para comenzar?"
+  },
+  "homepage.ctaSubtitle": {
+    "message": "Conecte su dispositivo en minutos siguiendo la guía del documento y experimente el ecosistema completo de interacción inteligente."
+  },
+  "homepage.ctaButton": {
+    "message": "Ver documentación de uso"
+  },
+  "homepage.featuresEyebrow": {
+    "message": "Competencias Clave"
+  },
+  "homepage.featuresTitle": {
+    "message": "Un ecosistema que conecta todos los modos de juego"
+  },
+  "homepage.featuresSubtitle": {
+    "message": "Desde la conexión de hardware hasta el desarrollo de software, UnderSilicon te ofrece una experiencia completa de interacción inteligente."
   }
 }

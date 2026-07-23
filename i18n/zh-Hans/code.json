@@ -367,5 +367,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "homepage.heroBadge": {
+    "message": "智能生态 · 文档中心"
+  },
+  "homepage.ctaTitle": {
+    "message": "准备好开始了吗？"
+  },
+  "homepage.ctaSubtitle": {
+    "message": "跟随文档指引，几分钟内即可连接设备，体验完整的智能互动生态。"
+  },
+  "homepage.ctaButton": {
+    "message": "查看使用文档"
+  },
+  "homepage.featuresEyebrow": {
+    "message": "核心能力"
+  },
+  "homepage.featuresTitle": {
+    "message": "一个生态，连接所有玩法"
+  },
+  "homepage.featuresSubtitle": {
+    "message": "从硬件连接到软件开发，硅基之下为你提供完整的智能互动体验。"
   }
 }

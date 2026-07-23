@@ -17,14 +17,14 @@ slug: /developer
 
 ## Other Usage Instructions
 
-- [Hardware Firmware Flashing Instructions](/docs/other/硬件固件烧录说明)
+- [Hardware Firmware Flashing Instructions](/docs/other/firmware-flash)
 
 ### Device Connecting to WiFi (Network Provisioning)
 
-- [Connect Device to WiFi via APP](/docs/other/设备连接wifi（配网）/通过APP将设备连接到wifi)
-- [Connect Device to WiFi via Mini Program](/docs/other/设备连接wifi（配网）/通过小程序将设备连接到wifi)
-- [Network Provisioning via PC Client (Requires PC with Bluetooth Support)](/docs/other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）)
-- [Check if Router Supports mDNS](/docs/other/检测路由器是否支持mdns（大部分路由器都支持）)
-- [Common Error Solutions](/docs/other/常见报错解决)
+- [Connect Device to WiFi via APP](/docs/other/wifi-config/app)
+- [Connect Device to WiFi via Mini Program](/docs/other/wifi-config/miniprogram)
+- [Network Provisioning via PC Client (Requires PC with Bluetooth Support)](/docs/other/wifi-config/pc-bluetooth)
+- [Check if Router Supports mDNS](/docs/other/check-mdns)
+- [Common Error Solutions](/docs/other/faq)
 
-## [Play Sharing Plan & Product Experience Plan](/docs/玩法共享计划&产品体验计划)
+## [Play Sharing Plan & Product Experience Plan](/docs/sharing-plan)

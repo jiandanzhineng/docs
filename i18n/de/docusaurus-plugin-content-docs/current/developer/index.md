@@ -17,14 +17,14 @@ slug: /developer
 
 ## Weitere Anleitungen
 
-- [Anleitung zum Flashen der Hardware-Firmware](/docs/other/硬件固件烧录说明)
+- [Anleitung zum Flashen der Hardware-Firmware](/docs/other/firmware-flash)
 
 ### Gerät mit WLAN verbinden (Netzwerkkonfiguration)
 
-- [Gerät über App mit WLAN verbinden](/docs/other/设备连接wifi（配网）/通过APP将设备连接到wifi)
-- [Gerät über Mini-Programm mit WLAN verbinden](/docs/other/设备连接wifi（配网）/通过小程序将设备连接到wifi)
-- [Netzwerkkonfiguration über PC-Client (PC benötigt Bluetooth-Unterstützung)](/docs/other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）)
-- [Überprüfen, ob der Router mdns unterstützt](/docs/other/检测路由器是否支持mdns（大部分路由器都支持）)
-- [Lösung häufiger Fehlermeldungen](/docs/other/常见报错解决)
+- [Gerät über App mit WLAN verbinden](/docs/other/wifi-config/app)
+- [Gerät über Mini-Programm mit WLAN verbinden](/docs/other/wifi-config/miniprogram)
+- [Netzwerkkonfiguration über PC-Client (PC benötigt Bluetooth-Unterstützung)](/docs/other/wifi-config/pc-bluetooth)
+- [Überprüfen, ob der Router mdns unterstützt](/docs/other/check-mdns)
+- [Lösung häufiger Fehlermeldungen](/docs/other/faq)
 
-## [Spielideen-Sharing-Programm & Produkttester-Programm](/docs/玩法共享计划&产品体验计划)
+## [Spielideen-Sharing-Programm & Produkttester-Programm](/docs/sharing-plan)

@@ -17,14 +17,14 @@ slug: /developer
 
 ## その他のご利用案内
 
-- [ハードウェアファームウェア書き込み説明](/docs/other/硬件固件烧录说明)
+- [ハードウェアファームウェア書き込み説明](/docs/other/firmware-flash)
 
 ### デバイスをWi-Fiに接続（ネットワーク設定）
 
-- [アプリからデバイスをWi-Fiに接続](/docs/other/设备连接wifi（配网）/通过APP将设备连接到wifi)
-- [ミニアプリからデバイスをWi-Fiに接続](/docs/other/设备连接wifi（配网）/通过小程序将设备连接到wifi)
-- [PCクライアントでネットワーク設定（PCのBluetooth対応が必要）](/docs/other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）)
-- [ルーターがmDNSをサポートしているか確認](/docs/other/检测路由器是否支持mdns（大部分路由器都支持）)
-- [よくあるエラー解決方法](/docs/other/常见报错解决)
+- [アプリからデバイスをWi-Fiに接続](/docs/other/wifi-config/app)
+- [ミニアプリからデバイスをWi-Fiに接続](/docs/other/wifi-config/miniprogram)
+- [PCクライアントでネットワーク設定（PCのBluetooth対応が必要）](/docs/other/wifi-config/pc-bluetooth)
+- [ルーターがmDNSをサポートしているか確認](/docs/other/check-mdns)
+- [よくあるエラー解決方法](/docs/other/faq)
 
-## [遊び方共有計画＆製品体験計画](/docs/玩法共享计划&产品体验计划)
+## [遊び方共有計画＆製品体験計画](/docs/sharing-plan)

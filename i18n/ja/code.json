@@ -367,5 +367,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
+  },
+  "homepage.heroBadge": {
+    "message": "インテリジェントエコシステム・ドキュメントセンター"
+  },
+  "homepage.ctaTitle": {
+    "message": "始める準備はできていますか？"
+  },
+  "homepage.ctaSubtitle": {
+    "message": "ドキュメントの指示に従って数分でデバイスを接続し、完全なスマートインタラクションエコシステムをお楽しみいただけます。"
+  },
+  "homepage.ctaButton": {
+    "message": "使用ドキュメントを表示する"
+  },
+  "homepage.featuresEyebrow": {
+    "message": "中核能力"
+  },
+  "homepage.featuresTitle": {
+    "message": "ひとつのエコシステム、すべての遊びを繋ぐ"
+  },
+  "homepage.featuresSubtitle": {
+    "message": "ハードウェア接続からソフトウェア開発まで、シリコン基盤の下(UnderSilicon)が完全なスマートインタラクション体験を提供します。"
   }
 }

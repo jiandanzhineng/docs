@@ -3,10 +3,6 @@
     "message": "Nächste",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.玩法说明": {
-    "message": "Spielanleitung",
-    "description": "The label for category '玩法说明' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.设备介绍 & 购买": {
     "message": "Geräteeinführung & Kauf",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
@@ -22,5 +18,17 @@
   "sidebar.tutorialSidebar.category.开发文档": {
     "message": "Entwicklerdokumentation",
     "description": "The label for category '开发文档' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.玩家使用说明": {
+    "message": "Spieler-Bedienungsanleitung",
+    "description": "The label for category '玩家使用说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.客户端下载": {
+    "message": "Client-Download",
+    "description": "The label for category '客户端下载' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.以往的玩法说明": {
+    "message": "Frühere Spielanleitungen",
+    "description": "The label for category '以往的玩法说明' in sidebar 'tutorialSidebar'"
   }
 }

@@ -17,14 +17,14 @@ slug: /developer
 
 ## 其他使用说明
 
-- [硬件固件烧录说明](/docs/other/硬件固件烧录说明)
+- [硬件固件烧录说明](/docs/other/firmware-flash)
 
 ### 设备连接wifi（配网）
 
-- [通过APP将设备连接到wifi](/docs/other/设备连接wifi（配网）/通过APP将设备连接到wifi)
-- [通过小程序将设备连接到wifi](/docs/other/设备连接wifi（配网）/通过小程序将设备连接到wifi)
-- [通过电脑客户端配网（需要电脑支持蓝牙）](/docs/other/设备连接wifi（配网）/通过电脑客户端配网（需要电脑支持蓝牙）)
-- [检测路由器是否支持mdns](/docs/other/检测路由器是否支持mdns（大部分路由器都支持）)
-- [常见报错解决](/docs/other/常见报错解决)
+- [通过APP将设备连接到wifi](/docs/other/wifi-config/app)
+- [通过小程序将设备连接到wifi](/docs/other/wifi-config/miniprogram)
+- [通过电脑客户端配网（需要电脑支持蓝牙）](/docs/other/wifi-config/pc-bluetooth)
+- [检测路由器是否支持mdns](/docs/other/check-mdns)
+- [常见报错解决](/docs/other/faq)
 
-## [玩法共享计划&产品体验计划](/docs/玩法共享计划&产品体验计划)
+## [玩法共享计划&产品体验计划](/docs/sharing-plan)
