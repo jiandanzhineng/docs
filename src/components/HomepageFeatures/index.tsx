@@ -51,15 +51,17 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, emoji, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--3')}>
-      <div className="text--center">
-        <span style={{fontSize: '5rem', lineHeight: '1.5', display: 'block', marginBottom: '1rem'}} role="img" aria-label="icon">
-          {emoji}
-        </span>
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--3', styles.featureCol)}>
+      <div className={styles.featureCard}>
+        <div className={styles.iconTile}>
+          <span role="img" aria-hidden="true">
+            {emoji}
+          </span>
+        </div>
+        <Heading as="h3" className={styles.featureTitle}>
+          {title}
+        </Heading>
+        <p className={styles.featureDescription}>{description}</p>
       </div>
     </div>
   );
@@ -69,6 +71,19 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionEyebrow}>
+            <Translate id="homepage.featuresEyebrow">核心能力</Translate>
+          </span>
+          <Heading as="h2" className={styles.sectionTitle}>
+            <Translate id="homepage.featuresTitle">一个生态，连接所有玩法</Translate>
+          </Heading>
+          <p className={styles.sectionSubtitle}>
+            <Translate id="homepage.featuresSubtitle">
+              从硬件连接到软件开发，硅基之下为你提供完整的智能互动体验。
+            </Translate>
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

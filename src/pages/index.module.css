@@ -3,22 +3,286 @@
  * and scoped locally.
  */
 
+/* ===== Hero ===== */
+
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
+  padding: 7.5rem 0 6.5rem;
+  text-align: center;
   overflow: hidden;
+  isolation: isolate;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+/* 网格背景 */
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(to right, rgba(109, 92, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 92, 255, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 30%, transparent 75%);
+}
+
+/* 漂浮光斑 */
+.heroOrb {
+  position: absolute;
+  z-index: -2;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.heroOrbLeft {
+  width: 34rem;
+  height: 34rem;
+  top: -12rem;
+  left: -8rem;
+  background: radial-gradient(circle, rgba(109, 92, 255, 0.5), transparent 65%);
+  animation: heroFloat 11s ease-in-out infinite;
+}
+
+.heroOrbRight {
+  width: 30rem;
+  height: 30rem;
+  top: -6rem;
+  right: -9rem;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.42), transparent 65%);
+  animation: heroFloat 13s ease-in-out infinite reverse;
+}
+
+[data-theme='dark'] .heroOrbLeft {
+  background: radial-gradient(circle, rgba(141, 133, 255, 0.4), transparent 65%);
+}
+
+[data-theme='dark'] .heroOrbRight {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3), transparent 65%);
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(1.5rem, 2rem) scale(1.08);
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .heroOrb {
+    animation: none;
+  }
+}
+
+/* 底部淡出，与内容区自然衔接 */
+.heroFade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6rem;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent, var(--ifm-background-color));
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+}
+
+/* 顶部胶囊徽章 */
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(109, 92, 255, 0.35);
+  background: var(--brand-gradient-soft);
+  backdrop-filter: blur(6px);
+  color: var(--ifm-color-primary-darker);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+[data-theme='dark'] .heroBadge {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.heroBadgeDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  box-shadow: 0 0 0 3px rgba(109, 92, 255, 0.18);
+}
+
+/* 主标题：渐变文字 */
+.heroTitle {
+  margin-bottom: 1.25rem;
+}
+
+.heroTitleLine {
+  display: inline-block;
+  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ifm-color-primary);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .heroTitleLine {
+    background: var(--brand-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.heroSubtitle {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* 按钮组 */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.9rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6d5cff 0%, #5b51e6 55%, #4f46e5 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 12px 30px -10px rgba(109, 92, 255, 0.65);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -10px rgba(109, 92, 255, 0.75);
+  filter: brightness(1.06);
+}
+
+.primaryButtonArrow {
+  transition: transform 0.2s ease;
+}
+
+.primaryButton:hover .primaryButtonArrow {
+  transform: translateX(4px);
+}
+
+.secondaryButton {
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font-weight: 600;
+  box-shadow: 0 4px 14px -6px rgba(15, 23, 42, 0.12);
+}
+
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -8px rgba(109, 92, 255, 0.3);
+}
+
+/* ===== 底部 CTA ===== */
+
+.ctaSection {
+  padding: 2rem 0 5rem;
+}
+
+.ctaPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #6d5cff 45%, #0ea5e9 110%);
+  box-shadow: 0 24px 60px -20px rgba(79, 70, 229, 0.55);
+}
+
+.ctaGlow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.22), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.14), transparent 40%);
+}
+
+.ctaTitle {
+  position: relative;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.ctaSubtitle {
+  position: relative;
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ctaButton {
+  position: relative;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: #4f46e5;
+  font-weight: 700;
+  box-shadow: 0 10px 26px -8px rgba(0, 0, 0, 0.35);
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  color: #4138c7;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4.5rem 1rem 4rem;
+  }
+
+  .ctaPanel {
+    padding: 3rem 1.25rem;
+  }
 }

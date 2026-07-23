@@ -1,11 +1,145 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3.5rem 0 4.5rem;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+/* ===== 区块标题 ===== */
+
+.sectionHeader {
+  max-width: 42rem;
+  margin: 0 auto 3.25rem;
+  text-align: center;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: var(--brand-gradient-soft);
+  border: 1px solid rgba(109, 92, 255, 0.3);
+  color: var(--ifm-color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.sectionTitle {
+  margin-bottom: 0.9rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .sectionSubtitle {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* ===== 特性卡片 ===== */
+
+.featureCol {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.featureCard {
+  position: relative;
+  width: 100%;
+  padding: 1.9rem 1.6rem;
+  border-radius: 1.125rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 10px -4px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+}
+
+/* 悬停时顶部渐变光条 */
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--brand-gradient);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(109, 92, 255, 0.45);
+  box-shadow: 0 22px 44px -16px rgba(99, 102, 241, 0.35);
+}
+
+.featureCard:hover::before {
+  opacity: 1;
+}
+
+[data-theme='dark'] .featureCard {
+  border-color: rgba(141, 133, 255, 0.14);
+  box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'] .featureCard:hover {
+  border-color: rgba(141, 133, 255, 0.5);
+  box-shadow: 0 22px 44px -14px rgba(109, 92, 255, 0.4);
+}
+
+/* 图标瓷贴 */
+.iconTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 1rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  background: var(--brand-gradient-soft);
+  border: 1px solid rgba(109, 92, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.25s ease;
+}
+
+.featureCard:hover .iconTile {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.featureTitle {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.featureDescription {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .featureDescription {
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.25rem;
+  }
 }

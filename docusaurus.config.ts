@@ -107,7 +107,7 @@ const config: Config = {
       title: '硅基之下(UnderSilicon) 文档',
       logo: {
         alt: '硅基之下(UnderSilicon) 文档 Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.webp',
       },
       items: [
         {

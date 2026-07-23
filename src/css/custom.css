@@ -6,27 +6,136 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* 品牌主色：电光紫（硅基科技感） */
+  --ifm-color-primary: #5b51e6;
+  --ifm-color-primary-dark: #4c43d9;
+  --ifm-color-primary-darker: #4138c7;
+  --ifm-color-primary-darkest: #352ea3;
+  --ifm-color-primary-light: #6f66ea;
+  --ifm-color-primary-lighter: #7d75ed;
+  --ifm-color-primary-lightest: #9a93f3;
+
+  /* 品牌渐变（供首页/按钮等复用） */
+  --brand-gradient: linear-gradient(120deg, #6d5cff 0%, #8b5cf6 45%, #38bdf8 100%);
+  --brand-gradient-soft: linear-gradient(135deg, rgba(109, 92, 255, 0.12), rgba(56, 189, 248, 0.12));
+  --brand-glow: rgba(109, 92, 255, 0.45);
+
   --ifm-code-font-size: 95%;
+  --ifm-global-radius: 0.625rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-navbar-shadow: 0 1px 0 0 var(--ifm-color-emphasis-200);
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-letter-spacing: -0.01em;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #8d85ff;
+  --ifm-color-primary-dark: #7d74ff;
+  --ifm-color-primary-darker: #6e64ff;
+  --ifm-color-primary-darkest: #5b51f0;
+  --ifm-color-primary-light: #9d97ff;
+  --ifm-color-primary-lighter: #aaa4ff;
+  --ifm-color-primary-lightest: #c4bfff;
+
+  --brand-gradient: linear-gradient(120deg, #8d85ff 0%, #a78bfa 45%, #38bdf8 100%);
+  --brand-gradient-soft: linear-gradient(135deg, rgba(141, 133, 255, 0.16), rgba(56, 189, 248, 0.16));
+  --brand-glow: rgba(141, 133, 255, 0.5);
+
+  /* 深邃的科技风暗色背景 */
+  --ifm-background-color: #0c0f1d;
+  --ifm-background-surface-color: #131830;
+  --ifm-navbar-background-color: rgba(12, 15, 29, 0.82);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 全局观感增强 ===== */
+
+::selection {
+  background: rgba(109, 92, 255, 0.25);
+}
+
+/* 导航栏：毛玻璃悬浮感 */
+.navbar {
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+[data-theme='dark'] .navbar {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar__brand {
+  transition: transform 0.2s ease;
+}
+
+.navbar__brand:hover {
+  transform: scale(1.03);
+}
+
+/* 品牌 Logo：圆角小瓷贴 */
+.navbar__logo img {
+  border-radius: 0.375rem;
+}
+
+/* 按钮：更现代的圆角 + 渐变主按钮 */
+.button {
+  border-radius: 0.625rem;
+  font-weight: 600;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease,
+    background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #6d5cff 0%, #5b51e6 60%, #4f46e5 100%);
+  border: none;
+  box-shadow: 0 8px 20px -8px var(--brand-glow);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background: linear-gradient(135deg, #7a6aff 0%, #6559ee 60%, #5750ec 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px -8px var(--brand-glow);
+}
+
+.button--primary:active {
+  transform: translateY(0);
+}
+
+/* 链接悬停更顺滑 */
+.markdown a,
+.footer__link-item {
+  transition: color 0.15s ease;
+}
+
+/* 页脚：深空色调 + 顶部渐变分割线 */
+.footer--dark {
+  --ifm-footer-background-color: #0a0d1a;
+  --ifm-footer-link-color: #a3a8c3;
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(90deg, transparent, rgba(109, 92, 255, 0.55), rgba(56, 189, 248, 0.55), transparent) 1;
+}
+
+.footer--dark .footer__link-item:hover {
+  color: #fff;
+}
+
+.footer__title {
+  color: #e6e8f2;
+}
+
+/* 文档侧边栏当前项更醒目 */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* 表格与代码块圆角统一 */
+.markdown table {
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
 }
 
 @media (max-width: 996px) {
