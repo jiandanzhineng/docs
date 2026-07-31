@@ -19,6 +19,8 @@ slug: /developer
 
 - [硬件固件烧录说明](/docs/other/firmware-flash)
 
+> **注意：设备的 BLE（蓝牙）连接和 WiFi 连接是二选一的，不能同时使用。** 设备配网成功连接 WiFi 后会自动关闭蓝牙；如需使用蓝牙直连控制设备，需切换到 BLE 模式（此时 WiFi 会断开）。详见下方配网文档中的说明。
+
 ### 设备连接wifi（配网）
 
 - [通过APP将设备连接到wifi](/docs/other/wifi-config/app)

@@ -4,6 +4,8 @@ slug: /other/wifi-config/app
 
 # 通过APP将设备连接到wifi
 
+**<font>注意：设备的 BLE（蓝牙）连接和 WiFi 连接是二选一的，不能同时使用。配网成功后设备会自动关闭蓝牙，此时蓝牙将不可用。如需使用蓝牙直连控制设备，需切换到 BLE 模式（此时 WiFi 会断开）。</font>**
+
 **<font>注意：如您想使用默认wifi 请勿配网 默认wifi名 easysmart 密码 11111111 设备会自动连接默认wifi</font>**
 
 **<font>前提：</font>**
