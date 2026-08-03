@@ -139,6 +139,12 @@
 }
 
 @media (max-width: 996px) {
+  .navbar {
+    /* backdrop-filter makes the fixed mobile sidebar relative to the navbar. */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   .navbar__items--right
     > .navbar__item:has(> .navbar__link.mobileLocaleDropdown) {
     display: inherit;
