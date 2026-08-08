@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Actualmente solo es compatible con dispositivos Android, iOS estará disponible próximamente.
 
-Enlace de descarga para Android: https://dl.undersilicon.com/apk/latest/app-release.apk
+Enlace de descarga para Android: https://dl.undersilicon.cn/apk/latest/app-release.apk
 
 # Conexión del dispositivo (tomando cunzhi01 como ejemplo)
 

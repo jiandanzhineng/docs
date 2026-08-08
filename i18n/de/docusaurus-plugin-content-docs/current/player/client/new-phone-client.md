@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Derzeit werden nur Android-Geräte unterstützt, iOS wird in Kürze verfügbar sein.
 
-Android-Download-Link: https://dl.undersilicon.com/apk/latest/app-release.apk
+Android-Download-Link: https://dl.undersilicon.cn/apk/latest/app-release.apk
 
 # Geräteverbindung (am Beispiel von cunzhi01)
 

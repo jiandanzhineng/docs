@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Currently, only Android devices are supported; iOS support is coming soon.
 
-Android download link: https://dl.undersilicon.com/apk/latest/app-release.apk
+Android download link: https://dl.undersilicon.cn/apk/latest/app-release.apk
 
 # Device Connection (using cunzhi01 as an example)
 

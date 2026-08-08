@@ -8,7 +8,7 @@ sidebar_position: 1
 
 当前仅支持安卓设备，ios即将支持。
 
-安卓下载链接：https://dl.undersilicon.com/apk/latest/app-release.apk
+安卓下载链接：https://dl.undersilicon.cn/apk/latest/app-release.apk
 
 # 设备连接（以cunzhi01为例）
 
