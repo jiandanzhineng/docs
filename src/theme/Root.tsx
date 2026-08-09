@@ -4,7 +4,7 @@ import {FiMail, FiMessageCircle, FiX} from 'react-icons/fi';
 import {FaWeixin} from 'react-icons/fa';
 
 const CUSTOMER_SERVICE_EMAIL = 'jiandanzhineng@outlook.com';
-const CUSTOMER_SERVICE_QR_CODE = 'img/微信客服二维码.png';
+const CUSTOMER_SERVICE_QR_CODE = 'img/新人工.png';
 
 export default function Root({children}: {children: ReactNode}): ReactNode {
   const [isOpen, setIsOpen] = useState(false);
