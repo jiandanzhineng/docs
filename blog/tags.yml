@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+update:
+  label: 更新公告
+  permalink: /update
+  description: 产品版本更新公告
