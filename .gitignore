@@ -24,3 +24,4 @@ yarn-error.log*
 .trae/documents/*
 
 reference
+/home
