@@ -5,10 +5,10 @@ import stripFontTags from './src/remark/stripFontTags';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const siteUrl = process.env.SITE_URL ?? 'https://your-docusaurus-site.example.com';
+const siteUrl = process.env.SITE_URL ?? 'https://docs.undersilicon.cn';
 const baseUrl = process.env.BASE_URL ?? '/';
-const organizationName = process.env.GITHUB_ORG ?? 'facebook';
-const projectName = process.env.GITHUB_PROJECT ?? 'docusaurus';
+const organizationName = process.env.GITHUB_ORG ?? 'UnderSilicon';
+const projectName = process.env.GITHUB_PROJECT ?? 'docs';
 
 const config: Config = {
   title: '硅基之下(UnderSilicon)文档',
@@ -99,7 +99,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -119,7 +119,7 @@ const config: Config = {
         {to: '/blog', label: '博客', position: 'left'},
         {type: 'localeDropdown', position: 'right', className: 'mobileLocaleDropdown'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/orgs/jiandanzhineng/repositories',
           label: 'GitHub',
           position: 'right',
         },
