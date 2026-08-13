@@ -13,7 +13,7 @@ const projectName = process.env.GITHUB_PROJECT ?? 'docusaurus';
 const config: Config = {
   title: '硅基之下(UnderSilicon)文档',
   tagline: '探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
