@@ -4,11 +4,13 @@ title: 客户端下载与设备连接
 sidebar_position: 1
 ---
 
-# 客户端下载
-
-当前仅支持安卓设备，ios即将支持。
+# 安卓客户端下载
 
 安卓下载链接：https://dl.undersilicon.cn/apk/latest/app-release.apk
+
+# 其他客户端
+
+[鸿蒙](./鸿蒙客户端.md) | [iOS](./iOS客户端.md)
 
 # 设备连接（以cunzhi01为例）
 
