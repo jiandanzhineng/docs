@@ -4,15 +4,15 @@ Target account: `Undersilicon @Undersilicon`
 
 ## Post Copy
 
-Pressure sensing turns edge control into a 3-stage loop:
+Pressure sensing powers a 3-stage edge-control loop:
 
 1. Calm: vibration builds
 2. Adaptive: pressure tunes intensity
-3. Edge trigger: threshold reached, pulse + stop
+3. Trigger: pulse + stop
 
 Cooldown, then repeat.
 
-18+ only. Start low.
+Recruiting 18+ testers. Testers must submit a test-session video. Interested? DM us.
 https://docs.undersilicon.cn/en/docs/player/cunzhi3step
 
 ## Image ALT Text
