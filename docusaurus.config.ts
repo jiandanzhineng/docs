@@ -75,7 +75,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'docs',
+          path: 'content',
           sidebarPath: './sidebars.ts',
           remarkPlugins: [stripFontTags],
         },

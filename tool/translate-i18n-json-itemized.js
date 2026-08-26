@@ -73,7 +73,7 @@ function localeToTargetLang(locale) {
 
 function parseArgs(argv) {
   const args = {
-    docsDir: 'docs',
+    docsDir: 'content',
     i18nDir: 'i18n',
     defaultLocale: 'zh-Hans',
     includeDefaultLocale: false,
@@ -152,7 +152,7 @@ function printHelp() {
       '用法: node tool/translate-i18n-json-itemized.js [options]',
       '',
       '选项:',
-      '  --docs-dir <dir>       源 docs 目录（默认 docs）',
+      '  --docs-dir <dir>       源文档目录（默认 content）',
       '  --i18n-dir <dir>       i18n 目录（默认 i18n）',
       '  --locales <list>       仅处理指定 locale（逗号分隔）',
       '  --include-default-locale  处理 defaultLocale（默认不处理）',

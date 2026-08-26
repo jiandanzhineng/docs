@@ -42,7 +42,7 @@ async function loadDotEnvIfPresent(repoRoot) {
 
 function parseArgs(argv) {
   const args = {
-    sourceDir: 'docs',
+    sourceDir: 'content',
     i18nDir: 'i18n',
     defaultLocale: 'zh-Hans',
     includeDefaultLocale: false,
@@ -551,7 +551,7 @@ function printHelp() {
   const lines = [
     '用法：node tool/check-doc-translations.js [options]',
     '',
-    '默认行为：扫描 docs/ 下的 .md/.mdx，自动为各语言生成/更新对应翻译文件。',
+    '默认行为：扫描 content/ 下的 .md/.mdx，自动为各语言生成/更新对应翻译文件。',
     '规则：翻译文件不存在 => 生成；源文件比翻译文件新 => 重新翻译覆盖；否则跳过。',
     '',
     'API 配置（建议用环境变量）：',
@@ -568,7 +568,7 @@ function printHelp() {
     '  --check-locale-mapping  仅输出 locale -> target_lang 映射后退出',
     '  --concurrency 5        并发翻译数量（默认 5）',
     '  --limit 50 | -n 50     仅输出前 N 条明细（默认全部；0 表示不输出明细）',
-    '  --source-dir docs     源文档目录（默认 docs）',
+    '  --source-dir content  源文档目录（默认 content）',
     '  --i18n-dir i18n       i18n 根目录（默认 i18n）',
     '  --plugin-docs-subdir <path>  翻译 docs 子目录（默认 docusaurus-plugin-content-docs/current）',
     '  --ext md,mdx          扫描的文件后缀（默认 md,mdx）',

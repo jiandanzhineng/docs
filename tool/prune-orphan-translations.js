@@ -98,7 +98,7 @@ async function pruneEmptyDirs(rootAbs) {
 
 function parseArgs(argv) {
   const args = {
-    sourceDir: 'docs',
+    sourceDir: 'content',
     i18nDir: 'i18n',
     locales: null,
     dryRun: false,
@@ -132,11 +132,11 @@ function printHelp() {
     [
       '用法: node tool/prune-orphan-translations.js [选项]',
       '',
-      '删除 i18n/<locale>/docusaurus-plugin-content-docs/current/ 下、docs/ 里已无对应源文件的',
+      '删除 i18n/<locale>/docusaurus-plugin-content-docs/current/ 下、content/ 里已无对应源文件的',
       '翻译文件 / 目录（搬迁 / 删除源文档后留下的孤儿译文）。',
       '',
       '选项:',
-      '  --source-dir <dir>   默认源目录 (默认 docs)',
+      '  --source-dir <dir>   默认源目录 (默认 content)',
       '  --i18n-dir <dir>     i18n 根目录 (默认 i18n)',
       '  --locale <a,b>       只处理指定 locale (逗号分隔)，默认全部',
       '  --dry-run, -n        只列出孤儿、不删除',

@@ -25,7 +25,7 @@ Dark technical infographic showing a three-stage pressure-sensing edge-control l
 
 ## Source
 
-`docs/player/气压寸止玩法3阶段升级版说明.md`
+`content/player/气压寸止玩法3阶段升级版说明.md`
 
 ## Generation Prompt
 

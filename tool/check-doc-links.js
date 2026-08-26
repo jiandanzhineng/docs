@@ -18,9 +18,9 @@
  * 有遗漏），所以本脚本报出的链接死链可能多于构建警告——以本脚本为准去修。
  *
  * 用法：
- *   node tool/check-doc-links.js                 # 扫 docs/ + 全部 i18n locale
- *   node tool/check-doc-links.js --locale en     # 只扫 en + 默认 docs/
- *   node tool/check-doc-links.js --no-default    # 只扫 i18n，不扫 docs/
+ *   node tool/check-doc-links.js                 # 扫 content/ + 全部 i18n locale
+ *   node tool/check-doc-links.js --locale en     # 只扫 en + 默认 content/
+ *   node tool/check-doc-links.js --no-default    # 只扫 i18n，不扫 content/
  *   node tool/check-doc-links.js --ext .md,.mdx
  *
  * 退出码：发现死链返回 1（可接入 CI / git hook），无死链返回 0。
@@ -155,7 +155,7 @@ async function resolveLinkExists(dirAbs, url) {
 
 function parseArgs(argv) {
   const args = {
-    sourceDir: 'docs',
+    sourceDir: 'content',
     i18nDir: 'i18n',
     includeDefault: true,
     locales: null,
@@ -199,14 +199,14 @@ function printHelp() {
     [
       '用法: node tool/check-doc-links.js [选项]',
       '',
-      '检查 docs/ 与 i18n/<locale>/docusaurus-plugin-content-docs/current/ 下所有',
+      '检查 content/ 与 i18n/<locale>/docusaurus-plugin-content-docs/current/ 下所有',
       '.md/.mdx 里指向本地图片 / 资源 / 其它 md 的相对引用，列出目标不存在的死链。',
       '',
       '选项:',
-      '  --source-dir <dir>   默认源目录 (默认 docs)',
+      '  --source-dir <dir>   默认源目录 (默认 content)',
       '  --i18n-dir <dir>     i18n 根目录 (默认 i18n)',
       '  --locale <a,b>       只扫指定 locale (逗号分隔)，默认全部',
-      '  --no-default         不扫默认源 docs/，只扫 i18n',
+      '  --no-default         不扫默认源 content/，只扫 i18n',
       '  --ext <.md,.mdx>     要扫描的扩展名 (默认 .md,.mdx)',
       '  -h, --help           显示本帮助',
       '',

@@ -1,6 +1,6 @@
 # 翻译工具（tool/）
 
-用大模型把中文文档（`docs/`）和 UI 文案（`i18n/`）翻译成 `en` / `ja` / `es` / `de`。
+用大模型把中文文档（`content/`）和 UI 文案（`i18n/`）翻译成 `en` / `ja` / `es` / `de`。
 源语言固定为 `zh-Hans`（默认语言），翻译文件落在 `i18n/<locale>/docusaurus-plugin-content-docs/current/` 下，与源保持相同的相对路径。
 
 ## 文件说明
@@ -8,9 +8,9 @@
 | 文件 | 作用 |
 |---|---|
 | `translate-md.js` | 底层公共库（API 请求 / 失败重试 / `.env` 加载 / responses↔chat/completions 双接口兜底），兼作单文件翻译 CLI |
-| `check-doc-translations.js` | **主力**：扫描 `docs/`，翻译 `.md`/`.mdx` 与 `_category_.json`，含全套校验与图片同步 |
-| `check-doc-links.js` | 检查 `docs/` 与各 `i18n` locale 下所有 `.md`/`.mdx` 里指向**本地图片 / 资源 / 其它 md 的相对引用**是否存在（防「文件移目录后 `./img/xxx`、`../other/yyy.md` 忘了改」导致的线上 404 / 跳转失败） |
-| `prune-orphan-translations.js` | 删除各 `i18n` locale 下**没有 `docs/` 源对应物**的孤儿译文（源文档搬迁 / 删除后残留的旧翻译、旧图片），已接入 `npm run translate` 链自动执行 |
+| `check-doc-translations.js` | **主力**：扫描 `content/`，翻译 `.md`/`.mdx` 与 `_category_.json`，含全套校验与图片同步 |
+| `check-doc-links.js` | 检查 `content/` 与各 `i18n` locale 下所有 `.md`/`.mdx` 里指向**本地图片 / 资源 / 其它 md 的相对引用**是否存在（防「文件移目录后 `./img/xxx`、`../other/yyy.md` 忘了改」导致的线上 404 / 跳转失败） |
+| `prune-orphan-translations.js` | 删除各 `i18n` locale 下**没有 `content/` 源对应物**的孤儿译文（源文档搬迁 / 删除后残留的旧翻译、旧图片），已接入 `npm run translate` 链自动执行 |
 | `translate-i18n-json-itemized.js` | 逐条翻译 i18n JSON 文案（`navbar.json` / `footer.json` / `code.json` / `docs/current.json` / `blog/options.json`），**增量**（已有翻译保留） |
 | `translate-i18n-json.js` | 可选：整文件**全量**重译 JSON。常规流程不跑，仅当需要强制重译 JSON 时用 `npm run translate-i18n-json-full` |
 
@@ -39,7 +39,7 @@ npm run translate
 等价于三步：
 
 1. `write-translations` — Docusaurus 生成 / 刷新 i18n 源 JSON
-2. `check-doc-translations` — 翻译 `docs/`
+2. `check-doc-translations` — 翻译 `content/`
 3. `translate-i18n-json-itemized` — 增量翻译 UI 文案 JSON
 
 ## ✅ 推荐工作流：逐语言翻译 + 抽查
@@ -61,8 +61,8 @@ node tool/check-doc-translations.js --locale en --only missing
 **第 3 步 — 引用完整性检查（重点）**：对比源与译文的链接数应一致。
 
 ```bash
-# 把 <file> 换成要抽查的文档（相对 docs/ 的路径）
-f="<file>"; s=$(grep -oE '\]\([^)]*\)' "docs/$f" | wc -l); \
+# 把 <file> 换成要抽查的文档（相对 content/ 的路径）
+f="<file>"; s=$(grep -oE '\]\([^)]*\)' "content/$f" | wc -l); \
 t=$(grep -oE '\]\([^)]*\)' "i18n/en/docusaurus-plugin-content-docs/current/$f" | wc -l); \
 echo "src=$s en=$t $([ "$s" = "$t" ] && echo ✓ || echo ✗)"
 ```
@@ -109,22 +109,22 @@ node tool/check-doc-translations.js --locale de --only missing
 
 ## 图片资源同步
 
-翻译完成后，工具会把 `docs/` 中译文引用的本地图片自动复制到对应
+翻译完成后，工具会把 `content/` 中译文引用的本地图片自动复制到对应
 `i18n/<locale>/.../` 目录。
 
 - `[ASSET_COPIED]` 已复制
-- `[ASSET_MISSING_SOURCE]` **源文档自己引用了不存在的图片**（源死链，与翻译无关，需在 `docs/` 侧修复）
+- `[ASSET_MISSING_SOURCE]` **源文档自己引用了不存在的图片**（源死链，与翻译无关，需在 `content/` 侧修复）
 
 ## 死链检查（`check-doc-links.js`）
 
-扫描 `docs/` + 全部 `i18n/<locale>/docusaurus-plugin-content-docs/current/`，提取每个
+扫描 `content/` + 全部 `i18n/<locale>/docusaurus-plugin-content-docs/current/`，提取每个
 `.md`/`.mdx` 里的本地相对引用（Markdown 图片 `![alt](./img/x.png)`、Markdown 链接
 `[文本](../other/y.md)`、JSX `require('./img/x.jpeg')`），按相对路径解析后检查目标文件
 是否真实存在，列出所有死链（图片 / 链接分开统计）。
 
 ```bash
-npm run check:doc-links                       # 扫 docs/ + 全部 locale
-node tool/check-doc-links.js --locale en      # 只扫 en + 默认 docs/
+npm run check:doc-links                       # 扫 content/ + 全部 locale
+node tool/check-doc-links.js --locale en      # 只扫 en + 默认 content/
 ```
 
 发现死链返回退出码 1（可接入 CI / pre-commit）。只检查本地相对路径，跳过
@@ -138,9 +138,9 @@ node tool/check-doc-links.js --locale en      # 只扫 en + 默认 docs/
 ## 孤儿译文清理（`prune-orphan-translations.js`）
 
 源文档搬迁 / 重命名 / 删除后，旧的 i18n 译文不会自动消失，会在各 locale 下堆积出
-`docs/` 里已不存在的孤儿（旧 `.md`、旧图片、空目录），产生过时重复路由。本工具按
-「`docs/` 是唯一真相」清理：`i18n/<locale>/docusaurus-plugin-content-docs/current/` 下
-每个文件，若 `docs/` 里不存在同相对路径的源文件，即为孤儿，删除并清理空目录。
+`content/` 里已不存在的孤儿（旧 `.md`、旧图片、空目录），产生过时重复路由。本工具按
+「`content/` 是唯一真相」清理：`i18n/<locale>/docusaurus-plugin-content-docs/current/` 下
+每个文件，若 `content/` 里不存在同相对路径的源文件，即为孤儿，删除并清理空目录。
 
 ```bash
 npm run prune          # 实际删除（翻译链 npm run translate 末尾已自动跑）
@@ -148,12 +148,12 @@ npm run prune:check    # dry-run，只列出孤儿不删（提交 / CI 前先看
 ```
 
 > 💡 配合 `check:doc-links` 一起用：prune 删孤儿后跑一遍 `check:doc-links`，可确认没有
-> 译文还引用着被删的孤儿（若有，说明该文件本该一起搬/改路径）。`zh-Hans` 用 `docs/` 本身，
+> 译文还引用着被删的孤儿（若有，说明该文件本该一起搬/改路径）。`zh-Hans` 用 `content/` 本身，
 > 不参与清理。
 
 ## 已知问题
 
-- `docs/player/old/`、`docs/player/client/` 等目录经历过搬迁，早期一批文档的 `./img/xxx`
+- `content/player/old/`、`content/player/client/` 等目录经历过搬迁，早期一批文档的 `./img/xxx`
   相对路径没跟着更新（应为 `../img/xxx`），已统一修复；后续挪文档务必同步改路径或跑 `npm run check:images`。
 
 ## 常见排错
