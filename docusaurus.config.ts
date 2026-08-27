@@ -117,6 +117,7 @@ const config: Config = {
           label: '文档',
         },
         {to: '/blog', label: '博客', position: 'left'},
+        {to: '/contact', label: '联系我们', position: 'left'},
         {type: 'localeDropdown', position: 'right', className: 'mobileLocaleDropdown'},
         {
           href: 'https://github.com/orgs/jiandanzhineng/repositories',
@@ -134,6 +135,10 @@ const config: Config = {
             {
               label: '使用说明',
               to: '/docs/',
+            },
+            {
+              label: '联系我们',
+              to: '/contact',
             },
             {
               label: '在线客服',
