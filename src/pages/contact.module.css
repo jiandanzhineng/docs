@@ -1,40 +1,84 @@
 .page {
-  padding: 3.5rem 0 5rem;
+  position: relative;
+  padding: 4rem 0 5.5rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* 顶部网格 + 光斑背景，呼应首页 Hero */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 26rem;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 12% 0%, rgba(109, 92, 255, 0.16), transparent 55%),
+    radial-gradient(circle at 88% 8%, rgba(56, 189, 248, 0.14), transparent 55%),
+    linear-gradient(to right, rgba(109, 92, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 92, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+  mask-image: radial-gradient(ellipse 85% 95% at 50% 0%, #000 25%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 95% at 50% 0%, #000 25%, transparent 72%);
+  pointer-events: none;
+}
+
+.header {
+  margin-bottom: 2.75rem;
+  text-align: center;
 }
 
 .title {
   margin-bottom: 0.75rem;
-  text-align: center;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--ifm-color-primary);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .title {
+    display: inline-block;
+    background: var(--brand-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .lead {
-  max-width: 36rem;
-  margin: 0 auto 2.5rem;
-  text-align: center;
+  max-width: 34rem;
+  margin: 0 auto;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--ifm-color-emphasis-700);
 }
 
+/* 微信二维码卡片：渐变描边 + 品牌光晕 */
 .qrCard {
-  max-width: 22rem;
-  margin: 0 auto 2.5rem;
-  padding: 1.75rem 1.5rem 1.5rem;
+  max-width: 21rem;
+  margin: 0 auto 3rem;
+  padding: 1.6rem 1.5rem 1.4rem;
   text-align: center;
-  border-radius: 1.125rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  background: var(--ifm-background-surface-color);
-  box-shadow: 0 2px 10px -4px rgba(15, 23, 42, 0.06);
+  border-radius: 1.25rem;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--ifm-background-surface-color), var(--ifm-background-surface-color))
+      padding-box,
+    var(--brand-gradient) border-box;
+  box-shadow: 0 18px 44px -18px var(--brand-glow);
 }
 
 .qrLabel {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
+  padding: 0.32rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(7, 193, 96, 0.1);
   color: #07c160;
   font-weight: 700;
 }
@@ -44,10 +88,11 @@
 }
 
 .qr {
-  width: 14rem;
-  height: 14rem;
+  width: 13rem;
+  height: 13rem;
   object-fit: contain;
   border-radius: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
   background: #fff;
 }
 
@@ -57,21 +102,24 @@
   color: var(--ifm-color-emphasis-700);
 }
 
-.list {
+/* 联系方式网格 */
+.grid {
   list-style: none;
-  max-width: 40rem;
+  max-width: 52rem;
   margin: 0 auto;
   padding: 0;
   display: grid;
-  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.5rem), 1fr));
+  gap: 1rem;
 }
 
-.item {
+.card {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1.05rem 1.2rem;
-  border-radius: 0.9rem;
+  align-items: center;
+  gap: 0.9rem;
+  height: 100%;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   background: var(--ifm-background-surface-color);
   color: inherit;
@@ -79,36 +127,87 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.item:hover,
-.item:focus-visible {
+.card:hover,
+.card:focus-visible {
   border-color: rgba(109, 92, 255, 0.45);
   color: inherit;
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -14px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 14px 30px -14px var(--brand-glow);
 }
 
-.item strong {
-  font-size: 1.02rem;
+.cardIcon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.8rem;
+  background: var(--brand-gradient-soft);
+  color: var(--ifm-color-primary);
+  font-size: 1.15rem;
 }
 
-.item span {
-  font-size: 0.9rem;
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.cardText strong {
+  font-size: 1rem;
+}
+
+.cardText span {
+  font-size: 0.85rem;
   color: var(--ifm-color-emphasis-700);
+  overflow-wrap: anywhere;
 }
 
-[data-theme='dark'] .qrCard,
-[data-theme='dark'] .item {
+.cardArrow {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-400);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card:hover .cardArrow,
+.card:focus-visible .cardArrow {
+  transform: translateX(3px);
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .card {
   border-color: rgba(141, 133, 255, 0.14);
 }
 
 @media screen and (max-width: 996px) {
   .page {
-    padding: 2.5rem 0 3.5rem;
+    padding: 2.75rem 0 4rem;
+  }
+
+  .bg {
+    height: 19rem;
+  }
+
+  .header {
+    margin-bottom: 2.25rem;
+  }
+
+  .qrCard {
+    margin-bottom: 2.25rem;
+    padding: 1.4rem 1.25rem 1.2rem;
   }
 
   .qr {
-    width: 12rem;
-    height: 12rem;
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+
+  .grid {
+    gap: 0.8rem;
   }
 }
