@@ -5,7 +5,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   FaWeixin,
   FaEnvelope,
-  FaHeadset,
   FaQq,
   FaShoppingBag,
   FaGithub,
@@ -19,7 +18,6 @@ const EMAIL = 'jiandanzhineng@outlook.com';
 
 const CONTACTS = [
   {title: '邮箱', desc: EMAIL, href: `mailto:${EMAIL}`, Icon: FaEnvelope},
-  {title: '在线客服', desc: '网页在线咨询', href: 'https://undersilicon.com/kefu/', Icon: FaHeadset},
   {title: 'QQ 群', desc: '970326066（验证答案：硅基之下）', href: 'https://qm.qq.com/q/EN44NRr8RO', Icon: FaQq},
   {title: 'X', desc: '@lufashi181845', href: 'https://x.com/lufashi181845', Icon: FaXTwitter},
   {title: 'X（英文）', desc: '@Undersilicon', href: 'https://x.com/Undersilicon', Icon: FaXTwitter},
