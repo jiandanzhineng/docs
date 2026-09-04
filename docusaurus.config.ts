@@ -31,6 +31,28 @@ const config: Config = {
   organizationName, // Usually your GitHub org/user name.
   projectName, // Usually your repo name.
 
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {type: 'text/javascript'},
+      innerHTML: `var _hmt = _hmt || [];
+(function() {
+  var src;
+  if (location.hostname === 'docs.undersilicon.cn') {
+    src = 'https://hm.baidu.com/hm.js?ce732a9c35d7f2fe102617da8624c24c';
+  } else if (location.hostname === 'docs.undersilicon.com') {
+    src = 'https://hm.baidu.com/hm.js?fcf301b9471d2e30b0362f85d770b3d0';
+  } else {
+    return;
+  }
+  var hm = document.createElement('script');
+  hm.src = src;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(hm, s);
+})();`,
+    },
+  ],
+
   onBrokenLinks: 'warn',
   markdown: {
     hooks: {
