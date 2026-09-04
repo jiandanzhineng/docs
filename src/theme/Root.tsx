@@ -3,6 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import {FiMail, FiMessageCircle, FiX} from 'react-icons/fi';
 import {FaWeixin} from 'react-icons/fa';
 import LocaleSuggestBanner from '@site/src/components/LocaleSuggestBanner';
+import BaiduTongji from '@site/src/components/BaiduTongji';
 
 const CUSTOMER_SERVICE_EMAIL = 'jiandanzhineng@outlook.com';
 const CUSTOMER_SERVICE_QR_CODE = 'img/新人工.png';
@@ -13,6 +14,7 @@ export default function Root({children}: {children: ReactNode}): ReactNode {
 
   return (
     <>
+      <BaiduTongji />
       <LocaleSuggestBanner />
       {children}
       <div className="customer-service-widget">
