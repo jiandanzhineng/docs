@@ -15,7 +15,11 @@
   里已显式补 `#fff`（2026-09-15）。改配色时记得两个主题都要给实色。
 - 部署链路：push 到 `main` → GitHub Actions → 构建产物同时发 GitHub Pages 和阿里云 OSS `ezs-docs`。
 - **CDN 会把 HTML 缓存 24 小时**（`Cache-Control: max-age=86400`，`X-Swift-CacheTime: 86400`），
-  仓库里没有自动刷新配置。改完要立刻生效得去阿里云控制台刷新 URL/目录，否则最多等一天。
+  仓库里没有自动刷新配置。改完要立刻生效得手动刷，否则最多等一天。
   CSS/JS 是内容哈希文件名，不受影响；受影响的是 HTML 本身。
+- 刷新 ESA 缓存：`node tool/purge-cdn-cache.js`（看剩余配额加 `--quota`），约 1 分钟生效。
+  ESA 站点是整个 `undersilicon.cn` 区域，所以**只用目录刷新**把作用域限定在 docs 域名下：
+  `hostname` 刷新当前套餐配额为 0 用不了，`purgeall` 会连 `shop.undersilicon.cn` 一起清、别用。
+  凭据取 `ALIYUN_ACCESS_KEY_ID/SECRET`，没设就回退读 `E:\smart\.env` 里的 `OSS_*`。
 - 排查小程序 web-view 里页面的实际渲染，用开发者工具的 CDP 端口最直接，见
   `E:\smart\project\shop\docs\note.md` 的「小程序商品描述链接」一节。
