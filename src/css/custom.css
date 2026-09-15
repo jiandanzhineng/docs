@@ -27,6 +27,10 @@
   --ifm-navbar-shadow: 0 1px 0 0 var(--ifm-color-emphasis-200);
   --ifm-heading-font-weight: 700;
   --ifm-heading-letter-spacing: -0.01em;
+
+  /* Infima 浅色主题默认 --ifm-background-color: transparent，靠浏览器默认的白色画布兜底。
+     小程序 web-view 这类容器底色不是白的时，就会变成黑底黑字，所以显式给个白底。 */
+  --ifm-background-color: #fff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
