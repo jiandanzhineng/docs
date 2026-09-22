@@ -25,3 +25,4 @@ sidebar_position: 0
 - [Kegel Exercise Gameplay](./提肛训练玩法.md)
 - [Tiptoe Punishment Gameplay v2](./踮脚惩罚玩法v2.md)
 - [Push-Up (Approximate) Detection Training Game](./俯卧撑（大概）检测训练游戏.md)
+- [Drink / Liquid-Collection Unlock](./喝水液体收集解锁玩法.md)
