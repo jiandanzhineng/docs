@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="640" viewBox="0 0 860 640" font-family="-apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5f6368"/>
+    </marker>
+    <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="640" rx="16" fill="#ffffff" stroke="#e0e0e0"/>
+  <text x="430" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#202124">Tiptoe Penalty · Core Flow</text>
+  <rect x="330" y="62" width="200" height="48" rx="12" fill="#e6f4ea" stroke="#34a853"/>
+  <text x="430" y="91" text-anchor="middle" font-size="16" fill="#1e7d34">Start game</text>
+  <rect x="310" y="142" width="240" height="48" rx="12" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="430" y="171" text-anchor="middle" font-size="16" fill="#174ea6">Stay on tiptoe</text>
+  <polygon points="430,214 560,266 430,318 300,266" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="430" y="262" text-anchor="middle" font-size="15" fill="#a06a00">Heel down?</text>
+  <rect x="52" y="240" width="188" height="52" rx="12" fill="#fce8e6" stroke="#ea4335"/>
+  <text x="146" y="262" text-anchor="middle" font-size="15" fill="#a50e0e">Shock now</text>
+  <text x="146" y="280" text-anchor="middle" font-size="12" fill="#a50e0e">Holds · ramps up</text>
+  <polygon points="708,226 794,266 708,306 622,266" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="708" y="262" text-anchor="middle" font-size="13" fill="#a06a00">Long clean run?</text>
+  <rect x="618" y="386" width="180" height="52" rx="12" fill="#f3e8fd" stroke="#9334e6"/>
+  <text x="708" y="408" text-anchor="middle" font-size="15" fill="#7627bb">Start vibration</text>
+  <text x="708" y="426" text-anchor="middle" font-size="12" fill="#7627bb">+ every 5 seconds</text>
+  <rect x="310" y="530" width="240" height="52" rx="12" fill="#f1f3f4" stroke="#80868b"/>
+  <text x="430" y="561" text-anchor="middle" font-size="15" fill="#3c4043">End · Unlock · Report</text>
+  <line x1="430" y1="110" x2="430" y2="142" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="430" y1="190" x2="430" y2="214" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="300" y1="266" x2="240" y2="266" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="268" y="256" text-anchor="middle" font-size="13" fill="#ea4335">Yes</text>
+  <line x1="560" y1="266" x2="622" y2="266" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="590" y="256" text-anchor="middle" font-size="13" fill="#1a73e8">No</text>
+  <line x1="708" y1="306" x2="708" y2="386" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="720" y="348" text-anchor="middle" font-size="13" fill="#9334e6">Yes</text>
+  <path d="M52 266 L28 266 L28 166 L310 166" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrD)"/>
+  <path d="M708 226 L708 200 L820 200 L820 166 L550 166" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrD)"/>
+  <text x="698" y="208" text-anchor="middle" font-size="13" fill="#9aa0a6">No</text>
+  <path d="M798 412 L820 412 L820 200" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="430" y1="318" x2="430" y2="530" stroke="#5f6368" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+  <text x="442" y="430" font-size="13" fill="#5f6368">Hold until time is up</text>
+</svg>

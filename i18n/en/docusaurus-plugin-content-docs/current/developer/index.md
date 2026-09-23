@@ -19,6 +19,8 @@ slug: /developer
 
 - [Hardware Firmware Flashing Instructions](/docs/other/firmware-flash)
 
+> **Note: BLE and Wi-Fi are mutually exclusive. They cannot be used at the same time.** After the device joins Wi-Fi, it turns Bluetooth off. To control it over Bluetooth, switch to BLE mode. Wi-Fi disconnects when you do that. See the provisioning docs below.
+
 ### Device Connecting to WiFi (Network Provisioning)
 
 - [Connect Device to WiFi via APP](/docs/other/wifi-config/app)

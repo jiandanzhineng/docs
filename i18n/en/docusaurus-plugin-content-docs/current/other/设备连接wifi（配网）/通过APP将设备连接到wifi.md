@@ -4,6 +4,8 @@ slug: /other/wifi-config/app
 
 # Connect Device to WiFi via APP
 
+**<font>Note: BLE and Wi-Fi are mutually exclusive. They cannot be used at the same time. After provisioning succeeds, the device turns Bluetooth off, so Bluetooth is unavailable. To control the device over Bluetooth again, switch it to BLE mode. Wi-Fi disconnects when you do that.</font>**
+
 **<font>Note: If you want to use the default WiFi, do not perform network configuration. Default WiFi name: easysmart, password: 11111111. The device will automatically connect to the default WiFi.</font>**
 
 **<font>Prerequisites:</font>**

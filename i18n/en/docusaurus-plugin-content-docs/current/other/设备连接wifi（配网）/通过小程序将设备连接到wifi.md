@@ -6,6 +6,8 @@ slug: /other/wifi-config/miniprogram
 
 All devices can connect to WiFi according to this document.
 
+**<font>Note: BLE and Wi-Fi are mutually exclusive. They cannot be used at the same time. After provisioning succeeds, the device turns Bluetooth off, so Bluetooth is unavailable. To control the device over Bluetooth again, switch it to BLE mode. Wi-Fi disconnects when you do that.</font>**
+
 **<font>Note: If you want to use the default WiFi, do not configure the network. The default WiFi name is easysmart, password is 11111111. The device will automatically connect to the default WiFi.</font>**
 
 Video Tutorial:
@@ -26,7 +28,7 @@ Example:
 
 ![1736778961469-1ea5e8a0-5131-4123-809d-c12aa7e32ee0.jpeg](./img/BwCUIIfLskyFx0zd/1736778961469-1ea5e8a0-5131-4123-809d-c12aa7e32ee0-968887.jpeg)
 
-## Step 2: Search for the mini program "物联地带蓝牙配网" in WeChat and click to enter.
+## Step 2: In WeChat, search for the mini program named 物联地带蓝牙配网 and open it. The mini program name is Chinese; search that exact name.
 <font>Note: Please turn on mobile Bluetooth before operation.</font>
 
 

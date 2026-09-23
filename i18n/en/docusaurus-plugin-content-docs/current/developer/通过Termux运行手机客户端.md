@@ -66,7 +66,7 @@ Possible Cause 3: The user performed network configuration, and the device no lo
 
 ## Termux Displays "Unable to install bootstrap"
 
-Do not install Termux in phone分身 (parallel space), dual-app mode, or similar environments.
+Do not install Termux in a parallel-space app, dual-app mode, or a similar cloned environment.
 
 ## Cannot Access `127.0.0.1:5173` via Phone Browser
 

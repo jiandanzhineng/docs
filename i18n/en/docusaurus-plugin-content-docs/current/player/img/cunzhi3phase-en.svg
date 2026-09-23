@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" font-family="-apple-system, 'Segoe UI', sans-serif">
+  <rect width="980" height="620" rx="16" fill="#f4f7fb"/>
+  <text x="490" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#202124">3-Phase Air-Pressure Edging</text>
+  <rect x="36" y="64" width="280" height="72" rx="10" fill="#ffffff" stroke="#dadce0"/>
+  <text x="48" y="90" font-size="13" fill="#3c4043">Air-pressure edging trainer.</text>
+  <text x="48" y="110" font-size="13" fill="#3c4043">Vibration guides you to the edge.</text>
+  <text x="48" y="128" font-size="13" fill="#3c4043">Over the limit: shock penalty.</text>
+  <rect x="36" y="170" width="230" height="150" rx="14" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="151" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#174ea6">1. Calm</text>
+  <text x="151" y="224" text-anchor="middle" font-size="13" fill="#174ea6">Vibration rises slowly,</text>
+  <text x="151" y="244" text-anchor="middle" font-size="13" fill="#174ea6">with random disturbance.</text>
+  <text x="151" y="270" text-anchor="middle" font-size="13" fill="#1967d2">Goal: raise arousal</text>
+  <text x="151" y="290" text-anchor="middle" font-size="13" fill="#1967d2">and pressure.</text>
+  <rect x="330" y="170" width="280" height="170" rx="14" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+  <text x="470" y="198" text-anchor="middle" font-size="16" font-weight="700" fill="#a06a00">2. Middle</text>
+  <text x="470" y="226" text-anchor="middle" font-size="13" fill="#a06a00">Higher pressure → less vibe</text>
+  <text x="470" y="246" text-anchor="middle" font-size="13" fill="#a06a00">(hold back).</text>
+  <text x="470" y="272" text-anchor="middle" font-size="13" fill="#a06a00">Lower pressure → more vibe</text>
+  <text x="470" y="292" text-anchor="middle" font-size="13" fill="#a06a00">(stay aroused).</text>
+  <rect x="690" y="80" width="250" height="150" rx="14" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
+  <text x="815" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#a50e0e">3. Edging</text>
+  <text x="815" y="140" text-anchor="middle" font-size="14" fill="#a50e0e">Shock fires.</text>
+  <text x="815" y="162" text-anchor="middle" font-size="14" fill="#a50e0e">Vibration stops.</text>
+  <text x="815" y="190" text-anchor="middle" font-size="13" fill="#a50e0e">Then enter cooldown.</text>
+  <rect x="690" y="360" width="250" height="120" rx="14" fill="#f3e8fd" stroke="#9334e6" stroke-width="2"/>
+  <text x="815" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#7627bb">4. Delay</text>
+  <text x="815" y="422" text-anchor="middle" font-size="14" fill="#7627bb">Wait out the cooldown.</text>
+  <text x="815" y="448" text-anchor="middle" font-size="13" fill="#7627bb">Then return by pressure.</text>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <line x1="266" y1="230" x2="330" y2="230" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="298" y="218" text-anchor="middle" font-size="11" fill="#5f6368">Above middle</text>
+  <line x1="610" y1="180" x2="690" y2="150" stroke="#ea4335" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="650" y="150" text-anchor="middle" font-size="11" fill="#a50e0e">At critical</text>
+  <line x1="815" y1="230" x2="815" y2="360" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="828" y="300" font-size="11" fill="#5f6368">Below critical</text>
+  <path d="M690 430 C520 500, 200 430, 151 320" fill="none" stroke="#1a73e8" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="360" y="500" text-anchor="middle" font-size="12" fill="#174ea6">Delay ends and pressure is below middle → Calm</text>
+  <path d="M690 400 C560 360, 500 300, 470 340" fill="none" stroke="#f9ab00" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="470" y="530" text-anchor="middle" font-size="12" fill="#a06a00">Delay ends and pressure is above middle → Middle</text>
+  <path d="M400 340 C300 380, 180 360, 151 320" fill="none" stroke="#1a73e8" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="250" y="390" font-size="12" fill="#174ea6">Below middle</text>
+  <text x="36" y="580" font-size="13" fill="#5f6368">Legend: vibration rises in Calm · shock in Edging · wait in Delay</text>
+</svg>

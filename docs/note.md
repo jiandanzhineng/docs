@@ -10,6 +10,7 @@
 - 喝水玩法 pee 模式对外称「液体收集」（容器放秤上、秤变重），不要写憋尿/排尿/排泄。源 `content/player/喝水液体收集解锁玩法.md`，slug 仍是 `/player/drink-pee-unlock`（2026-09-20）。
 - 喝水教程购买入口已加 Shop：套装 `force-drink`、电子秤 `electronic-scale`、寸止主机 `cunzhi01-host`、自动锁 `zidongsuo-auto-lock`（2026-09-20）。
 - 喝水玩法英文页：`i18n/en/.../player/喝水液体收集解锁玩法.md`，流程图英文 SVG 同目录 `img/drink-pee-unlock-flow.svg`，买链 `https://shop.undersilicon.cn/en/products/force-drink`（2026-09-22）。
+- 英文文档配图：流程图用同目录英文 SVG（`kegel-training-flow-en.svg`、`pushup-game-flow-en.svg`、`tiptoe-punish-flow.svg`、`cunzhi3phase-en.svg`）。接口图、左右震动型、穿戴裤、踮脚海报、扇贝海报已换成英文，只改 `i18n/en` 副本。配网和刷机截图仍是中文客户端界面，AI 重绘会改按钮，先不替换（2026-09-23）。
 - 百度统计（账号 ysy1997212，2026-09-04 接入）
   - `docs.undersilicon.cn` siteId `23498178` hm `ce732a9c35d7f2fe102617da8624c24c`
   - `docs.undersilicon.com` siteId `23498203` hm `fcf301b9471d2e30b0362f85d770b3d0`

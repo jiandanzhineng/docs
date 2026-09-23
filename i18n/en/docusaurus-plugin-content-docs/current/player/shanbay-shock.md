@@ -12,20 +12,20 @@ But what about memorizing vocabulary? You either "know" a word or you "don't kno
 
 What if **you get a shock for a wrong answer**? Give "wrong" a tangible cost, and every word instantly becomes a life-or-death situation—that's the Shanbay Vocabulary Shock play: **Wrong answer → Shock → You'll definitely remember it next time** 🔌⚡
 
-![Why Add Shock to Vocabulary Memorization ##h45vh##](./img/shanbay-shock/why-poster.png)
+![Why add a shock when memorizing words ##h45vh##](./img/shanbay-shock/why-poster-en.png)
 
 ---
 
 Shanbay Vocabulary Shock is a plugin play mode based on the Shanbay web version vocabulary study page: when the plugin detects that you clicked "Don't Know" (wrong answer), or—if punishment is enabled—detects "Couldn't Remember," it triggers the connected shock device to give you a zap ⚡.
 
-> 🛒 **Get the device**: [Purchase on Taobao](https://item.taobao.com/item.htm?id=1065205279302) | [Purchase on Official Website](https://shop.undersilicon.cn/zh/products/beidanci) | [Claim Discount Coupon](../优惠券.md)  
+> 🛒 **Get the device**: [Purchase on Taobao](https://item.taobao.com/item.htm?id=1065205279302) | [Purchase on Official Website](https://shop.undersilicon.cn/en/products/beidanci) | [Claim Discount Coupon](../优惠券.md)  
 > 🎬 **Video Tutorial**: [UnderSilicon Video Site (not yet uploaded)](https://video.undersilicon.com/w/pcesS2gYvbfuU5Wcf5v7fQ) | [YouTube (not yet uploaded)](https://youtu.be/Q7ti6oOdhpc)
 
 <!-- TODO: The video tutorial currently uses the "寸止" gameplay video as a placeholder, will be replaced with a Shanbay Vocabulary Shock exclusive link. -->
 
 ## Gameplay Description
 
-![Shanbay Vocabulary Shock Workflow Overview ##h45vh##](./img/shanbay-shock/workflow.png)
+![Shanbay vocabulary shock flow ##h45vh##](./img/shanbay-shock/workflow-en.png)
 
 The whole closed-loop in one sentence: **Shanbay Answering → Plugin judges right/wrong → Wrong answer triggers shock device**—Painful memory, doubled efficiency.
 
