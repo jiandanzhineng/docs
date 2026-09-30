@@ -36,11 +36,12 @@ OPENAI_MODEL="deepseek-v3.2"
 npm run translate
 ```
 
-等价于三步：
+等价于四步：
 
 1. `write-translations` — Docusaurus 生成 / 刷新 i18n 源 JSON
 2. `check-doc-translations` — 翻译 `content/`
 3. `translate-i18n-json-itemized` — 增量翻译 UI 文案 JSON
+4. `prune-orphan-translations` — 清理孤儿译文
 
 ## ✅ 推荐工作流：逐语言翻译 + 抽查
 
@@ -154,7 +155,7 @@ npm run prune:check    # dry-run，只列出孤儿不删（提交 / CI 前先看
 ## 已知问题
 
 - `content/player/old/`、`content/player/client/` 等目录经历过搬迁，早期一批文档的 `./img/xxx`
-  相对路径没跟着更新（应为 `../img/xxx`），已统一修复；后续挪文档务必同步改路径或跑 `npm run check:images`。
+  相对路径没跟着更新（应为 `../img/xxx`），已统一修复；后续挪文档务必同步改路径或跑 `npm run check:doc-links`。
 
 ## 常见排错
 

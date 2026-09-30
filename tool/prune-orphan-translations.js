@@ -6,6 +6,8 @@
  * 旧 .md 等），既产生过时重复路由，又可能被误当现行内容。本工具按「docs/ 是唯一真相」
  * 的原则：i18n/<locale>/docusaurus-plugin-content-docs/current/ 下每个文件，若 docs/ 里
  * 不存在同相对路径的源文件，即为孤儿，予以删除，并清理随之变空的目录。
+ * 例外：非 md 资源（图片等）若被同 locale 下保留的译文 md 或 content md 引用，则不算孤儿
+ * ——英文专用配图（*-en.svg / *-en.png 等）只存在于 i18n，不能被误删。
  *
  * 用法：
  *   node tool/prune-orphan-translations.js --dry-run   # 只列出，不删（提交前先跑这个）
@@ -49,6 +51,60 @@ async function collectSourceManifest(sourceDirAbs) {
     set.add(toPosixPath(path.relative(sourceDirAbs, f)));
   }
   return set;
+}
+
+const DOC_EXT_RE = /\.mdx?$/i;
+
+// 从 md/mdx 文本中提取相对资源引用：![](x) / [](x) / [ref]: x / require('x') / src="x" / import from 'x'
+function extractLocalRefs(text) {
+  const s = String(text || '');
+  const urls = [];
+  for (const m of s.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)) {
+    let inside = m[1].trim();
+    if (inside.startsWith('<') && inside.endsWith('>')) inside = inside.slice(1, -1);
+    urls.push(inside.trim().split(/\s+/)[0]);
+  }
+  for (const m of s.matchAll(/^\s*\[[^\]]+\]:\s*(\S+)/gm)) urls.push(m[1]);
+  for (const m of s.matchAll(/\brequire\(\s*['"]([^'"]+)['"]\s*\)/g)) urls.push(m[1]);
+  for (const m of s.matchAll(/\bsrc\s*=\s*["']([^"']+)["']/g)) urls.push(m[1]);
+  for (const m of s.matchAll(/\bimport\s+[^'"]*?from\s+['"]([^'"]+)['"]/g)) urls.push(m[1]);
+  return urls
+    .filter((u) => u && !/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(u)) // 跳过外链 / 站点绝对路径 / 锚点
+    .map((u) => {
+      const bare = u.split(/[?#]/)[0];
+      try {
+        return decodeURI(bare);
+      } catch {
+        return bare;
+      }
+    })
+    .filter(Boolean);
+}
+
+// 收集某 locale 下「被保留的译文 md」与「content 源 md」引用到的资源（均映射到该 locale 的 current 目录下）
+async function collectReferencedAssets(currentAbs, sourceDirAbs, manifest) {
+  const referenced = new Set();
+  const addFrom = async (mdAbs, rel) => {
+    let text;
+    try {
+      text = await fs.readFile(mdAbs, 'utf8');
+    } catch {
+      return;
+    }
+    const baseDir = path.dirname(path.join(currentAbs, rel));
+    for (const u of extractLocalRefs(text)) {
+      referenced.add(path.resolve(baseDir, u));
+    }
+  };
+  for await (const f of walkFiles(currentAbs)) {
+    const rel = path.relative(currentAbs, f);
+    // 只统计会被保留的译文 md（自身是孤儿的 md 不算，免得它拖住它引用的图）
+    if (DOC_EXT_RE.test(f) && manifest.has(toPosixPath(rel))) await addFrom(f, rel);
+  }
+  for (const rel of manifest) {
+    if (DOC_EXT_RE.test(rel)) await addFrom(path.join(sourceDirAbs, rel), rel);
+  }
+  return referenced;
 }
 
 // 自底向上删除变空的目录（限定在 rootAbs 之内）
@@ -179,9 +235,12 @@ async function main() {
   for (const locale of locales) {
     const currentAbs = path.join(i18nDirAbs, locale, PLUGIN_DOCS_SUBDIR);
     let localeOrphans = 0;
+    const referenced = await collectReferencedAssets(currentAbs, sourceDirAbs, manifest);
     for await (const f of walkFiles(currentAbs)) {
       const rel = toPosixPath(path.relative(currentAbs, f));
       if (manifest.has(rel)) continue; // docs/ 里有对应源文件，保留
+      // 译文专用资源（如英文配图 *-en.png）：被保留的译文 md 或 content md 引用的，保留
+      if (!DOC_EXT_RE.test(f) && referenced.has(path.resolve(f))) continue;
       localeOrphans++;
       totalOrphans++;
       const relRepo = toPosixPath(path.relative(repoRoot, f));
