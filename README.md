@@ -7,7 +7,7 @@
 - `content/`：网页文档源（默认语言 `zh-Hans`，站点 URL 仍为 `/docs/`）
 - `i18n/<locale>/`：`en`/`ja`/`es`/`de` 译文与 UI 文案 JSON，翻译流程见 `tool/README.md`
 - `blog/`：博客；`src/pages/`：独立页面
-- `docs/`：项目备忘（`docs/adr`、`docs/draft`、`docs/note.md`），不参与网页构建
+- `docs/`：项目备忘（`docs/adr`、`docs/note.md`），不参与网页构建
 
 ## 安装依赖
 
