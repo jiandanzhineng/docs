@@ -14,8 +14,11 @@ title: DeepSeek Harness 插件（AI 控制）
 
 ## 安装插件
 
-1. 打开 dsh 侧栏的「插件」页，点「安装」。
-2. 来源填 `dsh-plugin-undersilicon`，确认安装。
+1. 打开 dsh 侧栏的「插件」页，点右上角「添加插件」。
+2. 输入包名 `dsh-plugin-undersilicon`，点「安装」。
+
+   <img src={require('./img/ai-control/dsh-install.png').default} width="560" alt="dsh 添加插件对话框" />
+
 3. 点「立即启用」，然后**完全退出 dsh 再打开**。只刷新页面不会生效。
 
 也可以用命令行安装：`dsh plugin --profile <profile名> add dsh-plugin-undersilicon`。
@@ -23,6 +26,10 @@ title: DeepSeek Harness 插件（AI 控制）
 ## 使用
 
 打开一个会话（新会话先发一条消息），点会话标题旁的「硅基之下」按钮，右侧会出现控制面板：设备状态和强度条、**急停按钮**、设置。
+
+![左边对话、右边硅基之下控制面板](./img/ai-control/dsh-chat-panel.png)
+
+上图中 AI 想把强度调到最大（255），因为上限是 60%，设备实际按 153 执行。
 
 然后直接对 AI 说，例如：
 
@@ -32,15 +39,20 @@ title: DeepSeek Harness 插件（AI 控制）
 - 「截个图看看客户端现在在哪个页面」
 - 「写个脚本：心率超过 150 就把强度降到 0，并提醒我」
 
-AI 正在控制时，PC 客户端标题栏会显示「AI 控制中 · 上限 X%」。
+AI 正在控制时，PC 客户端标题栏会显示「AI 控制中 · 上限 X%」：
+
+<img src={require('./img/ai-control/titlebar-limit-60.png').default} width="467" alt="标题栏显示 AI 控制中 · 上限 60%" />
 
 ## 安全设置
 
-在右侧面板的「设置」里修改，保存后立即生效：
+在右侧面板点「编辑设置」修改，点「保存设置」后立即生效：
+
+<img src={require('./img/ai-control/dsh-settings.png').default} width="620" alt="插件设置：总阈值与按能力阈值" />
+
 
 | 设置 | 默认 | 说明 |
 |---|---|---|
-| 强度上限 | 60%，电击 30% | AI 下发的强度超过上限会被自动缩放到上限，不超过的照常执行；可以按能力分别设置 |
+| 总阈值 / 按能力阈值 | 60%，电击（shock）30% | AI 下发的强度超过上限会被自动缩放到上限，不超过的照常执行；可以按能力分别设置 |
 | 会话结束停止设备 | 开 | 会话结束时停止所有设备 |
 | 看门狗 | 30 秒 | dsh 卡死或退出后，设备在这个时间内自动停止 |
 
