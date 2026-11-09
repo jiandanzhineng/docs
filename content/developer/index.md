@@ -10,6 +10,8 @@ slug: /developer
 
 ---
 
+- [命令行工具（CLI）](命令行工具.md)
+- [DeepSeek Harness 插件（AI 控制）](DeepSeek-Harness插件.md)
 - [用Python控制跳蛋](用python控制跳蛋.md)
 - [通过Termux运行手机客户端](通过Termux运行手机客户端.md)
 - [合作低价大模型调用渠道](合作低价大模型调用渠道.md)
