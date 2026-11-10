@@ -1,6 +1,6 @@
 ---
 slug: /player/new-phone-client
-title: 客户端下载与设备连接
+title: 客户端下载与安装
 sidebar_position: 1
 ---
 
@@ -14,13 +14,7 @@ sidebar_position: 1
 
 # 设备连接（以cunzhi01为例）
 
-1. 开启设备 此时设备应该为蓝灯闪烁状态（如不闪烁请先充电）
-2. 打开客户端 点击添加设备 或右上角加号
-   ![APP首页截图 ##h40vh##](./img/client/app.jpg)
-3. 点击添加设备
-   ![发现设备 ##h40vh##](./img/client/finddevice.jpg)
-4. 点击完成
-   ![添加设备 ##h40vh##](./img/client/adddevice.jpg)
-5. 此时添加成功 已经正确连接 连接成功后蓝灯会常亮几秒之后熄灭
-   ![完成 ##h40vh##](./img/client/finish.jpg)
+- 开启设备，蓝灯闪烁；打开客户端点「添加设备」或右上角加号。
+- 按提示选择设备并点「完成」，添加成功即已连接（蓝灯常亮几秒后熄灭）。
+- 完整截图步骤见[蓝牙直连（手机）](/docs/start/connect/ble)。
 
