@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Player Guide
 
-> Read [Solo play safety](../start/单人游玩必读.md) before playing alone.
+> Read [Solo play safety](../start/安全须知/单人游玩必读.md) before playing alone.
 
 ## Client downloads
 

@@ -6,13 +6,13 @@ sidebar_position: 0
 
 # 玩法总览
 
-> ⚠️ 单人游玩前，请先阅读 [单人游玩必读](/docs/player/solo-safety)
+> ⚠️ 单人游玩前，请先阅读 [安全须知](/docs/player/solo-safety)
 >
 > 🛒 设备介绍与购买见 [设备介绍&购买](/docs/#设备介绍购买)
 
 ## 客户端下载
 
-客户端下载见 [快速开始](/docs/player/new-phone-client)。
+下载安装与连接设备见 [快速开始](/docs/start)。
 
 ## 玩法教程
 

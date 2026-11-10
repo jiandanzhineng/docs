@@ -7,9 +7,9 @@
     "message": "Geräteeinführung & Kauf",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
-    "message": "Gerät mit WiFi verbinden (Netzwerkkonfiguration)",
-    "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.配网到家里 WiFi": {
+    "message": "Mit Heim-WLAN verbinden",
+    "description": "The label for category '配网到家里 WiFi' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.开发文档": {
     "message": "Entwicklerdokumentation",
@@ -50,5 +50,13 @@
   "sidebar.tutorialSidebar.category.寸止综合设备": {
     "message": "Edging-Gesamtgerät",
     "description": "The label for category '寸止综合设备' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.连接设备": {
+    "message": "Gerät verbinden",
+    "description": "The label for category '连接设备' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.安全须知": {
+    "message": "Sicherheitshinweise",
+    "description": "The label for category '安全须知' in sidebar 'tutorialSidebar'"
   }
 }
