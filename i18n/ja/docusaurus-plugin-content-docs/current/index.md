@@ -9,20 +9,20 @@ sidebar_position: 0
 
 ## クライアントダウンロード & コミュニケーション
 
-[Windows](player/client/PC版控制客户端.md) | [Android](player/client/new-phone-client.md) | [HarmonyOS](player/client/鸿蒙客户端.md) | [iOS](player/client/iOS客户端.md)
+[Windows](start/client/PC版控制客户端.md) | [Android](start/client/new-phone-client.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
 
 QQグループ：970326066（認証情報：硅基之下）| WeChatグループ：右下カスタマーサービスまでご連絡ください
 
 ## 遊び方説明
 
-- [寸止め遊び方2 利用チュートリアル](player/寸止玩法二代使用教程.md)
-- [つま先立ち・肛門引き締めトレーニングチュートリアル](player/踮脚提肛训练教程.md)
-- [shanbay英単語電気ショック](player/shanbay-shock.md)
-- [気圧寸止め遊び方3段階アップグレード版](player/气压寸止玩法3阶段升级版说明.md)
+- [寸止め遊び方2 利用チュートリアル](player/寸止/寸止玩法二代使用教程.md)
+- [つま先立ち・肛門引き締めトレーニングチュートリアル](player/提肛与踮脚/踮脚提肛训练教程.md)
+- [shanbay英単語電気ショック](player/其他玩法/shanbay-shock.md)
+- [気圧寸止め遊び方3段階アップグレード版](player/寸止/气压寸止玩法3阶段升级版说明.md)
 - [エッジコントロール（寸止め）遊び方](player/边缘控制（寸止）玩法.md)
-- [肛門引き締めトレーニング遊び方](player/提肛训练玩法.md)
-- [つま先立ち罰ゲーム v2](player/踮脚惩罚玩法v2.md)
-- [腕立て伏せ（おそらく）検出トレーニングゲーム](player/俯卧撑（大概）检测训练游戏.md)
+- [肛門引き締めトレーニング遊び方](player/提肛与踮脚/提肛训练玩法.md)
+- [つま先立ち罰ゲーム v2](player/提肛与踮脚/踮脚惩罚玩法v2.md)
+- [腕立て伏せ（おそらく）検出トレーニングゲーム](player/其他玩法/俯卧撑（大概）检测训练游戏.md)
 
 ## デバイス紹介 & 購入
 

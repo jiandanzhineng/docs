@@ -7,10 +7,6 @@
     "message": "Introducción y Compra de Dispositivos",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.其他使用说明": {
-    "message": "Otras instrucciones de uso",
-    "description": "The label for category '其他使用说明' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
     "message": "Conexión del dispositivo a WiFi (configuración de red)",
     "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
@@ -19,10 +15,6 @@
     "message": "Documentación de desarrollo",
     "description": "The label for category '开发文档' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.玩家使用说明": {
-    "message": "Instrucciones para jugadores",
-    "description": "The label for category '玩家使用说明' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.客户端下载": {
     "message": "Descarga del cliente",
     "description": "The label for category '客户端下载' in sidebar 'tutorialSidebar'"
@@ -30,5 +22,33 @@
   "sidebar.tutorialSidebar.category.以往的玩法说明": {
     "message": "Instrucciones de juego anteriores",
     "description": "The label for category '以往的玩法说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.快速开始": {
+    "message": "Inicio rápido",
+    "description": "The label for category '快速开始' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.玩法": {
+    "message": "Juegos",
+    "description": "The label for category '玩法' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.常见问题与固件": {
+    "message": "Preguntas frecuentes y firmware",
+    "description": "The label for category '常见问题与固件' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.寸止系列": {
+    "message": "Serie Edging",
+    "description": "The label for category '寸止系列' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.提肛与踮脚": {
+    "message": "Kegel y puntillas",
+    "description": "The label for category '提肛与踮脚' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.其他玩法": {
+    "message": "Otros juegos",
+    "description": "The label for category '其他玩法' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.寸止综合设备": {
+    "message": "Dispositivo Edging todo en uno",
+    "description": "The label for category '寸止综合设备' in sidebar 'tutorialSidebar'"
   }
 }

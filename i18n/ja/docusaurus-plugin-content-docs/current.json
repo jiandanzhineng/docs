@@ -7,10 +7,6 @@
     "message": "デバイス紹介 & 購入",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.其他使用说明": {
-    "message": "その他の使用説明",
-    "description": "The label for category '其他使用说明' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
     "message": "デバイスをWiFiに接続（ネットワーク設定）",
     "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
@@ -19,10 +15,6 @@
     "message": "開発ドキュメント",
     "description": "The label for category '开发文档' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.玩家使用说明": {
-    "message": "プレイヤー使用説明",
-    "description": "The label for category '玩家使用说明' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.客户端下载": {
     "message": "クライアントダウンロード",
     "description": "The label for category '客户端下载' in sidebar 'tutorialSidebar'"
@@ -30,5 +22,33 @@
   "sidebar.tutorialSidebar.category.以往的玩法说明": {
     "message": "過去の遊び方説明",
     "description": "The label for category '以往的玩法说明' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.快速开始": {
+    "message": "クイックスタート",
+    "description": "The label for category '快速开始' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.玩法": {
+    "message": "プレイ",
+    "description": "The label for category '玩法' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.常见问题与固件": {
+    "message": "よくある質問とファームウェア",
+    "description": "The label for category '常见问题与固件' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.寸止系列": {
+    "message": "寸止めシリーズ",
+    "description": "The label for category '寸止系列' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.提肛与踮脚": {
+    "message": "ケーゲルとつま先立ち",
+    "description": "The label for category '提肛与踮脚' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.其他玩法": {
+    "message": "その他のプレイ",
+    "description": "The label for category '其他玩法' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.寸止综合设备": {
+    "message": "寸止め総合デバイス",
+    "description": "The label for category '寸止综合设备' in sidebar 'tutorialSidebar'"
   }
 }

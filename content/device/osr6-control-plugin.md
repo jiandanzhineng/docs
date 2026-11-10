@@ -1,5 +1,5 @@
 ---
-slug: osr6-control-plugin
+slug: /device/osr6-control-plugin
 title: OSR6控制插件
 ---
 
@@ -26,7 +26,7 @@ github：https://github.com/jiandanzhineng/osr6-controller/releases/
 
 接下来以寸止玩法为例，介绍OSR6插件的使用方式。
 
-寸止玩法使用方式参考 [3阶段寸止玩法介绍](../player/气压寸止玩法3阶段升级版说明.md)
+寸止玩法使用方式参考 [3阶段寸止玩法介绍](/docs/player/cunzhi3step)
 
 OSR6在游戏中的作用就是替代了原来的震动模块，通过OSR6来实现刺激的效果。
 
@@ -37,5 +37,5 @@ OSR6在游戏中的作用就是替代了原来的震动模块，通过OSR6来实
 5. 此时可以在UnderSilicon控制端中看到OSR6设备，可以开始寸止游戏啦
 > ! 注意：在启动游戏时 需要勾选OSR6设备作为偏轴电机控制器，否则OSR6无法接到游戏指令。
 
-[购买链接](../player/气压寸止玩法3阶段升级版说明.md#buy-link-info)
+[购买链接](/docs/player/cunzhi3step#buy-link-info)
 
