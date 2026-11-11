@@ -30,6 +30,11 @@
 - 喝水英文页：`i18n/en/.../player/喝水液体收集解锁玩法.md`，流程图 `img/drink-pee-unlock-flow.svg`，买链 `https://shop.undersilicon.cn/en/products/force-drink`。
 - 英文流程图文件名：`kegel-training-flow-en.svg`、`pushup-game-flow-en.svg`、`tiptoe-punish-flow.svg`、`cunzhi3phase-en.svg`；接口图、左右震动型、穿戴裤、踮脚海报、扇贝海报已换英文，只改 `i18n/en` 副本。配网和刷机截图仍是中文客户端界面，AI 重绘会改按钮，先不替换。
 
+## 智能客服（瑰夏）与知识包
+
+- KB 生成：`npm run build` 之后跑 `npm run build:kb`（`tool/build-kb.mjs`），输出 `build/kb/docs-kb.json`，随构建产物一起发到 GitHub Pages 和 OSS。线上地址：`https://ezs-docs.oss-cn-shanghai.aliyuncs.com/kb/docs-kb.json`。页数 < 20 或任一 url 缺失时非 0 退出让 CI 失败。
+- 右下客服挂件：`src/theme/Root.tsx` + `src/components/AiKefuChat/`（智能客服/人工客服两个标签）。API 地址取 `customFields.kefuApiBase`（默认 `https://wxapi.undersilicon.cn`，本地联调用环境变量 `KEFU_API_BASE` 覆盖）。接口：`POST {base}/api/web/chat`，body `{sessionId, message, locale, page}`，返回 `{reply, handoff, sources}`，错误 `{error, message}`。sessionId 与最近 50 条记录存 localStorage。
+
 ## 百度统计
 
 - `docs.undersilicon.cn` siteId `23498178`，hm `ce732a9c35d7f2fe102617da8624c24c`。

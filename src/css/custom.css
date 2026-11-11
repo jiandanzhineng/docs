@@ -266,103 +266,11 @@
   flex: 0 0 auto;
 }
 
+/* 客服面板外层容器：聊天主体样式在 src/components/AiKefuChat/styles.module.css */
 .customer-service-panel {
   position: relative;
-  width: min(18rem, calc(100vw - 2rem));
-  padding: 1rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 0.5rem;
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
-}
-
-.customer-service-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ifm-color-emphasis-700);
-  cursor: pointer;
-}
-
-.customer-service-close:hover,
-.customer-service-close:focus-visible {
-  background: var(--ifm-color-emphasis-100);
-  color: var(--ifm-font-color-base);
-}
-
-.customer-service-close svg {
-  width: 1.1rem;
-  height: 1.1rem;
-}
-
-.customer-service-title {
-  margin: 0 2.25rem 0.75rem 0;
-  font-size: 1.1rem;
-  line-height: 1.35;
-}
-
-.customer-service-wechat-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  width: 100%;
-  margin-bottom: 0.625rem;
-  color: #07c160;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.customer-service-wechat-label svg {
-  width: 1.35rem;
-  height: 1.35rem;
-  flex: 0 0 auto;
-}
-
-.customer-service-qr {
-  display: block;
-  width: 100%;
-  max-width: 14rem;
-  height: auto;
-  margin: 0 auto 0.875rem;
-  border-radius: 0.375rem;
-}
-
-.customer-service-email {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  min-width: 0;
-  padding: 0.625rem 0.75rem;
-  border-radius: 0.375rem;
-  background: var(--ifm-color-emphasis-100);
-  color: var(--ifm-font-color-base);
-  font-size: 0.9rem;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
-}
-
-.customer-service-email:hover,
-.customer-service-email:focus-visible {
-  color: var(--ifm-color-primary-dark);
-  text-decoration: none;
-}
-
-.customer-service-email svg {
-  width: 1rem;
-  height: 1rem;
-  flex: 0 0 auto;
+  flex-direction: column;
 }
 
 @media (max-width: 480px) {
@@ -374,5 +282,26 @@
   .customer-service-trigger {
     min-height: 2.75rem;
     padding: 0 0.85rem;
+  }
+}
+
+/* 聊天面板打开时移动端贴底全宽 */
+@media (max-width: 600px) {
+  .customer-service-widget.customer-service-widget--open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 0;
+    width: 100vw;
+    align-items: stretch;
+  }
+
+  .customer-service-widget--open .customer-service-panel {
+    width: 100%;
+  }
+
+  .customer-service-widget--open .customer-service-trigger {
+    display: none;
   }
 }

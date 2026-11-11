@@ -1,0 +1,265 @@
+/* 瑰夏智能客服聊天面板 */
+
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(23rem, calc(100vw - 2rem));
+  height: min(32rem, calc(100vh - 7rem));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 1rem;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+[data-theme='dark'] .chat {
+  border-color: var(--ifm-color-emphasis-300);
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.55);
+}
+
+/* 顶部标签页：智能客服 / 人工客服 */
+.tabBar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--brand-gradient);
+  flex: 0 0 auto;
+}
+
+.tab {
+  padding: 0.375rem 0.875rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.tabActive {
+  background: #fff;
+  color: var(--ifm-color-primary-darkest);
+  text-shadow: none;
+}
+
+.tabActive:hover {
+  background: #fff;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.headerBtns {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.headerBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  cursor: pointer;
+}
+.headerBtn:hover,
+.headerBtn:focus-visible {
+  background: rgba(255, 255, 255, 0.32);
+  color: #fff;
+}
+.headerBtn svg { width: 1rem; height: 1rem; }
+
+/* 消息列表 */
+.msgList {
+  position: relative;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0.875rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  scrollbar-width: thin;
+}
+.rowUser { display: flex; justify-content: flex-end; }
+.rowBot { display: flex; justify-content: flex-start; }
+
+.bubbleUser {
+  max-width: 82%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem 1rem 0.25rem 1rem;
+  background: linear-gradient(135deg, #6d5cff 0%, #5b51e6 100%);
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.bubbleBot {
+  max-width: 88%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem 1rem 1rem 0.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+/* 深色：气泡用比面板底色稍亮的同色系藏蓝 */
+[data-theme='dark'] .bubbleBot {
+  background: #1e2442;
+  border-color: #2c3358;
+}
+.bubbleBot a {
+  color: var(--ifm-color-primary);
+}
+.thinking {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85rem;
+}
+/* 常见问题快捷按钮 */
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.625rem;
+}
+.quickBtn {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--ifm-color-primary-lighter);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.quickBtn:hover {
+  background: var(--brand-gradient-soft);
+}
+
+/* 来源链接 */
+.sources {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--ifm-color-emphasis-300);
+  font-size: 0.8rem;
+}
+.sources a::before { content: '» '; }
+
+/* 输入栏 */
+.inputBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  padding-bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  flex: 0 0 auto;
+}
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  resize: none;
+  max-height: 6rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 1rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+  font-family: inherit;
+  line-height: 1.4;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--brand-glow);
+}
+.sendBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.sendBtn:hover:not(:disabled) { background: var(--ifm-color-primary-dark); }
+.sendBtn:disabled { opacity: 0.45; cursor: default; }
+.sendBtn svg { width: 1rem; height: 1rem; }
+/* 人工客服标签页 */
+.human {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.25rem 1.25rem;
+}
+.wechatLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  color: #07c160;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.wechatLabel svg { width: 1.3rem; height: 1.3rem; }
+.qr {
+  display: block;
+  width: 100%;
+  max-width: 13rem;
+  height: auto;
+  margin-bottom: 0.875rem;
+  border-radius: 0.5rem;
+}
+.email {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.email:hover { color: var(--ifm-color-primary-dark); text-decoration: none; }
+.email svg { width: 1rem; height: 1rem; flex: 0 0 auto; }
+
+/* 移动端贴底全宽 */
+@media (max-width: 600px) {
+  .chat {
+    width: 100%;
+    max-width: 100%;
+    height: min(70vh, 34rem);
+    border-radius: 1rem 1rem 0 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+}
