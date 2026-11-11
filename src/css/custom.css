@@ -273,34 +273,6 @@
   flex-direction: column;
 }
 
-.customer-service-close {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border: 0;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-}
-
-.customer-service-close:hover,
-.customer-service-close:focus-visible {
-  background: rgba(255, 255, 255, 0.35);
-  color: #fff;
-}
-
-.customer-service-close svg {
-  width: 1.05rem;
-  height: 1.05rem;
-}
-
 @media (max-width: 480px) {
   .customer-service-widget {
     right: 0.75rem;
@@ -316,10 +288,17 @@
 /* 聊天面板打开时移动端贴底全宽 */
 @media (max-width: 600px) {
   .customer-service-widget--open {
+    position: fixed;
+    left: 0;
     right: 0;
     bottom: 0;
     gap: 0;
     width: 100vw;
+    align-items: stretch;
+  }
+
+  .customer-service-widget--open .customer-service-panel {
+    width: 100%;
   }
 
   .customer-service-widget--open .customer-service-trigger {

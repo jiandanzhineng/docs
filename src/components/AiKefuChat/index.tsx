@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import {FaWeixin} from 'react-icons/fa';
-import {FiMail, FiSend, FiTrash2} from 'react-icons/fi';
+import {FiMail, FiRotateCcw, FiSend, FiX} from 'react-icons/fi';
 import styles from './styles.module.css';
 
 const EMAIL = 'jiandanzhineng@outlook.com';
@@ -73,8 +73,41 @@ function loadHistory(): Msg[] {
   }
 }
 
-// 回复里的网址转成可点链接，保留换行
-function linkify(text: string): ReactNode {
+// 回复里的网址转成可点链接：能对上 sources 或站内链接时显示页面标题
+const LOCALE_PREFIX = /^\/(en|ja|es|de)(?=\/|$)/;
+function normalizeUrl(raw: string): {path: string; sameSite: boolean} | null {
+  try {
+    const u = new URL(raw);
+    const isDocsSite = /^docs\.undersilicon\.(cn|com)$/.test(u.hostname);
+    const sameSite =
+      typeof window !== 'undefined' &&
+      (u.origin === window.location.origin || isDocsSite);
+    let p = u.pathname.replace(LOCALE_PREFIX, '') || '/';
+    if (p.length > 1) p = p.replace(/\/+$/, '');
+    return {path: p, sameSite};
+  } catch {
+    return null;
+  }
+}
+function linkify(text: string, sources?: Source[]): ReactNode {
+  const titleOf = (raw: string): string => {
+    const norm = normalizeUrl(raw);
+    if (!norm) return raw;
+    const hit = sources?.find((s) => {
+      const ns = normalizeUrl(s.url);
+      return ns && ns.path === norm.path;
+    });
+    if (hit?.title) return hit.title;
+    if (norm.sameSite) {
+      const last = norm.path.split('/').filter(Boolean).pop() ?? '';
+      try {
+        return decodeURIComponent(last) || norm.path;
+      } catch {
+        return last || norm.path;
+      }
+    }
+    return raw.length > 42 ? raw.slice(0, 42) + '…' : raw;
+  };
   const re = /(https?:\/\/[^\s<>"'）】]+)/g;
   const nodes: ReactNode[] = [];
   let last = 0;
@@ -84,7 +117,7 @@ function linkify(text: string): ReactNode {
     if (m.index > last) nodes.push(text.slice(last, m.index));
     nodes.push(
       <a key={i++} href={m[1]} target="_blank" rel="noopener noreferrer">
-        {m[1].length > 42 ? m[1].slice(0, 42) + '…' : m[1]}
+        {titleOf(m[1])}
       </a>,
     );
     last = m.index + m[1].length;
@@ -92,7 +125,7 @@ function linkify(text: string): ReactNode {
   if (last < text.length) nodes.push(text.slice(last));
   return nodes;
 }
-export default function AiKefuChat(): ReactNode {
+export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const apiBase =
     (siteConfig.customFields?.kefuApiBase as string | undefined) ??
@@ -191,16 +224,26 @@ export default function AiKefuChat(): ReactNode {
           onClick={() => setTab('human')}>
           人工客服
         </button>
-        {tab === 'chat' && (
+        <div className={styles.headerBtns}>
+          {tab === 'chat' && (
+            <button
+              type="button"
+              className={styles.headerBtn}
+              title="清空聊天记录，重新开始"
+              aria-label="清空聊天记录，重新开始"
+              onClick={clearHistory}>
+              <FiRotateCcw aria-hidden="true" />
+            </button>
+          )}
           <button
             type="button"
-            className={styles.clearBtn}
-            title="清空聊天记录"
-            aria-label="清空聊天记录"
-            onClick={clearHistory}>
-            <FiTrash2 aria-hidden="true" />
+            className={styles.headerBtn}
+            title="关闭客服面板"
+            aria-label="关闭客服面板"
+            onClick={onClose}>
+            <FiX aria-hidden="true" />
           </button>
-        )}
+        </div>
       </div>
 
       {tab === 'human' ? (
@@ -244,7 +287,7 @@ export default function AiKefuChat(): ReactNode {
               ) : (
                 <div key={i} className={styles.rowBot}>
                   <div className={styles.bubbleBot}>
-                    {linkify(m.text)}
+                    {linkify(m.text, m.sources)}
                     {!!m.sources?.length && (
                       <div className={styles.sources}>
                         {m.sources.map((s, j) => (

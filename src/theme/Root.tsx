@@ -1,6 +1,6 @@
 import React, {useState, type ReactNode} from 'react';
 import clsx from 'clsx';
-import {FiMessageCircle, FiX} from 'react-icons/fi';
+import {FiMessageCircle} from 'react-icons/fi';
 import LocaleSuggestBanner from '@site/src/components/LocaleSuggestBanner';
 import BaiduTongji from '@site/src/components/BaiduTongji';
 import AiKefuChat from '@site/src/components/AiKefuChat';
@@ -23,15 +23,7 @@ export default function Root({children}: {children: ReactNode}): ReactNode {
             id="customer-service-panel"
             className="customer-service-panel"
             aria-label="在线客服">
-            <button
-              className="customer-service-close"
-              type="button"
-              aria-label="关闭客服面板"
-              title="关闭"
-              onClick={() => setIsOpen(false)}>
-              <FiX aria-hidden="true" />
-            </button>
-            <AiKefuChat />
+            <AiKefuChat onClose={() => setIsOpen(false)} />
           </section>
         )}
         <button
