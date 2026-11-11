@@ -58,6 +58,11 @@ const config: Config = {
     },
   ],
 
+  customFields: {
+    // 智能客服（瑰夏）API 地址，本地联调可用 KEFU_API_BASE 覆盖
+    kefuApiBase: process.env.KEFU_API_BASE ?? 'https://wxapi.undersilicon.cn',
+  },
+
   onBrokenLinks: 'warn',
   markdown: {
     hooks: {

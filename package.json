@@ -26,6 +26,7 @@
     "check:doc-links": "node tool/check-doc-links.js",
     "sync:shop-products": "node tool/sync-shop-products.mjs",
     "check:shop-products": "node tool/check-shop-products.mjs",
+    "build:kb": "node tool/build-kb.mjs",
     "typecheck": "tsc"
   },
   "dependencies": {
