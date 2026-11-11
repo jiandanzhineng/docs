@@ -15,16 +15,14 @@ youtube: https://youtu.be/1m-OEwx_Gjg
 2. **请解压后安装 （解压失败可以安装 [7zip](https://www.7-zip.org/download.html) 之后用该软件解压**）
 3. **启动客户端**
 4. **启用电脑热点，设置 WiFi 名为 easysmart、密码为 11111111，频段选 2.4G。启动设备后约 15-30 秒会自动连接；如果客户端里没有设备，关闭电脑防火墙。**
-   完整步骤和常见问题（5G 频段、无电脑热点）见[电脑热点（电脑连设备）](/docs/start/connect/hotspot)。
+   完整步骤和常见问题（5G 频段）见[电脑热点（电脑连设备）](/docs/start/connect/hotspot)；开不了热点见[电脑走家里 WiFi](/docs/start/connect/pc-home-wifi)。
 5. **可以开始愉快玩耍啦**
 
  
 
 ## 无电脑热点情况使用方式 {#无电脑热点情况使用方式}
-1. 设备配网：参考[通过 APP 将设备连接到 WiFi](/docs/other/wifi-config/app) 将设备连接到家里的 WiFi（注意必须是 2.4G WiFi）
-2. 客户端启用mdns
 
-![1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87.png](./img/QhfCe6tcWnz7mH1G/1764167602427-6eb0053e-9d4e-449c-8a85-4608c37c5c87-759484.png)
+没有条件开电脑热点时，把设备配网到家里的 2.4G WiFi，客户端通过 mDNS 在局域网里连接设备，步骤见[电脑走家里 WiFi（无热点时）](/docs/start/connect/pc-home-wifi)。
 
 ## 其他下载链接
 
