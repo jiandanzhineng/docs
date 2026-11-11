@@ -30,6 +30,14 @@
 - 喝水英文页：`i18n/en/.../player/喝水液体收集解锁玩法.md`，流程图 `img/drink-pee-unlock-flow.svg`，买链 `https://shop.undersilicon.cn/en/products/force-drink`。
 - 英文流程图文件名：`kegel-training-flow-en.svg`、`pushup-game-flow-en.svg`、`tiptoe-punish-flow.svg`、`cunzhi3phase-en.svg`；接口图、左右震动型、穿戴裤、踮脚海报、扇贝海报已换英文，只改 `i18n/en` 副本。配网和刷机截图仍是中文客户端界面，AI 重绘会改按钮，先不替换。
 
+## 商城互通（2026-11-11 起，详见 ADR 2026-11-11-shop-integration）
+
+- 商品快照 `src/data/shop-products.json`（slug、中英文名、首图绝对网址，不含价格）：`npm run sync:shop-products` 联网拉 `shop.undersilicon.cn/api/products` 更新；CI 构建只用已提交快照。
+- 中文源页 frontmatter 写 `products: [商品slug]`，插件 `src/plugins/shop-docs/` 按 doc id 让所有语言共用；未知 slug 构建时警告，`npm run check:shop-products` 校验（未知即退出 1）。
+- 每个语言构建在输出根目录写 `product-docs.json`（中文 `build/`、英文 `build/en/`），字段：version/locale/generatedAt/onboarding（新手引导页 id 写在 `docusaurus.config.ts` 插件 options）/products（slug → {id,title,path} 数组）。
+- 文档页卡片：`src/theme/DocItem/Footer` 包住原 footer，正文后渲染 `src/components/ShopProducts`；ref 为 `docs-<页面slug末段>`（商城只允许 `[A-Za-z0-9._-]{1,64}`）；小程序 web-view 里（UA 含 miniProgram 或 `__wxjs_environment`）按需加载 jweixin 调 `wx.miniProgram.navigateTo(/pages/product/index?slug=...)`。
+- 商城链接带 `?ref=docs`（导航栏「商城」、页脚「官网商城」），中文站链 `/zh`、其他语言链 `/en`（`DOCUSAURUS_CURRENT_LOCALE` 判断）。
+
 ## 智能客服（瑰夏）与知识包
 
 - KB 生成：`npm run build` 之后跑 `npm run build:kb`（`tool/build-kb.mjs`），输出 `build/kb/docs-kb.json`，随构建产物一起发到 GitHub Pages 和 OSS。线上地址：`https://ezs-docs.oss-cn-shanghai.aliyuncs.com/kb/docs-kb.json`。页数 < 20 或任一 url 缺失时非 0 退出让 CI 失败。

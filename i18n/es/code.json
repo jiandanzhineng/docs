@@ -388,5 +388,13 @@
   },
   "homepage.featuresSubtitle": {
     "message": "Desde la conexión de hardware hasta el desarrollo de software, UnderSilicon te ofrece una experiencia completa de interacción inteligente."
+  },
+  "theme.shop.heading": {
+    "message": "Dispositivos utilizados en esta página",
+    "description": "Shop products card: theme.shop.heading"
+  },
+  "theme.shop.goShop": {
+    "message": "Ver en la tienda",
+    "description": "Shop products card: theme.shop.goShop"
   }
 }

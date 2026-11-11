@@ -10,6 +10,11 @@ const baseUrl = process.env.BASE_URL ?? '/';
 const organizationName = process.env.GITHUB_ORG ?? 'UnderSilicon';
 const projectName = process.env.GITHUB_PROJECT ?? 'docs';
 
+// 商城链接按构建语言区分：中文站 zh、其他语言 en（ref=docs 供商城统计来源）
+const shopLocale =
+  process.env.DOCUSAURUS_CURRENT_LOCALE === 'zh-Hans' ? 'zh' : 'en';
+const shopUrl = `https://shop.undersilicon.cn/${shopLocale}?ref=docs`;
+
 const config: Config = {
   title: '硅基之下(UnderSilicon)文档',
   tagline: '探索 硅基之下(UnderSilicon) 智能生态，解锁无限互动玩法',
@@ -97,6 +102,15 @@ const config: Config = {
   },
 
 
+  plugins: [
+    [
+      './src/plugins/shop-docs/index.ts',
+      {
+        onboarding: ['start/index', 'start/安全须知/单人游玩必读'],
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -145,6 +159,7 @@ const config: Config = {
         },
         {to: '/blog', label: '博客', position: 'left'},
         {to: '/contact', label: '联系我们', position: 'left'},
+        {href: shopUrl, label: '商城', position: 'left'},
         {type: 'localeDropdown', position: 'right', className: 'mobileLocaleDropdown'},
         {
           href: 'https://github.com/orgs/jiandanzhineng/repositories',
@@ -189,6 +204,10 @@ const config: Config = {
         {
           title: '更多',
           items: [
+            {
+              label: '官网商城',
+              href: shopUrl,
+            },
             {
               label: "淘宝店",
               href: "https://shop282688998.taobao.com/",
