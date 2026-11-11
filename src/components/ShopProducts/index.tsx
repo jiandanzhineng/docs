@@ -55,6 +55,15 @@ export function buildRefTag(raw: string): string {
   return cleaned.slice(0, REF_MAX_LEN - 'docs-'.length) || 'page';
 }
 
+/** 原图可达数 MB，走商城的 Next 图片优化取 384 宽缩略图；失败时回退原图 */
+function thumbUrl(image: string): string {
+  if (!image.startsWith(`${SHOP_ORIGIN}/uploads/`)) {
+    return image;
+  }
+  const path = image.slice(SHOP_ORIGIN.length);
+  return `${SHOP_ORIGIN}/_next/image?url=${encodeURIComponent(path)}&w=384&q=75`;
+}
+
 function productHref(
   product: ProductSnapshot,
   locale: string,
@@ -112,7 +121,7 @@ export default function ShopProducts({
   }
 
   return (
-    <section className={styles.section} aria-label="本页用到的设备">
+    <section className={styles.section}>
       <h2 className={styles.heading}>
         <Translate id="theme.shop.heading">
           本页用到的设备
@@ -130,9 +139,15 @@ export default function ShopProducts({
             {product.image ? (
               <img
                 className={styles.image}
-                src={product.image}
+                src={thumbUrl(product.image)}
                 alt={isZh ? product.nameZh : product.nameEn}
                 loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (img.src !== product.image) {
+                    img.src = product.image;
+                  }
+                }}
               />
             ) : null}
             <div className={styles.body}>
