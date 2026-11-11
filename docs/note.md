@@ -18,6 +18,11 @@
 - ESA 站点是整个 `undersilicon.cn` 区域，**只用目录刷新**把作用域限定在 docs 域名下；`hostname` 刷新当前套餐配额为 0 用不了，`purgeall` 会连 `shop.undersilicon.cn` 一起清，别用。
 - 凭据取 `ALIYUN_ACCESS_KEY_ID/SECRET`，没设就回退读 `E:\smart\.env` 里的 `OSS_*`。
 
+## 翻译工具链
+
+- `npm run translate` = `write-translations` → `check-doc-translations.js`（md）→ `translate-i18n-json-itemized.js`（JSON）→ `prune-orphan-translations.js`。
+- **翻译 API 代理已失效**（2026-11-11）：`.env` 里 `OPENAI_BASE_URL=https://claude-proxy.shiroha.tech` DNS 解析不了，`requestTranslate` 全部 fetch failed。itemized 脚本失败时会把 zh-Hans 原文回退写进外语文件，所以失败输出要人工检查、补译后再提交。修好后换 `OPENAI_BASE_URL`/`OPENAI_API_KEY` 再跑。
+
 ## 页面与内容
 
 - 浅色主题背景：Infima 默认 `--ifm-background-color: transparent`，靠浏览器白画布兜底，在小程序 web-view 这类非白底容器里会黑底黑字。`src/css/custom.css` 的 `:root` 已显式补 `#fff`（2026-09-15）；改配色时两个主题都要给实色。
@@ -42,6 +47,7 @@
 
 - KB 生成：`npm run build` 之后跑 `npm run build:kb`（`tool/build-kb.mjs`），输出 `build/kb/docs-kb.json`，随构建产物一起发到 GitHub Pages 和 OSS。线上地址：`https://ezs-docs.oss-cn-shanghai.aliyuncs.com/kb/docs-kb.json`。页数 < 20 或任一 url 缺失时非 0 退出让 CI 失败。
 - 右下客服挂件：`src/theme/Root.tsx` + `src/components/AiKefuChat/`（智能客服/人工客服两个标签）。API 地址取 `customFields.kefuApiBase`（默认 `https://wxapi.undersilicon.cn`，本地联调用环境变量 `KEFU_API_BASE` 覆盖）。接口：`POST {base}/api/web/chat`，body `{sessionId, message, locale, page}`，返回 `{reply, handoff, sources}`，错误 `{error, message}`。sessionId 与最近 50 条记录存 localStorage。
+- 挂件 UI 文案走 code.json i18n（id 统一 `kefu.*`，zh-Hans 为源）：新文案写成 `translate({id, message})` 字面量调用，`npm run write-translations` 提取后进 `i18n/zh-Hans/code.json`，再由 `tool/translate-i18n-json-itemized.js` 补 en/ja/es/de。注意该翻译器按 zh-Hans 重建目标文件——zh-Hans 没有的 key 会从外语文件里被丢掉，新 key 必须先进 zh-Hans（2026-11-11）。
 
 ## 百度统计
 

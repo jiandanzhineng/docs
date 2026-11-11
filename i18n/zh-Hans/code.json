@@ -396,5 +396,65 @@
   "theme.shop.goShop": {
     "message": "去商城看看",
     "description": "Shop products card: theme.shop.goShop"
+  },
+  "kefu.panel.ariaLabel": {
+    "message": "在线客服"
+  },
+  "kefu.trigger.close": {
+    "message": "关闭客服"
+  },
+  "kefu.trigger.open": {
+    "message": "联系客服"
+  },
+  "kefu.trigger.label": {
+    "message": "客服"
+  },
+  "kefu.quick.connect": {
+    "message": "怎么连接设备？"
+  },
+  "kefu.quick.edging": {
+    "message": "寸止玩法怎么选？"
+  },
+  "kefu.quick.download": {
+    "message": "客户端在哪里下载？"
+  },
+  "kefu.welcome": {
+    "message": "你好呀，我是智能客服瑰夏～ 设备连接、玩法教程、客户端下载的问题都可以问我，答不准的地方可以切到右侧标签找人工客服～"
+  },
+  "kefu.handoffTip": {
+    "message": "这个问题瑰夏回答不准，请扫码添加人工客服～"
+  },
+  "kefu.failTip": {
+    "message": "瑰夏刚才走神了，请稍后再试，或者切到「人工客服」联系我们～"
+  },
+  "kefu.timeoutTip": {
+    "message": "瑰夏查得有点久，稍后再试或找人工客服～"
+  },
+  "kefu.tab.ai": {
+    "message": "智能客服"
+  },
+  "kefu.tab.human": {
+    "message": "人工客服"
+  },
+  "kefu.clear.title": {
+    "message": "清空聊天记录，重新开始"
+  },
+  "kefu.close.title": {
+    "message": "关闭客服面板"
+  },
+  "kefu.human.wechat": {
+    "message": "微信扫码联系人工客服"
+  },
+  "kefu.human.qrAlt": {
+    "message": "微信客服二维码"
+  },
+  "kefu.thinking": {
+    "message": "瑰夏正在查文档…"
+  },
+  "kefu.input.placeholder": {
+    "message": "问点什么…"
+  },
+  "kefu.send": {
+    "message": "发送"
   }
 }

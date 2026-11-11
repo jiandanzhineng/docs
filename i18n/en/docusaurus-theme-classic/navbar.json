@@ -22,5 +22,9 @@
   "item.label.商城": {
     "message": "Shop",
     "description": "Navbar item with label 商城"
+  },
+  "item.label.联系我们": {
+    "message": "Contact Us",
+    "description": "Navbar item with label 联系我们"
   }
 }

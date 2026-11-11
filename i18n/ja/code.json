@@ -396,5 +396,65 @@
   "theme.shop.goShop": {
     "message": "ショップで見る",
     "description": "Shop products card: theme.shop.goShop"
+  },
+  "kefu.panel.ariaLabel": {
+    "message": "オンラインカスタマーサポート"
+  },
+  "kefu.trigger.close": {
+    "message": "サポートを閉じる"
+  },
+  "kefu.trigger.open": {
+    "message": "サポートに問い合わせ"
+  },
+  "kefu.trigger.label": {
+    "message": "サポート"
+  },
+  "kefu.quick.connect": {
+    "message": "デバイスの接続方法は？"
+  },
+  "kefu.quick.edging": {
+    "message": "エッジングプレイの選び方は？"
+  },
+  "kefu.quick.download": {
+    "message": "クライアントはどこでダウンロードできますか？"
+  },
+  "kefu.welcome": {
+    "message": "こんにちは！スマートアシスタントのGeishaです。デバイス接続・プレイガイド・クライアントのダウンロードについて聞いてください。うまく答えられない場合は、右の「人間サポート」タブをご利用ください。"
+  },
+  "kefu.handoffTip": {
+    "message": "この質問にはGeishaはうまく答えられません。QRコードをスキャンして人間サポートにご連絡ください。"
+  },
+  "kefu.failTip": {
+    "message": "Geishaが少し迷子になりました。しばらくしてからもう一度お試しください。または「人間サポート」タブからご連絡ください。"
+  },
+  "kefu.timeoutTip": {
+    "message": "Geishaの確認に時間がかかっています。しばらくしてからもう一度お試しください。または人間サポートにご連絡ください。"
+  },
+  "kefu.tab.ai": {
+    "message": "AIサポート"
+  },
+  "kefu.tab.human": {
+    "message": "人間サポート"
+  },
+  "kefu.clear.title": {
+    "message": "チャット履歴をクリアして最初から"
+  },
+  "kefu.close.title": {
+    "message": "サポートパネルを閉じる"
+  },
+  "kefu.human.wechat": {
+    "message": "WeChatでスキャンして人間サポートに連絡"
+  },
+  "kefu.human.qrAlt": {
+    "message": "WeChatサポートQRコード"
+  },
+  "kefu.thinking": {
+    "message": "Geishaがドキュメントを確認中…"
+  },
+  "kefu.input.placeholder": {
+    "message": "質問を入力…"
+  },
+  "kefu.send": {
+    "message": "送信"
   }
 }

@@ -396,5 +396,65 @@
   "theme.shop.goShop": {
     "message": "Ver en la tienda",
     "description": "Shop products card: theme.shop.goShop"
+  },
+  "kefu.panel.ariaLabel": {
+    "message": "Atención al cliente en línea"
+  },
+  "kefu.trigger.close": {
+    "message": "Cerrar soporte"
+  },
+  "kefu.trigger.open": {
+    "message": "Contactar con soporte"
+  },
+  "kefu.trigger.label": {
+    "message": "Soporte"
+  },
+  "kefu.quick.connect": {
+    "message": "¿Cómo conecto el dispositivo?"
+  },
+  "kefu.quick.edging": {
+    "message": "¿Cómo elijo un juego de edging?"
+  },
+  "kefu.quick.download": {
+    "message": "¿Dónde descargo el cliente?"
+  },
+  "kefu.welcome": {
+    "message": "¡Hola! Soy Geisha, la asistente de IA. Pregúntame sobre conexión del dispositivo, guías de juego o descargas del cliente. Si no puedo responder, cambia a la pestaña de soporte humano a la derecha."
+  },
+  "kefu.handoffTip": {
+    "message": "Geisha no puede responder esta pregunta. Escanea el código QR para contactar con soporte humano."
+  },
+  "kefu.failTip": {
+    "message": "Geisha se distrajo un momento. Inténtalo de nuevo más tarde o cambia a la pestaña \"Soporte humano\" para contactarnos."
+  },
+  "kefu.timeoutTip": {
+    "message": "Geisha está tardando un poco. Inténtalo de nuevo más tarde o contacta con soporte humano."
+  },
+  "kefu.tab.ai": {
+    "message": "Asistente IA"
+  },
+  "kefu.tab.human": {
+    "message": "Soporte humano"
+  },
+  "kefu.clear.title": {
+    "message": "Borrar el chat y empezar de nuevo"
+  },
+  "kefu.close.title": {
+    "message": "Cerrar el panel de soporte"
+  },
+  "kefu.human.wechat": {
+    "message": "Escanea con WeChat para contactar con soporte humano"
+  },
+  "kefu.human.qrAlt": {
+    "message": "Código QR de soporte en WeChat"
+  },
+  "kefu.thinking": {
+    "message": "Geisha está consultando los documentos…"
+  },
+  "kefu.input.placeholder": {
+    "message": "Escribe tu pregunta…"
+  },
+  "kefu.send": {
+    "message": "Enviar"
   }
 }

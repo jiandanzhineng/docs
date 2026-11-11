@@ -1,4 +1,5 @@
 import React, {useState, type ReactNode} from 'react';
+import {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
 import {FiMessageCircle} from 'react-icons/fi';
 import LocaleSuggestBanner from '@site/src/components/LocaleSuggestBanner';
@@ -22,7 +23,7 @@ export default function Root({children}: {children: ReactNode}): ReactNode {
           <section
             id="customer-service-panel"
             className="customer-service-panel"
-            aria-label="在线客服">
+            aria-label={translate({id: 'kefu.panel.ariaLabel', message: '在线客服'})}>
             <AiKefuChat onClose={() => setIsOpen(false)} />
           </section>
         )}
@@ -31,10 +32,14 @@ export default function Root({children}: {children: ReactNode}): ReactNode {
           type="button"
           aria-expanded={isOpen}
           aria-controls="customer-service-panel"
-          title={isOpen ? '关闭客服' : '联系客服'}
+          title={
+            isOpen
+              ? translate({id: 'kefu.trigger.close', message: '关闭客服'})
+              : translate({id: 'kefu.trigger.open', message: '联系客服'})
+          }
           onClick={() => setIsOpen((current) => !current)}>
           <FiMessageCircle aria-hidden="true" />
-          <span>客服</span>
+          <span>{translate({id: 'kefu.trigger.label', message: '客服'})}</span>
         </button>
       </div>
     </>

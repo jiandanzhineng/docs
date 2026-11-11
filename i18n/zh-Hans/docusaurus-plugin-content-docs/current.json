@@ -50,5 +50,21 @@
   "sidebar.tutorialSidebar.category.寸止综合设备": {
     "message": "寸止综合设备",
     "description": "The label for category '寸止综合设备' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.连接设备": {
+    "message": "连接设备",
+    "description": "The label for category '连接设备' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.配网到家里 WiFi": {
+    "message": "配网到家里 WiFi",
+    "description": "The label for category '配网到家里 WiFi' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.安全须知": {
+    "message": "安全须知",
+    "description": "The label for category '安全须知' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.配件": {
+    "message": "配件",
+    "description": "The label for category '配件' in sidebar 'tutorialSidebar'"
   }
 }
