@@ -1,5 +1,6 @@
 ﻿---
 slug: /other/wifi-config/miniprogram
+sidebar_position: 3
 ---
 
 # 通过小程序将设备连接到wifi

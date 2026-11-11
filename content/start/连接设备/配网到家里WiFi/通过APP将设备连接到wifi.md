@@ -1,5 +1,6 @@
 ﻿---
 slug: /other/wifi-config/app
+sidebar_position: 2
 ---
 
 # 通过APP将设备连接到wifi

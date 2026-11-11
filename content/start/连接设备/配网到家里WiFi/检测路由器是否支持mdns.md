@@ -1,5 +1,6 @@
 ﻿---
 slug: /other/check-mdns
+sidebar_position: 4
 ---
 
 # 检测路由器是否支持mdns（大部分路由器都支持）
