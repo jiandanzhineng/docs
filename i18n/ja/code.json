@@ -388,5 +388,13 @@
   },
   "homepage.featuresSubtitle": {
     "message": "ハードウェア接続からソフトウェア開発まで、シリコン基盤の下(UnderSilicon)が完全なスマートインタラクション体験を提供します。"
+  },
+  "theme.shop.heading": {
+    "message": "このページで使うデバイス",
+    "description": "Shop products card: theme.shop.heading"
+  },
+  "theme.shop.goShop": {
+    "message": "ショップで見る",
+    "description": "Shop products card: theme.shop.goShop"
   }
 }

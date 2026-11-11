@@ -2,6 +2,7 @@
 
 > 自动生成，勿手改。更新：`python E:\smart\tools\memory-index\memory_index.py --path <本层级目录>`
 
+- 2026-11-11 [文档与商城互通](2026-11-11-shop-integration.md) — 文档与商城互通：导航互链、frontmatter 标商品、导出商品教程表、卡片不显示价格
 - 2026-11-10 [文档信息架构与链接稳定](2026-11-10-docs-ia-and-link-stability.md) — 文档按快速开始/设备/玩法分组，连接方式单列，已挂网址不得变化
 - 2026-09-23 [英文文档配图用英文](2026-09-23-en-docs-images.md) — 英文文档里带中文的配图要出英文版，可用 AI 生成
 - 2026-09-22 [喝水玩法英文文档](2026-09-22-drink-pee-unlock-en.md) — 喝水玩法英文页用英文流程图，买链指向 Shop 英文页

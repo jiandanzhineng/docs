@@ -2,6 +2,8 @@
 slug: /player/shanbay-shock
 title: 扇贝单词电击玩法教程
 sidebar_position: 2
+products:
+  - beidanci
 ---
 
 ## 为什么要电一下？
