@@ -1,5 +1,6 @@
 ---
 slug: /other/wifi-config/app
+sidebar_position: 2
 ---
 
 # Conectar el dispositivo a Wi-Fi mediante una APP

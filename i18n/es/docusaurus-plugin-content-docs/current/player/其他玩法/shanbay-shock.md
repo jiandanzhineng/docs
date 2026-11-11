@@ -2,6 +2,8 @@
 slug: /player/shanbay-shock
 title: Tutorial de Juego de Electrochoque en Shanbay Words
 sidebar_position: 2
+products:
+  - beidanci
 ---
 
 ## ¿Por qué un electrochoque?

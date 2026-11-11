@@ -19,7 +19,7 @@ Grupo QQ: 970326066 (Información de verificación: Silicon Underworld) | Grupo 
 - [Tutorial de entrenamiento de elevación de puntillas y contracción anal](player/提肛与踮脚/踮脚提肛训练教程.md)
 - [Descarga eléctrica con Shanbay para memorizar palabras](player/其他玩法/shanbay-shock.md)
 - [Versión mejorada de 3 etapas del modo de detención por pulgada con presión de aire](player/寸止/气压寸止玩法3阶段升级版说明.md)
-- [Modo de control de borde (detención por pulgada)](player/边缘控制（寸止）玩法.md)
+- [Modo de control de borde (detención por pulgada)](player/old/边缘控制（寸止）玩法.md)
 - [Modo de entrenamiento de contracción anal](player/提肛与踮脚/提肛训练玩法.md)
 - [Modo de castigo por elevación de puntillas v2](player/提肛与踮脚/踮脚惩罚玩法v2.md)
 - [Juego de entrenamiento con detección de flexiones (aproximadamente)](player/其他玩法/俯卧撑（大概）检测训练游戏.md)

@@ -1,5 +1,6 @@
 ---
 slug: /other/wifi-config/miniprogram
+sidebar_position: 3
 ---
 
 # Gerät über Mini-Programm mit WiFi verbinden

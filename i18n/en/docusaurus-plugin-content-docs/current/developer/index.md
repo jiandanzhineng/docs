@@ -10,6 +10,8 @@ slug: /developer
 
 ---
 
+- [Command-Line Tool (CLI)](命令行工具.md)
+- [DeepSeek Harness Plugin (AI Control)](DeepSeek-Harness插件.md)
 - [Control a Vibrator with Python](用python控制跳蛋.md)
 - [Running Mobile Client via Termux](通过Termux运行手机客户端.md)
 - [Cooperative Low-Cost Large Model Calling Channels](合作低价大模型调用渠道.md)

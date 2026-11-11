@@ -2,6 +2,8 @@
 slug: /player/shanbay-shock
 title: Lernanleitung für den elektrisierenden "Shanbay-Wörter"-Modus
 sidebar_position: 2
+products:
+  - beidanci
 ---
 
 ## Warum einen elektrischen Schlag?

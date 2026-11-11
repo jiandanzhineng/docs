@@ -1,27 +1,35 @@
 ---
 slug: /player
+title: Spielweisen-Übersicht
 sidebar_position: 0
 ---
 
-# Spieleranleitung
+# Spielweisen-Übersicht
+
+> ⚠️ Lies vor dem Solo-Spiel bitte die [Sicherheitshinweise](/docs/player/solo-safety)
+>
+> 🛒 Gerätevorstellung und Kauf siehe [Gerätevorstellung & Kauf](/docs/#设备介绍购买)
 
 ## Client-Download
 
-- [Windows-PC-Steuerclient](../start/客户端下载.md)
-- [Android-Client für Mobiltelefone](../start/客户端下载.md)
-- [HarmonyOS-Client](../start/客户端下载.md)
-- [iOS-Client](../start/客户端下载.md)
+Download, Installation und Geräteverbindung siehe [Schnellstart](/docs/start).
 
-## Spielanleitungen
+## Spieltutorials
 
-- [Anleitung zur Verwendung von Edging-Spielweise der zweiten Generation](./寸止/寸止玩法二代使用教程.md)
-- [Anleitung zum Zehenspitzen- und Beckenbodentraining](./提肛与踮脚/踮脚提肛训练教程.md)
-- [Shanbay-Vokabeln-Elektroschock](./其他玩法/shanbay-shock.md)
+| Spielweise | Benötigte Geräte/Fähigkeiten | Ein-Satz-Beschreibung |
+| --- | --- | --- |
+| [Auswahl der Edging-Reihe](/docs/player/edging) | Edging-Gesamtgerät | Unterschiede und Auswahlempfehlung der drei Edging-Spielweisen |
+| [Eingebautes Edging des Hauptgeräts (Edging+Kegel)](/docs/player/cunzhi01) | Edging-Gesamtgerät (Luftdruck+Vibration+Elektroimpuls) | Stimulation bis zum Schwellenwert, dann automatischer Stopp — hält dich am Rand |
+| [Luftdruck-Edging-Spielweise (3-Phasen-Upgrade)](/docs/player/cunzhi3step) | Edging-Gesamtgerät, optional automatisches Schloss/OSR6 | Überschreitet der Luftdruck den kritischen Wert, wird Elektroschock ausgelöst; Zyklus Ruhe–Mitte–Edge–Abkühlung |
+| [Luftdruck-Sprung-Edging-Spielweise](/docs/player/surge-edging) | Edging-Gesamtgerät | Auslösung über kurzfristigen Druckanstieg; Mitteldruck wird jede Runde automatisch kalibriert |
+| [Kegel-Trainingsspielweise](/docs/player/kegel-training) | Edging-Gesamtgerät | Entspannungs–Anspannungs-Zykluserkennung; Versäumnisse werden per Elektroimpuls gemeldet |
+| [Zehenspitzen-Bestrafungsspielweise v2](/docs/player/tiptoe-v2) | Edging-Gesamtgerät, optional automatisches Schloss | Auf den Zehenspitzen stehen bleiben; Ferse setzt auf = Bestrafung |
+| [Tutorial zu Zehenspitzen- und Kegel-Training](/docs/player/tiptoe-kegel) | Edging-Gesamtgerät | Haltungstraining mit gleichzeitigem Kegel- und Zehenspitzenstand |
+| [Trinken-/Flüssigkeitssammeln-Freischalt-Spielweise](/docs/player/drink-pee-unlock) | Waage, optional Elektroimpuls/automatisches Schloss | Nach Vorgabe trinken oder Flüssigkeit sammeln; Entriegelung bei Zielerreichung oder Zeitablauf |
+| [Liegestütz-(ungefähr-)Erkennungs-Trainingsspiel](/docs/player/pushup-game) | Abstandssensor, optional Edging-Gerät/automatisches Schloss | Abstandssensor zählt Liegestütze |
+| [Shanbay-Vokabeln-Elektroschock](/docs/player/shanbay-shock) | Elektroimpuls-Gerät | Vokabel-Lernspielweise mit Elektroschock bei Fehlern |
 
 ## Spielbeschreibungen
 
-- [Luftdruck-Edging-Spielweise in 3 Phasen, erweiterte Version](./寸止/气压寸止玩法3阶段升级版说明.md)
-- [Edging-Kontrolle (Edging)-Spielweise](./边缘控制（寸止）玩法.md)
-- [Beckenbodentraining-Spielweise](./提肛与踮脚/提肛训练玩法.md)
-- [Zehenspitzen-Bestrafungsspielweise v2](./提肛与踮脚/踮脚惩罚玩法v2.md)
-- [Liegestütze (ungefähr) Erkennungstrainingsspiel](./其他玩法/俯卧撑（大概）检测训练游戏.md)
+- Auswahlempfehlungen für die Edging-Reihe siehe [Welche Edging-Spielweise wählen](/docs/player/edging)
+- Alte Tutorials zur ersten Gerätegeneration siehe Seitenleiste „Frühere Spielanleitung“

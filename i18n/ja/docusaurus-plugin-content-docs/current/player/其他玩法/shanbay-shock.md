@@ -2,6 +2,8 @@
 slug: /player/shanbay-shock
 title: 扇貝単語電気ショックプレイ解説
 sidebar_position: 2
+products:
+  - beidanci
 ---
 
 ## なぜ『電撃』が必要なのか？
@@ -18,7 +20,7 @@ sidebar_position: 2
 
 扇貝単語電気ショックは、扇貝のウェブ版単語学習ページをベースにしたプラグインのプレイスタイルです：プラグインがあなたが「わからない」（間違い）をクリックしたことを検知したとき、または罰則を有効にした状態で「思い出せない」と判断したときに、接続済みの電気ショックデバイスを作動させ、ズリ～ンと来るやつを届けます ⚡。
 
-> 🛒 **デバイス入手方法**：[淘宝で購入](https://item.taobao.com/item.htm?id=1065205279302) | [公式サイトで購入](https://shop.undersilicon.cn/zh/products/beidanci) | [クーポン受け取り](../../优惠券.md)  
+> 🛒 **デバイス入手方法**：[淘宝で購入](https://item.taobao.com/item.htm?id=1065205279302) | [公式サイトで購入](https://shop.undersilicon.cn/zh/products/beidanci) | [クーポン受け取り](/docs/coupon)  
 > 🎬 **ビデオチュートリアル**：[硅基之下ビデオサイト(まだアップロードされていません)](https://video.undersilicon.com/w/pcesS2gYvbfuU5Wcf5v7fQ) | [YouTube(まだアップロードされていません)](https://youtu.be/Q7ti6oOdhpc)
 
 <!-- TODO: ビデオチュートリアルは現時点で寸止めプレイ用のものを代用しています。扇貝単語電気ショック専用リンクに置き換えてください。 -->

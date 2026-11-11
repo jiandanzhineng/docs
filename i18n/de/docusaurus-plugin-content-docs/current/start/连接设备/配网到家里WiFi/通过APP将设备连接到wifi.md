@@ -1,5 +1,6 @@
 ---
 slug: /other/wifi-config/app
+sidebar_position: 2
 ---
 
 # Gerät per App mit WLAN verbinden

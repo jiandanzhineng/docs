@@ -1,5 +1,6 @@
 ---
 slug: /other/check-mdns
+sidebar_position: 4
 ---
 
 # Prüfen, ob der Router mdns unterstützt (die meisten Router unterstützen es)

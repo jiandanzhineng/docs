@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5f6368"/>
+    </marker>
+    <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="620" rx="16" fill="#ffffff" stroke="#e0e0e0"/>
+
+  <text x="400" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#202124">踮脚惩罚玩法 · 核心流程</text>
+
+  <!-- 开始 -->
+  <rect x="300" y="62" width="200" height="48" rx="12" fill="#e6f4ea" stroke="#34a853"/>
+  <text x="400" y="91" text-anchor="middle" font-size="16" fill="#1e7d34">开始游戏</text>
+
+  <!-- 保持踮脚 -->
+  <rect x="300" y="142" width="200" height="48" rx="12" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="400" y="171" text-anchor="middle" font-size="16" fill="#174ea6">保持踮脚站立</text>
+
+  <!-- 判定：脚后跟落地 -->
+  <polygon points="400,214 520,266 400,318 280,266" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="400" y="262" text-anchor="middle" font-size="15" fill="#a06a00">脚后跟落地？</text>
+
+  <!-- 立即电击 -->
+  <rect x="72" y="240" width="168" height="52" rx="12" fill="#fce8e6" stroke="#ea4335"/>
+  <text x="156" y="262" text-anchor="middle" font-size="15" fill="#a50e0e">立即电击</text>
+  <text x="156" y="280" text-anchor="middle" font-size="12" fill="#a50e0e">持续 · 渐进增强</text>
+
+  <!-- 久未违规 -->
+  <polygon points="648,226 734,266 648,306 562,266" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="648" y="262" text-anchor="middle" font-size="14" fill="#a06a00">久未违规？</text>
+
+  <!-- 震动增强 -->
+  <rect x="563" y="386" width="170" height="52" rx="12" fill="#f3e8fd" stroke="#9334e6"/>
+  <text x="648" y="408" text-anchor="middle" font-size="15" fill="#7627bb">启动震动</text>
+  <text x="648" y="426" text-anchor="middle" font-size="12" fill="#7627bb">每 5 秒增强</text>
+
+  <!-- 结束 -->
+  <rect x="300" y="520" width="200" height="52" rx="12" fill="#f1f3f4" stroke="#80868b"/>
+  <text x="400" y="551" text-anchor="middle" font-size="15" fill="#3c4043">结束 · 解锁 · 报告</text>
+
+  <!-- 主流程箭头 -->
+  <line x1="400" y1="110" x2="400" y2="142" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="400" y1="190" x2="400" y2="214" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- 是 -> 立即电击 -->
+  <line x1="280" y1="266" x2="240" y2="266" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="260" y="256" text-anchor="middle" font-size="13" fill="#ea4335">是</text>
+
+  <!-- 否 -> 久未违规 -->
+  <line x1="520" y1="266" x2="562" y2="266" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="541" y="256" text-anchor="middle" font-size="13" fill="#1a73e8">否</text>
+
+  <!-- 是 -> 震动 -->
+  <line x1="648" y1="306" x2="648" y2="386" stroke="#5f6368" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="656" y="348" text-anchor="middle" font-size="13" fill="#9334e6">是</text>
+
+  <!-- 循环返回：电击后回到保持踮脚 -->
+  <path d="M72 266 L40 266 L40 166 L300 166" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrD)"/>
+
+  <!-- 循环返回：久未违规（否）回到保持踮脚 -->
+  <path d="M648 226 L648 200 L760 200 L760 166 L500 166" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrD)"/>
+  <text x="638" y="208" text-anchor="middle" font-size="13" fill="#9aa0a6">否</text>
+
+  <!-- 震动后返回 -->
+  <path d="M733 412 L760 412 L760 200" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- 时间到 -->
+  <line x1="400" y1="318" x2="400" y2="520" stroke="#5f6368" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+  <text x="412" y="424" font-size="13" fill="#5f6368">坚持到设定时间</text>
+</svg>

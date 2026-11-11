@@ -2,6 +2,8 @@
 slug: /player/shanbay-shock
 title: Shanbay Vocabulary Shock Play Tutorial
 sidebar_position: 2
+products:
+  - beidanci
 ---
 
 ## Why a Shock?

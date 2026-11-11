@@ -3,36 +3,50 @@ slug: /
 sidebar_position: 0
 ---
 
-# Produktanleitung für Silicon Base
+# Produktanleitung für Untersilicon
 
 > Kurz-URL: easysmart.top
 
-## Client-Download & Kommunikation
+## Client-Download & Austausch
 
-[Windows](start/客户端下载.md) | [Android](start/客户端下载.md) | [HarmonyOS](start/客户端下载.md) | [iOS](start/客户端下载.md)
+[Windows](/docs/player/new-phone-client#pc) | [Android](/docs/player/new-phone-client) | [HarmonyOS](/docs/player/new-phone-client#鸿蒙客户端) | [iOS](/docs/player/new-phone-client#ios)
 
-QQ-Gruppe: 970326066 (Verifizierungsinfo: Silicon Base) | WeChat-Gruppe: Kontakt über Kundenservice unten rechts
+QQ-Gruppe: 970326066 (Verifizierungsinfo: 硅基之下) | WeChat-Gruppe: Kontakt über Kundenservice unten rechts
 
 ## Spielanleitungen
 
-- [Anleitung zur "Pause vor dem Höhepunkt"-Spielweise, 2. Generation](player/寸止/寸止玩法二代使用教程.md)
-- [Tutorial für Zehenspitzen- und Beckenboden-Training](player/提肛与踮脚/踮脚提肛训练教程.md)
-- [Shanbay-Vokabeln-Elektroschock](player/其他玩法/shanbay-shock.md)
-- [Druckluft "Pause vor dem Höhepunkt"-Spielweise, 3-Stufen-Upgrade-Version](player/寸止/气压寸止玩法3阶段升级版说明.md)
-- [Spielweise zur Kantenkontrolle ("Pause vor dem Höhepunkt")](player/边缘控制（寸止）玩法.md)
-- [Spielweise für Beckenboden-Training](player/提肛与踮脚/提肛训练玩法.md)
-- [Bestrafungsspielweise auf Zehenspitzen v2](player/提肛与踮脚/踮脚惩罚玩法v2.md)
-- [Trainingsspiel mit Liegestütz-Erkennung](player/其他玩法/俯卧撑（大概）检测训练游戏.md)
+Zu viele Spielweisen, keine Ahnung, was du wählen sollst? Schau zuerst in die [Spielweisen-Übersicht](/docs/player) (jede Spielweise mit Ein-Satz-Beschreibung).
 
-## Gerätevorstellung & Kauf
+**Edging-Reihe**
 
-- [Steuerungsterminal für oszillierenden Motor mit Intensitätsregelung](device/往复式电机强度控制终端.md)
-- [Einfaches intelligentes Abstandssensor-Terminal](device/简单智能距离感应终端.md)
-- [Einfaches intelligentes Verriegelungsterminal](device/简单智能锁定终端.md)
-- [Einfaches intelligentes Motor-(Vibrator-)Steuerungsterminal](device/简单智能电机（跳蛋）控制终端.md)
-- [Einfaches intelligentes Impuls-(Elektroschock-)Terminal](device/简单智能脉冲（电击）终端.md)
+- [Welche Edging-Spielweise wählen](/docs/player/edging)
+- [Tutorial zum eingebauten Edging des Hauptgeräts (Edging+Kegel)](/docs/player/cunzhi01)
+- [Luftdruck-Edging-Spielweise, 3-Phasen-Upgrade](/docs/player/cunzhi3step)
+- [Luftdruck-Sprung-Edging-Spielweise](/docs/player/surge-edging)
+
+**Kegel und Zehenspitze**
+
+- [Kegel-Trainingsspielweise](/docs/player/kegel-training)
+- [Zehenspitzen-Bestrafungsspielweise v2](/docs/player/tiptoe-v2)
+- [Tutorial zu Zehenspitzen- und Kegel-Training](/docs/player/tiptoe-kegel)
+
+**Weitere Spielweisen**
+
+- [Trinken-/Flüssigkeitssammeln-Freischalt-Spielweise](/docs/player/drink-pee-unlock)
+- [Liegestütz-(ungefähr-)Erkennungs-Trainingsspiel](/docs/player/pushup-game)
+- [Shanbay-Vokabeln-Elektroschock](/docs/player/shanbay-shock)
+
+## Gerätevorstellung & Kauf {#设备介绍购买}
+
+- [Edging-Gesamtgerät (2. Generation)](/docs/device/cunzhi01)
+- [Steuerungsterminal für oszillierenden Motor mit Intensitätsregelung](/docs/device/reciprocating-motor)
+- [Einfaches intelligentes Motor-(Vibrator-)Steuerungsterminal](/docs/device/motor-controller)
+- [Einfaches intelligentes Impuls-(Elektroschock-)Terminal](/docs/device/pulse-controller)
+- [Einfaches intelligentes Abstandssensor-Terminal](/docs/device/distance-sensor)
+- [Einfaches intelligentes Verriegelungsterminal](/docs/device/lock-controller)
+- [Einfaches intelligentes Waagen-Terminal](/docs/device/electronic-scale)
 
 ## Dokumentationsumfang
 
 Dieses Dokument ist eine Nutzungsanleitung für normale Benutzer. Entwickler sollten referenzieren:
-- [Entwicklerdokumentation](developer/index.md) (Termux-Client, Hardware-Flash, Spielentwicklung)
+- [Entwicklerdokumentation](/docs/developer) (Termux-Client, Hardware-Flash, Spielentwicklung)

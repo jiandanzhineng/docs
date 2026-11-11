@@ -1,5 +1,6 @@
 ---
 slug: /other/check-mdns
+sidebar_position: 4
 ---
 
 # ルーターが mDNS をサポートしているか確認（ほとんどのルーターが対応）
