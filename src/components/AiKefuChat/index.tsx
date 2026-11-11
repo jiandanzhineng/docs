@@ -127,6 +127,21 @@ function linkify(text: string, sources?: Source[]): ReactNode {
   if (last < text.length) nodes.push(text.slice(last));
   return nodes;
 }
+const URL_IN_TEXT = /https?:\/\/[^\s<>"'）】]+/;
+
+// sources 中已在正文里以链接出现的不再重复展示
+function dedupeSources(reply: string, sources?: Source[]): Source[] | undefined {
+  if (!sources?.length) return sources;
+  const used = new Set<string>();
+  for (const m of reply.matchAll(new RegExp(URL_IN_TEXT, 'g'))) {
+    const n = normalizeUrl(m[0]);
+    if (n) used.add(n.path);
+  }
+  return sources.filter((s) => {
+    const n = normalizeUrl(s.url);
+    return !n || !used.has(n.path);
+  });
+}
 export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const apiBase =
@@ -139,6 +154,8 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
+  // 'bottom'：滚到底；数字：把该索引消息的顶部滚到可视区顶部
+  const scrollTarget = useRef<'bottom' | number>('bottom');
   const sessionRef = useRef('');
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -154,7 +171,16 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
   }, []);
 
   useEffect(() => {
-    listRef.current?.scrollTo({top: listRef.current.scrollHeight});
+    const list = listRef.current;
+    if (!list) return;
+    const target = scrollTarget.current;
+    if (target === 'bottom' || target >= messages.length) {
+      list.scrollTo({top: list.scrollHeight});
+    } else {
+      // 机器人新回答：把它的顶部滚到可视区顶部（留 8px），比视口短则等效滚到底
+      const el = list.querySelector<HTMLElement>(`[data-msg-index="${target}"]`);
+      list.scrollTo({top: Math.max(0, (el?.offsetTop ?? 0) - 8)});
+    }
     if (mounted) storageSet(KEY_HISTORY, JSON.stringify(messages.slice(-MAX_HISTORY)));
   }, [messages, mounted, sending]);
   const send = async (raw?: string) => {
@@ -162,6 +188,7 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
     if (!text || sending) return;
     setInput('');
     setSending(true);
+    scrollTarget.current = 'bottom';
     setMessages((m) => [...m, {role: 'user', text}]);
     try {
       const res = await fetch(`${apiBase}/api/web/chat`, {
@@ -186,30 +213,40 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
         message?: string;
       };
       if (res.ok && data.reply) {
-        setMessages((m) => [
-          ...m,
-          {role: 'bot', text: data.reply!, sources: data.sources},
-        ]);
+        setMessages((m) => {
+          scrollTarget.current = m.length;
+          return [
+            ...m,
+            {
+              role: 'bot',
+              text: data.reply!,
+              sources: dedupeSources(data.reply!, data.sources),
+            },
+          ];
+        });
         if (data.handoff) {
           if (!data.reply!.includes('人工')) {
-            setMessages((m) => [...m, {role: 'bot', text: HANDOFF_TIP}]);
+            setMessages((m) => {
+              scrollTarget.current = m.length;
+              return [...m, {role: 'bot', text: HANDOFF_TIP}];
+            });
           }
           handoffTimer.current = setTimeout(() => setTab('human'), 1600);
         }
       } else {
-        setMessages((m) => [
-          ...m,
-          {role: 'bot', text: data.message || FAIL_TIP},
-        ]);
+        setMessages((m) => {
+          scrollTarget.current = m.length;
+          return [...m, {role: 'bot', text: data.message || FAIL_TIP}];
+        });
       }
     } catch (err) {
       const aborted =
         err instanceof Error &&
         (err.name === 'AbortError' || err.name === 'TimeoutError');
-      setMessages((m) => [
-        ...m,
-        {role: 'bot', text: aborted ? TIMEOUT_TIP : FAIL_TIP},
-      ]);
+      setMessages((m) => {
+        scrollTarget.current = m.length;
+        return [...m, {role: 'bot', text: aborted ? TIMEOUT_TIP : FAIL_TIP}];
+      });
     } finally {
       setSending(false);
     }
@@ -293,11 +330,11 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
             )}
             {messages.map((m, i) =>
               m.role === 'user' ? (
-                <div key={i} className={styles.rowUser}>
+                <div key={i} className={styles.rowUser} data-msg-index={i}>
                   <div className={styles.bubbleUser}>{m.text}</div>
                 </div>
               ) : (
-                <div key={i} className={styles.rowBot}>
+                <div key={i} className={styles.rowBot} data-msg-index={i}>
                   <div className={styles.bubbleBot}>
                     {linkify(m.text, m.sources)}
                     {!!m.sources?.length && (

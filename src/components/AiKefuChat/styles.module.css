@@ -86,6 +86,7 @@
 
 /* 消息列表 */
 .msgList {
+  position: relative;
   flex: 1 1 auto;
   overflow-y: auto;
   padding: 0.875rem 0.75rem;
@@ -170,6 +171,7 @@
   align-items: flex-end;
   gap: 0.5rem;
   padding: 0.625rem 0.75rem;
+  padding-bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--ifm-color-emphasis-200);
   flex: 0 0 auto;
 }
@@ -261,4 +263,3 @@
     border-left: 0;
   }
 }
-
