@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState, type ReactNode} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
 import {FaWeixin} from 'react-icons/fa';
 import {FiMail, FiRotateCcw, FiSend, FiX} from 'react-icons/fi';
@@ -12,18 +13,36 @@ const KEY_SESSION = 'aiKefu.sessionId';
 const KEY_HISTORY = 'aiKefu.history.v1';
 const MAX_HISTORY = 50;
 const MAX_LEN = 500;
-
-const QUICK_QUESTIONS = [
-  '怎么连接设备？',
-  '寸止玩法怎么选？',
-  '客户端在哪里下载？',
-];
-const WELCOME =
-  '你好呀，我是智能客服瑰夏～ 设备连接、玩法教程、客户端下载的问题都可以问我，答不准的地方可以切到右侧标签找人工客服～';
-const HANDOFF_TIP = '这个问题瑰夏回答不准，请扫码添加人工客服～';
-const FAIL_TIP = '瑰夏刚才走神了，请稍后再试，或者切到「人工客服」联系我们～';
-const TIMEOUT_TIP = '瑰夏查得有点久，稍后再试或找人工客服～';
 const FETCH_TIMEOUT_MS = 90_000;
+
+// 挂件文案走 Docusaurus code.json，随页面语言切换；id 一律 kefu.* 前缀
+// 注意：必须写成 translate({id, message}) 字面量调用，write-translations 才能提取
+const quickQuestions = (): string[] => [
+  translate({id: 'kefu.quick.connect', message: '怎么连接设备？'}),
+  translate({id: 'kefu.quick.edging', message: '寸止玩法怎么选？'}),
+  translate({id: 'kefu.quick.download', message: '客户端在哪里下载？'}),
+];
+const welcomeText = () =>
+  translate({
+    id: 'kefu.welcome',
+    message:
+      '你好呀，我是智能客服瑰夏～ 设备连接、玩法教程、客户端下载的问题都可以问我，答不准的地方可以切到右侧标签找人工客服～',
+  });
+const handoffTipText = () =>
+  translate({
+    id: 'kefu.handoffTip',
+    message: '这个问题瑰夏回答不准，请扫码添加人工客服～',
+  });
+const failTipText = () =>
+  translate({
+    id: 'kefu.failTip',
+    message: '瑰夏刚才走神了，请稍后再试，或者切到「人工客服」联系我们～',
+  });
+const timeoutTipText = () =>
+  translate({
+    id: 'kefu.timeoutTip',
+    message: '瑰夏查得有点久，稍后再试或找人工客服～',
+  });
 
 interface Source {
   title: string;
@@ -228,7 +247,7 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
           if (!data.reply!.includes('人工')) {
             setMessages((m) => {
               scrollTarget.current = m.length;
-              return [...m, {role: 'bot', text: HANDOFF_TIP}];
+              return [...m, {role: 'bot', text: handoffTipText()}];
             });
           }
           handoffTimer.current = setTimeout(() => setTab('human'), 1600);
@@ -236,7 +255,7 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
       } else {
         setMessages((m) => {
           scrollTarget.current = m.length;
-          return [...m, {role: 'bot', text: data.message || FAIL_TIP}];
+          return [...m, {role: 'bot', text: data.message || failTipText()}];
         });
       }
     } catch (err) {
@@ -245,7 +264,10 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
         (err.name === 'AbortError' || err.name === 'TimeoutError');
       setMessages((m) => {
         scrollTarget.current = m.length;
-        return [...m, {role: 'bot', text: aborted ? TIMEOUT_TIP : FAIL_TIP}];
+        return [
+          ...m,
+          {role: 'bot', text: aborted ? timeoutTipText() : failTipText()},
+        ];
       });
     } finally {
       setSending(false);
@@ -265,21 +287,27 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
           type="button"
           className={clsx(styles.tab, tab === 'chat' && styles.tabActive)}
           onClick={() => setTab('chat')}>
-          智能客服
+          {translate({id: 'kefu.tab.ai', message: '智能客服'})}
         </button>
         <button
           type="button"
           className={clsx(styles.tab, tab === 'human' && styles.tabActive)}
           onClick={() => setTab('human')}>
-          人工客服
+          {translate({id: 'kefu.tab.human', message: '人工客服'})}
         </button>
         <div className={styles.headerBtns}>
           {tab === 'chat' && (
             <button
               type="button"
               className={styles.headerBtn}
-              title="清空聊天记录，重新开始"
-              aria-label="清空聊天记录，重新开始"
+              title={translate({
+                id: 'kefu.clear.title',
+                message: '清空聊天记录，重新开始',
+              })}
+              aria-label={translate({
+                id: 'kefu.clear.title',
+                message: '清空聊天记录，重新开始',
+              })}
               onClick={clearHistory}>
               <FiRotateCcw aria-hidden="true" />
             </button>
@@ -287,8 +315,14 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
           <button
             type="button"
             className={styles.headerBtn}
-            title="关闭客服面板"
-            aria-label="关闭客服面板"
+            title={translate({
+              id: 'kefu.close.title',
+              message: '关闭客服面板',
+            })}
+            aria-label={translate({
+              id: 'kefu.close.title',
+              message: '关闭客服面板',
+            })}
             onClick={onClose}>
             <FiX aria-hidden="true" />
           </button>
@@ -299,9 +333,21 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
         <div className={styles.human}>
           <div className={styles.wechatLabel}>
             <FaWeixin aria-hidden="true" />
-            <span>微信扫码联系人工客服</span>
+            <span>
+              {translate({
+                id: 'kefu.human.wechat',
+                message: '微信扫码联系人工客服',
+              })}
+            </span>
           </div>
-          <img className={styles.qr} src={qrSrc} alt="微信客服二维码" />
+          <img
+            className={styles.qr}
+            src={qrSrc}
+            alt={translate({
+              id: 'kefu.human.qrAlt',
+              message: '微信客服二维码',
+            })}
+          />
           <a className={styles.email} href={`mailto:${EMAIL}`}>
             <FiMail aria-hidden="true" />
             <span>{EMAIL}</span>
@@ -313,9 +359,9 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
             {showWelcome && (
               <div className={styles.rowBot}>
                 <div className={styles.bubbleBot}>
-                  {linkify(WELCOME)}
+                  {linkify(welcomeText())}
                   <div className={styles.quick}>
-                    {QUICK_QUESTIONS.map((q) => (
+                    {quickQuestions().map((q) => (
                       <button
                         key={q}
                         type="button"
@@ -357,7 +403,10 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
             {sending && (
               <div className={styles.rowBot}>
                 <div className={clsx(styles.bubbleBot, styles.thinking)}>
-                  瑰夏正在查文档…
+                  {translate({
+                    id: 'kefu.thinking',
+                    message: '瑰夏正在查文档…',
+                  })}
                 </div>
               </div>
             )}
@@ -375,7 +424,10 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
               value={input}
               rows={1}
               maxLength={MAX_LEN}
-              placeholder="问点什么…"
+              placeholder={translate({
+                id: 'kefu.input.placeholder',
+                message: '问点什么…',
+              })}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -388,8 +440,8 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
               type="submit"
               className={styles.sendBtn}
               disabled={sending || !input.trim()}
-              aria-label="发送"
-              title="发送">
+              aria-label={translate({id: 'kefu.send', message: '发送'})}
+              title={translate({id: 'kefu.send', message: '发送'})}>
               <FiSend aria-hidden="true" />
             </button>
           </form>

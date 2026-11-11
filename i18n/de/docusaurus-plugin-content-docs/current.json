@@ -7,9 +7,9 @@
     "message": "Geräteeinführung & Kauf",
     "description": "The label for category '设备介绍 & 购买' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.配网到家里 WiFi": {
-    "message": "Mit Heim-WLAN verbinden",
-    "description": "The label for category '配网到家里 WiFi' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.设备连接 WiFi（配网）": {
+    "message": "Gerät mit WLAN verbinden (Kopplung)",
+    "description": "The label for category '设备连接 WiFi（配网）' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.开发文档": {
     "message": "Entwicklerdokumentation",
@@ -55,8 +55,16 @@
     "message": "Gerät verbinden",
     "description": "The label for category '连接设备' in sidebar 'tutorialSidebar'"
   },
+  "sidebar.tutorialSidebar.category.配网到家里 WiFi": {
+    "message": "Mit Heim-WLAN verbinden",
+    "description": "The label for category '配网到家里 WiFi' in sidebar 'tutorialSidebar'"
+  },
   "sidebar.tutorialSidebar.category.安全须知": {
     "message": "Sicherheitshinweise",
     "description": "The label for category '安全须知' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.配件": {
+    "message": "Zubehör",
+    "description": "The label for category '配件' in sidebar 'tutorialSidebar'"
   }
 }

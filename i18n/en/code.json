@@ -396,5 +396,65 @@
   "theme.shop.goShop": {
     "message": "View in Shop",
     "description": "Shop products card: theme.shop.goShop"
+  },
+  "kefu.panel.ariaLabel": {
+    "message": "Online customer service"
+  },
+  "kefu.trigger.close": {
+    "message": "Close support"
+  },
+  "kefu.trigger.open": {
+    "message": "Contact support"
+  },
+  "kefu.trigger.label": {
+    "message": "Support"
+  },
+  "kefu.quick.connect": {
+    "message": "How do I connect my device?"
+  },
+  "kefu.quick.edging": {
+    "message": "How do I pick an edging game?"
+  },
+  "kefu.quick.download": {
+    "message": "Where can I download the client?"
+  },
+  "kefu.welcome": {
+    "message": "Hi there! I'm Geisha, your AI assistant. Ask me anything about device pairing, gameplay guides, or client downloads. If I can't answer, switch to the Human Support tab on the right."
+  },
+  "kefu.handoffTip": {
+    "message": "Geisha can't answer this one. Please scan the QR code to reach human support."
+  },
+  "kefu.failTip": {
+    "message": "Geisha drifted off just now. Please try again later, or switch to the \"Human Support\" tab to reach us."
+  },
+  "kefu.timeoutTip": {
+    "message": "Geisha is taking a while. Please try again later or contact human support."
+  },
+  "kefu.tab.ai": {
+    "message": "AI Assistant"
+  },
+  "kefu.tab.human": {
+    "message": "Human Support"
+  },
+  "kefu.clear.title": {
+    "message": "Clear chat and start over"
+  },
+  "kefu.close.title": {
+    "message": "Close the support panel"
+  },
+  "kefu.human.wechat": {
+    "message": "Scan with WeChat to reach human support"
+  },
+  "kefu.human.qrAlt": {
+    "message": "WeChat support QR code"
+  },
+  "kefu.thinking": {
+    "message": "Geisha is checking the docs…"
+  },
+  "kefu.input.placeholder": {
+    "message": "Ask something…"
+  },
+  "kefu.send": {
+    "message": "Send"
   }
 }
