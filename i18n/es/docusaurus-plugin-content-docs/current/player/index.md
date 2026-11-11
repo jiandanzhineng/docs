@@ -7,10 +7,10 @@ sidebar_position: 0
 
 ## Descarga del Cliente
 
-- [Cliente de Control para Windows PC](../start/client/PC版控制客户端.md)
-- [Cliente para Teléfono Android](../start/client/new-phone-client.md)
-- [Cliente HarmonyOS](../start/client/鸿蒙客户端.md)
-- [Cliente iOS](../start/client/iOS客户端.md)
+- [Cliente de Control para Windows PC](../start/客户端下载.md)
+- [Cliente para Teléfono Android](../start/客户端下载.md)
+- [Cliente HarmonyOS](../start/客户端下载.md)
+- [Cliente iOS](../start/客户端下载.md)
 
 ## Tutoriales de Juego
 

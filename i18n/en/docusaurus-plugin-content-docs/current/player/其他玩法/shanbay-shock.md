@@ -33,7 +33,7 @@ The whole closed-loop in one sentence: **Shanbay Answering → Plugin judges rig
 
 ### 1. Preparation
 
-Please install the client and connect the device first. For details, see [PC Control Client](../../start/client/PC版控制客户端.md).
+Please install the client and connect the device first. For details, see [PC Control Client](../../start/客户端下载.md).
 
 Before starting, double-check these:
 

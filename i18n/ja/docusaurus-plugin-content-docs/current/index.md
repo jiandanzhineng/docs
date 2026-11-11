@@ -9,7 +9,7 @@ sidebar_position: 0
 
 ## クライアントダウンロード & コミュニケーション
 
-[Windows](start/client/PC版控制客户端.md) | [Android](start/client/new-phone-client.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
+[Windows](start/客户端下载.md) | [Android](start/客户端下载.md) | [HarmonyOS](start/客户端下载.md) | [iOS](start/客户端下载.md)
 
 QQグループ：970326066（認証情報：硅基之下）| WeChatグループ：右下カスタマーサービスまでご連絡ください
 

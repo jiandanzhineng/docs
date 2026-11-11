@@ -33,7 +33,7 @@ El ciclo completo en una frase: **Responder en Shanbay → La extensión juzga s
 
 ### 1. Preparativos
 
-Primero, instala el cliente y conecta el dispositivo. Consulta [Cliente de Control para PC](../../start/client/PC版控制客户端.md).
+Primero, instala el cliente y conecta el dispositivo. Consulta [Cliente de Control para PC](../../start/客户端下载.md).
 
 Antes de iniciar, confirma estos puntos:
 

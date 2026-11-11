@@ -7,10 +7,10 @@ sidebar_position: 0
 
 ## クライアントのダウンロード
 
-- [Windows PC版コントロールクライアント](../start/client/PC版控制客户端.md)
-- [Android スマートフォンクライアント](../start/client/new-phone-client.md)
-- [鴻蒙クライアント](../start/client/鸿蒙客户端.md)
-- [iOSクライアント](../start/client/iOS客户端.md)
+- [Windows PC版コントロールクライアント](../start/客户端下载.md)
+- [Android スマートフォンクライアント](../start/客户端下载.md)
+- [鴻蒙クライアント](../start/客户端下载.md)
+- [iOSクライアント](../start/客户端下载.md)
 
 ## 遊び方チュートリアル
 

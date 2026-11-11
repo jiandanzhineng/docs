@@ -7,10 +7,10 @@ sidebar_position: 0
 
 ## Client-Download
 
-- [Windows-PC-Steuerclient](../start/client/PC版控制客户端.md)
-- [Android-Client für Mobiltelefone](../start/client/new-phone-client.md)
-- [HarmonyOS-Client](../start/client/鸿蒙客户端.md)
-- [iOS-Client](../start/client/iOS客户端.md)
+- [Windows-PC-Steuerclient](../start/客户端下载.md)
+- [Android-Client für Mobiltelefone](../start/客户端下载.md)
+- [HarmonyOS-Client](../start/客户端下载.md)
+- [iOS-Client](../start/客户端下载.md)
 
 ## Spielanleitungen
 

@@ -33,7 +33,7 @@ Der gesamte Kreislauf in einem Satz: **Auf Shanbay antworten → Das Plugin beur
 
 ### 1. Vorbereitungen
 
-Bitte installiere zuerst den Client und verbinde das Gerät, siehe [PC-Steuerungsclient](../../start/client/PC版控制客户端.md).
+Bitte installiere zuerst den Client und verbinde das Gerät, siehe [PC-Steuerungsclient](../../start/客户端下载.md).
 
 Vor dem Start stelle folgende Punkte sicher:
 
