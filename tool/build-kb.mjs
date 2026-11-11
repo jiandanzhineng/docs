@@ -71,6 +71,9 @@ function categoryOf(rel, fm) {
   return labels.length ? labels.join(' > ') : '文档';
 }
 
+const cleanAlt = (s) => s.replace(/##[^#\n]*?##/g, '').replace(/\s+/g, ' ').trim();
+const figAlt = (s) => `[图：${cleanAlt(s) || '插图'}]`;
+
 // 清洗正文：去 frontmatter/import/JSX/注释；图片 → [图：alt]；链接保留文字
 function cleanText(body) {
   const lines = body.split(/\r?\n/);
@@ -92,7 +95,7 @@ function cleanText(body) {
       if (/\/>|>\s*$/.test(line)) {
         inJsxImg = false;
         const alt = (jsxAlt + line).match(/alt="([^"]*)"/);
-        out.push(`[图：${alt ? alt[1] : '插图'}]`);
+        out.push(figAlt(alt ? alt[1] : ''));
         jsxAlt = '';
       } else jsxAlt += line;
       continue;
@@ -108,11 +111,11 @@ function cleanText(body) {
     }
     let s = line.replace(/<!--[\s\S]*?-->/g, '');
     // <img ... /> 单行行内图 → [图：alt]
-    s = s.replace(/<img\b[^>]*?alt="([^"]*)"[^>]*?\/?\s*>/gi, '[图：$1]');
+    s = s.replace(/<img\b[^>]*?alt="([^"]*)"[^>]*?\/?\s*>/gi, (_, a) => figAlt(a));
     s = s.replace(/<img\b[^>]*?\/?\s*>/gi, '[图：插图]');
     // 图片 ![alt](url) → [图：alt]（支持图片嵌在链接里 [![alt](img)](url)）
-    s = s.replace(/\[!\[([^\]]*)\]\([^)]*\)\]\([^)]*\)/g, '[图：$1]');
-    s = s.replace(/!\[([^\]]*)\]\([^)]*\)/g, '[图：$1]');
+    s = s.replace(/\[!\[([^\]]*)\]\([^)]*\)\]\([^)]*\)/g, (_, a) => figAlt(a));
+    s = s.replace(/!\[([^\]]*)\]\([^)]*\)/g, (_, a) => figAlt(a));
     // 链接 [text](url) → text（站内站外都只留文字）
     s = s.replace(/\[([^\]]*)\]\((?:https?:|mailto:)[^)]*\)/g, '$1');
     s = s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');
@@ -120,7 +123,9 @@ function cleanText(body) {
     s = s.replace(/<\/[A-Za-z][^>]*>/g, '').replace(/<[A-Za-z][^>]*\/?>/g, '');
     out.push(s);
   }
-  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  return out.join('\n')
+    .replace(/##[^#\n]*?##/g, '') // 图片尺寸标记 ##h40vh## 等
+    .replace(/\n{3,}/g, '\n\n').trim();
 }
 const decodeEntities = (s) =>
   s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
@@ -152,13 +157,27 @@ function gitSha() {
     return 'local';
   }
 }
+// 没有 slug 的页面按 Docusaurus 默认规则推导：去掉扩展名与尾部 /index
+// （build 目录名是未编码的中文路径，url 同样存未编码形态，浏览器自行编码）
+function urlFromRel(rel) {
+  let p = rel.replace(/\.mdx?$/i, '');
+  if (/^index$/i.test(p)) p = '';
+  else p = p.replace(/\/index$/i, '');
+  return `/docs${p ? '/' + p : ''}`;
+}
+
 const files = listDocs(contentDir).filter((rel) => !IS_EXCLUDED(rel));
 const pages = [];
 const failures = [];
+const seenUrls = new Map();
 for (const rel of files) {
   const {fm, body} = parseFrontmatter(fs.readFileSync(path.join(contentDir, rel), 'utf8'));
-  const slug = (fm.slug || '').replace(/^\/*/, '/');
-  const url = `/docs${slug}`;
+  const url = fm.slug ? `/docs${fm.slug.replace(/^\/*/, '/')}` : urlFromRel(rel);
+  if (seenUrls.has(url)) {
+    failures.push(`url 重复: ${url} (${rel} 与 ${seenUrls.get(url)})`);
+    continue;
+  }
+  seenUrls.set(url, rel);
   const htmlPath = urlToHtmlPath(buildDir, url);
   if (!fs.existsSync(htmlPath)) {
     failures.push(`url 不存在: ${url} (${rel})`);

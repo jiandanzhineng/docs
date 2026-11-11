@@ -22,6 +22,8 @@ const WELCOME =
   '你好呀，我是智能客服瑰夏～ 设备连接、玩法教程、客户端下载的问题都可以问我，答不准的地方可以切到右侧标签找人工客服～';
 const HANDOFF_TIP = '这个问题瑰夏回答不准，请扫码添加人工客服～';
 const FAIL_TIP = '瑰夏刚才走神了，请稍后再试，或者切到「人工客服」联系我们～';
+const TIMEOUT_TIP = '瑰夏查得有点久，稍后再试或找人工客服～';
+const FETCH_TIMEOUT_MS = 90_000;
 
 interface Source {
   title: string;
@@ -165,6 +167,10 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
       const res = await fetch(`${apiBase}/api/web/chat`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
+        signal:
+          typeof AbortSignal !== 'undefined' && AbortSignal.timeout
+            ? AbortSignal.timeout(FETCH_TIMEOUT_MS)
+            : undefined,
         body: JSON.stringify({
           sessionId: sessionRef.current,
           message: text,
@@ -196,8 +202,14 @@ export default function AiKefuChat({onClose}: {onClose: () => void}): ReactNode 
           {role: 'bot', text: data.message || FAIL_TIP},
         ]);
       }
-    } catch {
-      setMessages((m) => [...m, {role: 'bot', text: FAIL_TIP}]);
+    } catch (err) {
+      const aborted =
+        err instanceof Error &&
+        (err.name === 'AbortError' || err.name === 'TimeoutError');
+      setMessages((m) => [
+        ...m,
+        {role: 'bot', text: aborted ? TIMEOUT_TIP : FAIL_TIP},
+      ]);
     } finally {
       setSending(false);
     }
