@@ -36,6 +36,11 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && format('https://{0}', github.event.repository.name) || format('https://{0}.github.io', github.repository_owner)) }}
           BASE_URL: ${{ vars.BASE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && '/' || format('/{0}/', github.event.repository.name)) }}
 
+      - name: 生成知识包 docs-kb.json
+        run: npm run build:kb
+        env:
+          SITE_URL: ${{ vars.SITE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && format('https://{0}', github.event.repository.name) || format('https://{0}.github.io', github.repository_owner)) }}
+
       - name: 配置 Pages
         uses: actions/configure-pages@v5
 

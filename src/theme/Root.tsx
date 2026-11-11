@@ -1,28 +1,28 @@
 import React, {useState, type ReactNode} from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import {FiMail, FiMessageCircle, FiX} from 'react-icons/fi';
-import {FaWeixin} from 'react-icons/fa';
+import clsx from 'clsx';
+import {FiMessageCircle, FiX} from 'react-icons/fi';
 import LocaleSuggestBanner from '@site/src/components/LocaleSuggestBanner';
 import BaiduTongji from '@site/src/components/BaiduTongji';
-
-const CUSTOMER_SERVICE_EMAIL = 'jiandanzhineng@outlook.com';
-const CUSTOMER_SERVICE_QR_CODE = 'img/新人工.png';
+import AiKefuChat from '@site/src/components/AiKefuChat';
 
 export default function Root({children}: {children: ReactNode}): ReactNode {
   const [isOpen, setIsOpen] = useState(false);
-  const qrCodeSrc = useBaseUrl(CUSTOMER_SERVICE_QR_CODE);
 
   return (
     <>
       <BaiduTongji />
       <LocaleSuggestBanner />
       {children}
-      <div className="customer-service-widget">
+      <div
+        className={clsx(
+          'customer-service-widget',
+          isOpen && 'customer-service-widget--open',
+        )}>
         {isOpen && (
           <section
             id="customer-service-panel"
             className="customer-service-panel"
-            aria-labelledby="customer-service-title">
+            aria-label="在线客服">
             <button
               className="customer-service-close"
               type="button"
@@ -31,24 +31,7 @@ export default function Root({children}: {children: ReactNode}): ReactNode {
               onClick={() => setIsOpen(false)}>
               <FiX aria-hidden="true" />
             </button>
-            <h2 id="customer-service-title" className="customer-service-title">
-              在线客服
-            </h2>
-            <div className="customer-service-wechat-label">
-              <FaWeixin aria-hidden="true" />
-              <span>微信客服</span>
-            </div>
-            <img
-              className="customer-service-qr"
-              src={qrCodeSrc}
-              alt="微信客服二维码"
-            />
-            <a
-              className="customer-service-email"
-              href={`mailto:${CUSTOMER_SERVICE_EMAIL}`}>
-              <FiMail aria-hidden="true" />
-              <span>{CUSTOMER_SERVICE_EMAIL}</span>
-            </a>
+            <AiKefuChat />
           </section>
         )}
         <button
