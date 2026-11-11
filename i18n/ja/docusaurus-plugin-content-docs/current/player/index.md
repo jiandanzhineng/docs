@@ -8,7 +8,7 @@ sidebar_position: 0
 ## クライアントのダウンロード
 
 - [Windows PC版コントロールクライアント](../start/client/PC版控制客户端.md)
-- [Android スマートフォンクライアント](../start/client/new-phone-client.md)
+- [Android スマートフォンクライアント](../start/client/安卓客户端.md)
 - [鴻蒙クライアント](../start/client/鸿蒙客户端.md)
 - [iOSクライアント](../start/client/iOS客户端.md)
 

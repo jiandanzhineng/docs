@@ -8,7 +8,7 @@ sidebar_position: 0
 ## Descarga del Cliente
 
 - [Cliente de Control para Windows PC](../start/client/PC版控制客户端.md)
-- [Cliente para Teléfono Android](../start/client/new-phone-client.md)
+- [Cliente para Teléfono Android](../start/client/安卓客户端.md)
 - [Cliente HarmonyOS](../start/client/鸿蒙客户端.md)
 - [Cliente iOS](../start/client/iOS客户端.md)
 

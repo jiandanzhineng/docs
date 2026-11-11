@@ -9,7 +9,7 @@ sidebar_position: 0
 
 ## Descarga de cliente & Comunidad
 
-[Windows](start/client/PC版控制客户端.md) | [Android](start/client/new-phone-client.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
+[Windows](start/client/PC版控制客户端.md) | [Android](start/client/安卓客户端.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
 
 Grupo QQ: 970326066 (Información de verificación: Silicon Underworld) | Grupo de WeChat: Contactar con el servicio al cliente en la esquina inferior derecha
 

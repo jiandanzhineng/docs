@@ -8,7 +8,7 @@ sidebar_position: 0
 ## Client-Download
 
 - [Windows-PC-Steuerclient](../start/client/PC版控制客户端.md)
-- [Android-Client für Mobiltelefone](../start/client/new-phone-client.md)
+- [Android-Client für Mobiltelefone](../start/client/安卓客户端.md)
 - [HarmonyOS-Client](../start/client/鸿蒙客户端.md)
 - [iOS-Client](../start/client/iOS客户端.md)
 
