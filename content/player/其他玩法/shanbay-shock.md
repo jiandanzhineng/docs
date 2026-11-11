@@ -33,7 +33,7 @@ sidebar_position: 2
 
 ### 1. 准备工作
 
-请先安装客户端并连接设备，详见 [PC版控制客户端](/docs/pc-client)。
+请先安装客户端并连接设备，详见 [PC版控制客户端](/docs/player/new-phone-client#pc)。
 
 启动前再确认这几项：
 

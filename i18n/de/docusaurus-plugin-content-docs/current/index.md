@@ -9,7 +9,7 @@ sidebar_position: 0
 
 ## Client-Download & Kommunikation
 
-[Windows](start/client/PC版控制客户端.md) | [Android](start/client/安卓客户端.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
+[Windows](start/客户端下载.md) | [Android](start/客户端下载.md) | [HarmonyOS](start/客户端下载.md) | [iOS](start/客户端下载.md)
 
 QQ-Gruppe: 970326066 (Verifizierungsinfo: Silicon Base) | WeChat-Gruppe: Kontakt über Kundenservice unten rechts
 

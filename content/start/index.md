@@ -14,7 +14,7 @@ sidebar_position: 0
 
 ## 1. 下载安装客户端
 
-手机安装[安卓客户端](/docs/player/new-phone-client)，电脑安装 [Windows 客户端](/docs/pc-client)；iPhone、鸿蒙分别见 [iOS 客户端](/docs/player/ios-client)、[鸿蒙客户端](/docs/player/harmonyos-client)。
+手机安装[安卓客户端](/docs/player/new-phone-client)，电脑安装 [Windows 客户端](/docs/player/new-phone-client#pc)；iPhone、鸿蒙分别见 [iOS 客户端](/docs/player/new-phone-client#ios)、[鸿蒙客户端](/docs/player/new-phone-client#鸿蒙客户端)。
 
 ## 2. 连接设备
 

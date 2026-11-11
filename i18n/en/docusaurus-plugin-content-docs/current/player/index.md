@@ -9,10 +9,10 @@ sidebar_position: 0
 
 ## Client downloads
 
-- [Windows PC control client](../start/client/PC版控制客户端.md)
-- [Android phone client](../start/client/安卓客户端.md)
-- [HarmonyOS client](../start/client/鸿蒙客户端.md)
-- [iOS client](../start/client/iOS客户端.md)
+- [Windows PC control client](../start/客户端下载.md)
+- [Android phone client](../start/客户端下载.md)
+- [HarmonyOS client](../start/客户端下载.md)
+- [iOS client](../start/客户端下载.md)
 
 ## Tutorials
 

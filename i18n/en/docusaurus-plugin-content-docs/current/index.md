@@ -9,7 +9,7 @@ sidebar_position: 0
 
 ## Clients and contact
 
-[Windows](start/client/PC版控制客户端.md) | [Android](start/client/安卓客户端.md) | [HarmonyOS](start/client/鸿蒙客户端.md) | [iOS](start/client/iOS客户端.md)
+[Windows](start/客户端下载.md) | [Android](start/客户端下载.md) | [HarmonyOS](start/客户端下载.md) | [iOS](start/客户端下载.md)
 
 QQ group: 970326066 (verification answer: 硅基之下) | WeChat group: use the support button at the lower right
 

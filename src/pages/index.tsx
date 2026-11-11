@@ -38,7 +38,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className={clsx('button button--lg', styles.secondaryButton)}
-            to="/docs/pc-client">
+            to="/docs/player/new-phone-client#pc">
             <Translate id="homepage.downloadClient">下载客户端</Translate>
           </Link>
         </div>

@@ -9,7 +9,7 @@ sidebar_position: 0
 
 ## 客户端下载 & 交流
 
-[Windows](/docs/pc-client) | [Android](/docs/player/new-phone-client) | [鸿蒙](/docs/player/harmonyos-client) | [iOS](/docs/player/ios-client)
+[Windows](/docs/player/new-phone-client#pc) | [Android](/docs/player/new-phone-client) | [鸿蒙](/docs/player/new-phone-client#鸿蒙客户端) | [iOS](/docs/player/new-phone-client#ios)
 
 QQ群：970326066（验证信息：硅基之下）| 微信群：联系右下角客服
 
