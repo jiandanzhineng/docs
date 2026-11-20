@@ -100,5 +100,17 @@
     "nameZh": "DZC01 电子秤",
     "nameEn": "DZC01 Electronic Scale",
     "image": "https://shop.undersilicon.cn/uploads/products/1789872686817-76968796.jpg"
+  },
+  {
+    "slug": "distance-sensor",
+    "nameZh": "QTZ 距离感应终端",
+    "nameEn": "QTZ Distance Sensor",
+    "image": "https://shop.undersilicon.cn/uploads/products/1795170971909-28b4dc9e.jpg"
+  },
+  {
+    "slug": "reciprocating-motor",
+    "nameZh": "PJ01 往复电机控制器",
+    "nameEn": "PJ01 Reciprocating Motor Controller",
+    "image": "https://shop.undersilicon.cn/uploads/products/1795170972290-b1918a5b.jpg"
   }
 ]
