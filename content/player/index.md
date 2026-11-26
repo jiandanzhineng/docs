@@ -28,6 +28,7 @@ sidebar_position: 0
 | [喝水/液体收集解锁玩法](/docs/player/drink-pee-unlock) | 电子秤，可选电脉冲/自动锁 | 按目标喝水或收集液体，达标或超时解锁 |
 | [俯卧撑（大概）检测训练游戏](/docs/player/pushup-game) | 距离感应，可选寸止设备/自动锁 | 距离传感器判定俯卧撑次数 |
 | [扇贝背单词电击](/docs/player/shanbay-shock) | 电脉冲设备 | 背错单词就电击的背单词玩法 |
+| [运动心率电击提醒](/docs/player/heart-rate-trainer) | 蓝牙心率带 + 电脉冲设备，可选震动/自动锁 | 运动中心率低于下限触发电击提醒，支持锁屏后台托管 |
 
 ## 玩法说明
 
